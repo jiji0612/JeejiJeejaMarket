@@ -23,8 +23,9 @@ if ( sizeof($request_array['events']) > 0 ) {
         if ($text == 'Hi') {
             $text = 'Hello';
         }else{
-            $post_body = json_encode($text, JSON_UNESCAPED_UNICODE);
-            $text = send_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec', $POST_HEADER, $post_body);
+            $text = send_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec');
+            echo "Result: ".$send_result."\r\n";
+            return;
         }
         
         if ($text == '') {
@@ -46,6 +47,18 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 echo "OK";
 
+
+function get_reply_message($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+}
 
 function send_reply_message($url, $post_header, $post_body)
 {
