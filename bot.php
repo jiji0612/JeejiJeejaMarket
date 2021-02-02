@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         if ($text == 'Hi') {
             $text = 'Hello';
         }else{
-            $text = get_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec?par=อาหาร');
+            $text = get_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec', $text);
         }
         
         if ($text == '') {
@@ -46,11 +46,12 @@ if ( sizeof($request_array['events']) > 0 ) {
 echo "OK";
 
 
-function get_reply_message($url)
+function get_reply_message($url, $post_body)
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $result = curl_exec($ch);
     curl_close($ch);
