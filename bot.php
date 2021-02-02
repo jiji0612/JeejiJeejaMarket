@@ -24,7 +24,8 @@ if ( sizeof($request_array['events']) > 0 ) {
         if ($text == 'Hi') {
             $text = 'Hello';
         }else{
-            $text = searchBug('https://dialogflow.cloud.google.com/v1/integrations/line/webhook/d789fe09-51e9-402b-9e16-2d88db92d167');
+            $post_body = json_encode($text, JSON_UNESCAPED_UNICODE);
+            $text = send_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec', $POST_HEADER, $post_body);
         }
         
         if ($text == '') {
@@ -45,19 +46,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 }
 
 echo "OK";
-
-
-function searchBug($path){
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL,$path);
-    curl_setopt($ch, CURLOPT_FAILONERROR,1);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION,1);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-    $retValue = curl_exec($ch);          
-    curl_close($ch);
-    return $retValue;
-}
 
 
 function send_reply_message($url, $post_header, $post_body)
