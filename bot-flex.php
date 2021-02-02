@@ -23,7 +23,7 @@ $jsonFlex = [
         "contents" => [
           [
             "type" => "text",
-            "text" => "Purchase",
+            "text" => "Soft Your Style",
             "size" => "lg",
             "align" => "start",
             "weight" => "bold",
