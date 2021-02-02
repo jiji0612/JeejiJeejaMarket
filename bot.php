@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         if ($text == 'Hi') {
             $text = 'Hello';
         }else{
-            $post_body = array('text' => $text);
+            $post_body = json_encode($text, JSON_UNESCAPED_UNICODE);
             $text = send_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec', $POST_HEADER, $post_body);
         }
         
