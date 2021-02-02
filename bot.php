@@ -25,12 +25,7 @@ if ( sizeof($request_array['events']) > 0 ) {
                       'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
                       'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
                       'Hi' => 'Hello World!');
-        while (($txt_name = current($arrayText)) !== FALSE ) {
-            if ($txt_name == $text) {
-                $text = key($arrayText);
-            }
-            next($arrayText);
-        }
+        $text = $arrayText[$text];
 
         $data = [
             'replyToken' => $reply_token,
