@@ -21,19 +21,16 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $text = $event['message']['text'];
         
-        $arrayText = array("ขนมขบเคี้ยว" => "เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ",
-                      "อาหาร" => "เลือกสินค้า อาหาร ได้เลยค่ะ",
-                      "เครื่องดื่ม" => "เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ");
+        $arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
+                      'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
+                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ');
         while ($txt_name = current($arrayText)) {
             if ($txt_name == $text) {
                 $text = key($arrayText);
             }
-            next($array);
+            next($arrayText);
         }
-        if ($text == 'Hi') {
-            $text = 'Hello';
-        }
-        
+
         $data = [
             'replyToken' => $reply_token,
             // 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
