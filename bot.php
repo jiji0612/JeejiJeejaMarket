@@ -20,6 +20,16 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
         $text = $event['message']['text'];
+        
+        $arrayText = array("ขนมขบเคี้ยว" => "เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ",
+                      "อาหาร" => "เลือกสินค้า อาหาร ได้เลยค่ะ",
+                      "เครื่องดื่ม" => "เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ");
+        while ($txt_name = current($arrayText)) {
+            if ($txt_name == $text) {
+                $text = key($arrayText);
+            }
+            next($array);
+        }
         if ($text == 'Hi') {
             $text = 'Hello';
         }
