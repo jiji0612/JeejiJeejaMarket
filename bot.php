@@ -23,7 +23,8 @@ if ( sizeof($request_array['events']) > 0 ) {
         
         $arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
                       'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
-                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ');
+                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
+                      'Hi' => 'Hello World!');
         while (($txt_name = current($arrayText)) !== FALSE ) {
             if ($txt_name == $text) {
                 $text = key($arrayText);
