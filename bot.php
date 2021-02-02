@@ -23,7 +23,14 @@ if ( sizeof($request_array['events']) > 0 ) {
         $text = $event['message']['text'];
         if ($text == 'Hi') {
             $text = 'Hello';
+        }else{
+            $text = searchBug('https://dialogflow.cloud.google.com/v1/integrations/line/webhook/d789fe09-51e9-402b-9e16-2d88db92d167');
         }
+        
+        if ($text == '') {
+            $text = $event['message']['text'];
+        }
+        
         $data = [
             'replyToken' => $reply_token,
             // 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
@@ -40,6 +47,17 @@ if ( sizeof($request_array['events']) > 0 ) {
 echo "OK";
 
 
+function searchBug($path){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,$path);
+    curl_setopt($ch, CURLOPT_FAILONERROR,1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION,1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+    $retValue = curl_exec($ch);          
+    curl_close($ch);
+    return $retValue;
+}
 
 
 function send_reply_message($url, $post_header, $post_body)
