@@ -12,7 +12,6 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 
-
 if ( sizeof($request_array['events']) > 0 ) {
 
     foreach ($request_array['events'] as $event) {
@@ -24,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         if ($text == 'Hi') {
             $text = 'Hello';
         }else{
-            $post_body = json_encode($text, JSON_UNESCAPED_UNICODE);
+            $post_body = array('text' => $text);
             $text = send_reply_message('https://script.google.com/macros/s/AKfycbwG9gca_qwKqD03pEqtv3Q2HmpHsK0OYGY9-vxs2s4xkKobMy4/exec', $POST_HEADER, $post_body);
         }
         
