@@ -42,7 +42,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$string = file_get_contents("flex-block.json");
 			$json_a = json_decode($string, true);
-			$json_a['replyToken'] = $reply_token;
+			//$json_a['replyToken'] = $reply_token;
 			
 			//$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			
