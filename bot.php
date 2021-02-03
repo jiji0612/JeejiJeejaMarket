@@ -44,7 +44,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
 			
-			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+			$post_body = $json_a;
 		}
 		
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
