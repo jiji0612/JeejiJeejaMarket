@@ -2,749 +2,246 @@
   "replyToken": "",  
   "messages": [
 	{
-	  "type": "bubble",
-	  "size": "mega",
-	  "header": {
-		"type": "box",
-		"layout": "vertical",
-		"contents": [
-		  {
+	  "type": "carousel",
+	  "contents": [
+		{
+		  "type": "bubble",
+		  "size": "nano",
+		  "header": {
 			"type": "box",
 			"layout": "vertical",
 			"contents": [
 			  {
 				"type": "text",
-				"text": "FROM",
-				"color": "#ffffff66",
-				"size": "sm"
+				"text": "In Progress",
+				"color": "#ffffff",
+				"align": "start",
+				"size": "md",
+				"gravity": "center"
 			  },
 			  {
 				"type": "text",
-				"text": "Akihabara",
+				"text": "70%",
 				"color": "#ffffff",
-				"size": "xl",
-				"flex": 4,
-				"weight": "bold"
+				"align": "start",
+				"size": "xs",
+				"gravity": "center",
+				"margin": "lg"
+			  },
+			  {
+				"type": "box",
+				"layout": "vertical",
+				"contents": [
+				  {
+					"type": "box",
+					"layout": "vertical",
+					"contents": [
+					  {
+						"type": "filler"
+					  }
+					],
+					"width": "70%",
+					"backgroundColor": "#0D8186",
+					"height": "6px"
+				  }
+				],
+				"backgroundColor": "#9FD8E36E",
+				"height": "6px",
+				"margin": "sm"
 			  }
-			]
+			],
+			"backgroundColor": "#27ACB2",
+			"paddingTop": "19px",
+			"paddingAll": "12px",
+			"paddingBottom": "16px"
 		  },
-		  {
+		  "body": {
+			"type": "box",
+			"layout": "vertical",
+			"contents": [
+			  {
+				"type": "box",
+				"layout": "horizontal",
+				"contents": [
+				  {
+					"type": "text",
+					"text": "Buy milk and lettuce before class",
+					"color": "#8C8C8C",
+					"size": "sm",
+					"wrap": true
+				  }
+				],
+				"flex": 1
+			  }
+			],
+			"spacing": "md",
+			"paddingAll": "12px"
+		  },
+		  "styles": {
+			"footer": {
+			  "separator": false
+			}
+		  }
+		},
+		{
+		  "type": "bubble",
+		  "size": "nano",
+		  "header": {
 			"type": "box",
 			"layout": "vertical",
 			"contents": [
 			  {
 				"type": "text",
-				"text": "TO",
-				"color": "#ffffff66",
-				"size": "sm"
-			  },
-			  {
-				"type": "text",
-				"text": "Shinjuku",
+				"text": "Pending",
 				"color": "#ffffff",
-				"size": "xl",
-				"flex": 4,
-				"weight": "bold"
+				"align": "start",
+				"size": "md",
+				"gravity": "center"
+			  },
+			  {
+				"type": "text",
+				"text": "30%",
+				"color": "#ffffff",
+				"align": "start",
+				"size": "xs",
+				"gravity": "center",
+				"margin": "lg"
+			  },
+			  {
+				"type": "box",
+				"layout": "vertical",
+				"contents": [
+				  {
+					"type": "box",
+					"layout": "vertical",
+					"contents": [
+					  {
+						"type": "filler"
+					  }
+					],
+					"width": "30%",
+					"backgroundColor": "#DE5658",
+					"height": "6px"
+				  }
+				],
+				"backgroundColor": "#FAD2A76E",
+				"height": "6px",
+				"margin": "sm"
 			  }
-			]
+			],
+			"backgroundColor": "#FF6B6E",
+			"paddingTop": "19px",
+			"paddingAll": "12px",
+			"paddingBottom": "16px"
+		  },
+		  "body": {
+			"type": "box",
+			"layout": "vertical",
+			"contents": [
+			  {
+				"type": "box",
+				"layout": "horizontal",
+				"contents": [
+				  {
+					"type": "text",
+					"text": "Wash my car",
+					"color": "#8C8C8C",
+					"size": "sm",
+					"wrap": true
+				  }
+				],
+				"flex": 1
+			  }
+			],
+			"spacing": "md",
+			"paddingAll": "12px"
+		  },
+		  "styles": {
+			"footer": {
+			  "separator": false
+			}
 		  }
-		],
-		"paddingAll": "20px",
-		"backgroundColor": "#0367D3",
-		"spacing": "md",
-		"height": "154px",
-		"paddingTop": "22px"
-	  },
-	  "body": {
-		"type": "box",
-		"layout": "vertical",
-		"contents": [
-		  {
+		},
+		{
+		  "type": "bubble",
+		  "size": "nano",
+		  "header": {
 			"type": "box",
-			"layout": "horizontal",
+			"layout": "vertical",
 			"contents": [
 			  {
 				"type": "text",
-				"text": "Jul 19, 2019",
-				"size": "sm",
+				"text": "In Progress",
+				"color": "#ffffff",
+				"align": "start",
+				"size": "md",
+				"gravity": "center"
+			  },
+			  {
+				"type": "text",
+				"text": "100%",
+				"color": "#ffffff",
+				"align": "start",
+				"size": "xs",
 				"gravity": "center",
-				"align": "end"
+				"margin": "lg"
 			  },
 			  {
 				"type": "box",
 				"layout": "vertical",
 				"contents": [
-				  {
-					"type": "filler"
-				  },
 				  {
 					"type": "box",
 					"layout": "vertical",
 					"contents": [
 					  {
-						"type": "text",
-						"text": "📄"
+						"type": "filler"
 					  }
 					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
+					"width": "100%",
+					"backgroundColor": "#7D51E4",
+					"height": "6px"
 				  }
 				],
-				"flex": 0,
-				"backgroundColor": "#848484",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "รับฝาก",
-				"gravity": "center",
-				"flex": 1,
-				"size": "sm"
+				"backgroundColor": "#9FD8E36E",
+				"height": "6px",
+				"margin": "sm"
 			  }
 			],
-			"spacing": "lg",
-			"cornerRadius": "30px",
-			"margin": "xl"
+			"backgroundColor": "#A17DF5",
+			"paddingTop": "19px",
+			"paddingAll": "12px",
+			"paddingBottom": "16px"
 		  },
-		  {
+		  "body": {
 			"type": "box",
-			"layout": "horizontal",
+			"layout": "vertical",
 			"contents": [
 			  {
 				"type": "box",
-				"layout": "baseline",
+				"layout": "horizontal",
 				"contents": [
 				  {
 					"type": "text",
-					"text": "18:12:26",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
+					"text": "Buy milk and lettuce before class",
+					"color": "#8C8C8C",
+					"size": "sm",
+					"wrap": true
 				  }
 				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px",
-						"backgroundColor": "#B7B7B7"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "คต. กาดสวนแก้ว",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
+				"flex": 1
 			  }
 			],
-			"spacing": "lg",
-			"height": "40px"
+			"spacing": "md",
+			"paddingAll": "12px"
 		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "text",
-				"text": "Jul 20, 2019",
-				"size": "sm",
-				"gravity": "center",
-				"align": "end"
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "filler"
-				  },
-				  {
-					"type": "box",
-					"layout": "vertical",
-					"contents": [
-					  {
-						"type": "text",
-						"text": "🚚"
-					  }
-					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
-				  }
-				],
-				"flex": 0,
-				"backgroundColor": "#A9D0F5",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "กำลังขนส่ง",
-				"gravity": "center",
-				"flex": 1,
-				"size": "xs"
-			  }
-			],
-			"cornerRadius": "30px",
-			"spacing": "lg"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "box",
-				"layout": "baseline",
-				"contents": [
-				  {
-					"type": "text",
-					"text": "15:12:26",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
-				  }
-				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px",
-						"backgroundColor": "#B7B7B7"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "คต. กาดสวนแก้ว",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
-			  }
-			],
-			"spacing": "lg",
-			"height": "40px"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "text",
-				"text": "Jul 20, 2019",
-				"size": "sm",
-				"gravity": "center",
-				"align": "end"
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "filler"
-				  },
-				  {
-					"type": "box",
-					"layout": "vertical",
-					"contents": [
-					  {
-						"type": "text",
-						"text": "🚚"
-					  }
-					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
-				  }
-				],
-				"flex": 0,
-				"backgroundColor": "#A9D0F5",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "กำลังขนส่ง",
-				"gravity": "center",
-				"flex": 1,
-				"size": "xs"
-			  }
-			],
-			"cornerRadius": "30px",
-			"spacing": "lg"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "box",
-				"layout": "baseline",
-				"contents": [
-				  {
-					"type": "text",
-					"text": "19:34:00",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
-				  }
-				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px",
-						"backgroundColor": "#B7B7B7"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "ศป. ลำพูน",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
-			  }
-			],
-			"spacing": "lg",
-			"height": "40px"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "text",
-				"text": "Jul 22, 2019",
-				"size": "sm",
-				"gravity": "center",
-				"align": "end"
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "filler"
-				  },
-				  {
-					"type": "box",
-					"layout": "vertical",
-					"contents": [
-					  {
-						"type": "text",
-						"text": "🚚"
-					  }
-					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
-				  }
-				],
-				"flex": 0,
-				"backgroundColor": "#A9D0F5",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "กำลังขนส่ง",
-				"gravity": "center",
-				"flex": 1,
-				"size": "xs"
-			  }
-			],
-			"cornerRadius": "30px",
-			"spacing": "lg"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "box",
-				"layout": "baseline",
-				"contents": [
-				  {
-					"type": "text",
-					"text": "02:27:46",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
-				  }
-				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px",
-						"backgroundColor": "#B7B7B7"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "ศป. อยุธยา",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
-			  }
-			],
-			"spacing": "lg",
-			"height": "40px"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "text",
-				"text": "Jul 22, 2019",
-				"size": "sm",
-				"gravity": "center",
-				"align": "end"
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "filler"
-				  },
-				  {
-					"type": "box",
-					"layout": "vertical",
-					"contents": [
-					  {
-						"type": "text",
-						"text": "📦"
-					  }
-					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
-				  }
-				],
-				"flex": 0,
-				"backgroundColor": "#F6E3CE",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "กำลังนำจ่าย",
-				"gravity": "center",
-				"flex": 1,
-				"size": "xs"
-			  }
-			],
-			"cornerRadius": "30px",
-			"spacing": "lg"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "box",
-				"layout": "baseline",
-				"contents": [
-				  {
-					"type": "text",
-					"text": "11:09:07",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
-				  }
-				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px",
-						"backgroundColor": "#B7B7B7"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "หันคา",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
-			  }
-			],
-			"spacing": "lg",
-			"height": "40px"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "text",
-				"text": "Jul 22, 2019",
-				"size": "sm",
-				"gravity": "center",
-				"align": "end"
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "filler"
-				  },
-				  {
-					"type": "box",
-					"layout": "vertical",
-					"contents": [
-					  {
-						"type": "text",
-						"text": "✔️"
-					  }
-					],
-					"cornerRadius": "30px",
-					"height": "20px",
-					"width": "20px",
-					"offsetStart": "7px"
-				  },
-				  {
-					"type": "filler"
-				  }
-				],
-				"flex": 0,
-				"backgroundColor": "#CEF6CE",
-				"width": "30px",
-				"height": "30px",
-				"cornerRadius": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "นำจ่ายสำเร็จ",
-				"gravity": "center",
-				"flex": 1,
-				"size": "xs"
-			  }
-			],
-			"cornerRadius": "30px",
-			"spacing": "lg"
-		  },
-		  {
-			"type": "box",
-			"layout": "horizontal",
-			"contents": [
-			  {
-				"type": "box",
-				"layout": "baseline",
-				"contents": [
-				  {
-					"type": "text",
-					"text": "11:59:50",
-					"size": "xs",
-					"color": "#8c8c8c",
-					"align": "end"
-				  }
-				],
-				"flex": 2
-			  },
-			  {
-				"type": "box",
-				"layout": "vertical",
-				"contents": [
-				  {
-					"type": "box",
-					"layout": "horizontal",
-					"contents": [
-					  {
-						"type": "filler"
-					  },
-					  {
-						"type": "box",
-						"layout": "vertical",
-						"contents": [
-						  {
-							"type": "filler"
-						  }
-						],
-						"width": "2px"
-					  },
-					  {
-						"type": "filler"
-					  }
-					],
-					"flex": 1
-				  }
-				],
-				"width": "30px"
-			  },
-			  {
-				"type": "text",
-				"text": "หันคา",
-				"gravity": "top",
-				"flex": 2,
-				"size": "xs",
-				"color": "#8c8c8c"
-			  }
-			],
-			"spacing": "lg",
-			"height": "20px"
+		  "styles": {
+			"footer": {
+			  "separator": false
+			}
 		  }
-		]
-	  }
+		}
+	  ]
 	}
   ]
 }
