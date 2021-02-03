@@ -49,7 +49,7 @@ $msgapitemplate = [
       ],
 	  "hero" => [
 		"type" => "image",
-		"url" => "https =>//www.linefriends.com/img/img_sec.jpg",
+		"url" => "https://www.linefriends.com/img/img_sec.jpg",
 		"size" => "full",
 		"aspectRatio" => "2 =>1"
 	  ],
