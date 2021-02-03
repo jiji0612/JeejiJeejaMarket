@@ -28,28 +28,30 @@ $msgapitemplate = [
         ]
       ],
 	  "hero" => [
-		  "contents" => [
-			  [
-				"type" => "image",
-				"url" => "https://www.linefriends.com/img/img_sec.jpg",
-				"size" => "full",
-				"aspectRatio" => "2:1"
-			  ],
-			  [
-				"type" => "filler"
-			  ],
-			  [
-				"type" => "image",
-				"url" => "https://www.linefriends.com/img/img_sec.jpg",
-				"size" => "full",
-				"aspectRatio" => "2:1"
-			  ]
-			]
+			"type" => "image",
+			"url" => "https://www.linefriends.com/img/img_sec.jpg",
+			"size" => "full",
+			"aspectRatio" => "2:1"
 		  ],
       "body" => [
         "type" => "box",
         "layout" => "vertical",
         "contents" => [
+		  [
+			"type" => "image",
+			"url" => "https://www.linefriends.com/img/img_sec.jpg",
+			"size" => "full",
+			"aspectRatio" => "2:1"
+		  ],
+		  [
+			"type" => "filler"
+		  ],
+		  [
+			"type" => "image",
+			"url" => "https://www.linefriends.com/img/img_sec.jpg",
+			"size" => "full",
+			"aspectRatio" => "2:1"
+		  ],
           [
             "type" => "separator",
             "color" => "#C3C3C3"
