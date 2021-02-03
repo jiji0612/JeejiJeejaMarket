@@ -14,7 +14,7 @@ $msgapitemplate3 = [
             "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip1.jpg",
             "size" => "full",
             "aspectMode" => "cover",
-            "aspectRatio" => "2 =>3",
+            "aspectRatio" => "2:3",
             "gravity" => "top"
           ],
           [
@@ -144,7 +144,7 @@ $msgapitemplate3 = [
             "url" => "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip2.jpg",
             "size" => "full",
             "aspectMode" => "cover",
-            "aspectRatio" => "2 =>3",
+            "aspectRatio" => "2:3",
             "gravity" => "top"
           ],
           [
