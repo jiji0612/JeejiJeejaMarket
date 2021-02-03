@@ -14,6 +14,8 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 include 'msgapitemplate.php';
 
+$string = file_get_contents("flex-block.json");
+$json_fx1 = json_decode($string, true);
 
 
 if ( sizeof($request_array['events']) > 0 ) {
@@ -41,7 +43,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$json_fx1]
         ];
 		}
 		
