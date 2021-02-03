@@ -40,13 +40,11 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
-			$json_a = file_get_contents("flex-block.json");
+			$string = file_get_contents("flex-block.json");
+			$json_a = json_decode($string, true);
+			$json_a['replyToken'] = $reply_token;
 			
-			$post_body = array();
-			$post_body['replyToken'] = $reply_token;
-			$post_body = json_encode($post_body, JSON_UNESCAPED_UNICODE);
-			
-			$post_body = $post_body + $json_a;
+			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
 		
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);

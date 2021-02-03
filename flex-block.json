@@ -1,4 +1,6 @@
-"messages": [
+{
+  "replyToken": "",  
+  "messages": [
 	{
 	  "type": "bubble",
 	  "header": {
@@ -42,4 +44,5 @@
 		]
 	  }
 	}
-]
+  ]
+}
