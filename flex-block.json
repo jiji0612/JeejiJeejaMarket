@@ -6,7 +6,7 @@
 		  "altText": "this is a buttons template",
 		  "template": {
 			"type": "buttons",
-			"thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+			"thumbnailImageUrl": "https://www.linefriends.com/img/img_sec.jpg",
 			"title": "Menu",
 			"text": "Please select",
 			"actions": [
