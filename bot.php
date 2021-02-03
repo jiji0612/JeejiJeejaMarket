@@ -41,9 +41,13 @@ if ( sizeof($request_array['events']) > 0 ) {
 				'messages' => [['type' => 'text', 'text' => $text ]]
 			];
 		}else{
+			$json_fx = str_replace("{","[",$json_fx);
+			$json_fx = str_replace("}","]",$json_fx);
+			$json_fx = str_replace(":","=>",$json_fx);
+			
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => [['type' => 'text', 'text' => $json_fx ]]
+				'messages' => $json_fx
             ];
 		}
 		
