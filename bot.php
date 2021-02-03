@@ -13,7 +13,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 
 //include 'msgapitemplate.php';
-include 'msgapitemplate2.php';
+//include 'msgapitemplate2.php';
 //include 'msgapitemplate3.php';
 
 $arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
@@ -40,13 +40,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
-			$data = [
-				'replyToken' => $reply_token,
-				'messages' => [$msgapitemplate2]
-				//'messages' => [['type' => 'text', 'text' => echo $msgapitemplate3 ]]
-            ];
-			$string = file_get_contents("flex-box.json");
-			$post_body = json_decode($string, true);
+			$post_body = file_get_contents("flex-box.json");
+			//$post_body = json_decode($string, true);
 		}
 		
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
