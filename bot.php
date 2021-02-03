@@ -42,11 +42,12 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$string = file_get_contents("flex-block.json");
 			$json_a = json_decode($string, true);
-			$arrPostData = array();
-			$arrPostData['replyToken'] = $reply_token;
-			$arrPostData['messages'] = $json_a;
 			
-			$post_body = json_encode($arrPostData, JSON_UNESCAPED_UNICODE);
+			$post_body = array();
+			$post_body['replyToken'] = $reply_token;
+			$post_body = json_encode($post_body, JSON_UNESCAPED_UNICODE);
+			
+			$post_body = $post_body + $json_a;
 		}
 		
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
