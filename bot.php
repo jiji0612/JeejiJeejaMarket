@@ -38,16 +38,17 @@ if ( sizeof($request_array['events']) > 0 ) {
 				// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
 				'messages' => [['type' => 'text', 'text' => $text ]]
 			];
+			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
 			$data = [
 				'replyToken' => $reply_token,
 				'messages' => [$msgapitemplate2]
 				//'messages' => [['type' => 'text', 'text' => echo $msgapitemplate3 ]]
             ];
+			$string = file_get_contents("flex-box.json");
+			$post_body = json_decode($string, true);
 		}
 		
-        $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
