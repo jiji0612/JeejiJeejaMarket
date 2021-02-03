@@ -1,7 +1,7 @@
 <?php
 
 
-$API_URL = 'https://api.line.me/v2/bot/push';
+$API_URL = 'https://api.line.me/v2/bot/message';
 $ACCESS_TOKEN = 'AYyU+19kM1Sc/SvtDOAkHMZt0R6/pz+1PQAmv+4WDzW6Z/nYx9qUJGVrfQlTChWXGS4YkZASmqj8s1HZmAoJSZiKWXcjm3DVxchx8PUnin+f3PToBHREHH3ihbD4sNVE/5ziwnXe7Cym5Cl2lFYwhwdB04t89/1O/w1cDnyilFU='; 
 $channelSecret = 'de095f3ae95904dee375316809d4ef89';
 
@@ -46,7 +46,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
-		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
+		$send_result = send_reply_message($API_URL.'/push', $POST_HEADER, $post_body);
 		
 		//Debug Code
 		
@@ -56,7 +56,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		];
 		$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		
-        $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
+        $send_result = send_reply_message($API_URL.'/push', $POST_HEADER, $post_body);
 		
 		
         echo "Result: ".$send_result."\r\n";
