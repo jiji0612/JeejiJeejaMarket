@@ -32,9 +32,9 @@ if ( sizeof($request_array['events']) > 0 ) {
                       'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
                       'Hi' => 'Hello World!',
 					  'Hello' => 'สวีสดีจร้า');
-        $text = $arrayText[$text];
 
-        if (!empty($text){
+        if (array_key_exists($text, $arrayText)  {
+			$text = $arrayText[$text];
 			$data = [
 				'replyToken' => $reply_token,
 				// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
