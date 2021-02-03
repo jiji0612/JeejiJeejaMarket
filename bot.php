@@ -42,9 +42,9 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 		}else{
 			$data = [
-            'replyToken' => $reply_token,
-            'messages' => [['type' => 'text', 'text' => $json_fx ]]
-        ];
+				'replyToken' => $reply_token,
+				'messages' => [['type' => 'text', 'text' => $json_str ]]
+            ];
 		}
 		
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
