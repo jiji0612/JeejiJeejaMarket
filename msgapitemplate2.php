@@ -1,6 +1,6 @@
 <?php
 
-$msgapitemplate = [
+$msgapitemplate2 = [
     "type" => "flex",
     "altText" => "Hello Flex Message",
     "contents" => [
