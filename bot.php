@@ -16,6 +16,12 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 //include 'msgapitemplate2.php';
 include 'msgapitemplate3.php';
 
+$arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
+                      'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
+                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
+                      'Hi' => 'Hello World!',
+					  'Hello' => 'สวีสดีจร้า');
+					  
 if ( sizeof($request_array['events']) > 0 ) {
 
     foreach ($request_array['events'] as $event) {
@@ -24,12 +30,6 @@ if ( sizeof($request_array['events']) > 0 ) {
         $reply_token = $event['replyToken'];
 
         $text = $event['message']['text'];
-        
-        $arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
-                      'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
-                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
-                      'Hi' => 'Hello World!',
-					  'Hello' => 'สวีสดีจร้า');
 
         if (array_key_exists($text, $arrayText)) {
 			$text = $arrayText[$text];
@@ -42,7 +42,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$data = [
 				'replyToken' => $reply_token,
 				//'messages' => [$msgapitemplate3]
-				'messages' => [['type' => 'text', 'text' => $msgapitemplate3 ]]
+				'messages' => [['type' => 'text', 'text' => echo $msgapitemplate3 ]]
             ];
 		}
 		
