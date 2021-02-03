@@ -33,7 +33,7 @@ if ( sizeof($request_array['events']) > 0 ) {
                       'Hi' => 'Hello World!',
 					  'Hello' => 'สวีสดีจร้า');
 
-        if (array_key_exists($text, $arrayText)  {
+        if (array_key_exists($text, $arrayText)) {
 			$text = $arrayText[$text];
 			$data = [
 				'replyToken' => $reply_token,
