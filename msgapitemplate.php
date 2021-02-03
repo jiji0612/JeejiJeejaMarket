@@ -1,6 +1,6 @@
 <?php
 
-$jsonFlex = [
+$msgapitemplate = [
     "type" => "flex",
     "altText" => "Hello Flex Message",
     "contents" => [
