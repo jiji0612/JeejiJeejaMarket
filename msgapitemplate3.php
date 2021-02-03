@@ -10,7 +10,7 @@ $msgapitemplate3 = [
 				"type" => "image",
 				"url" => "https://www.linefriends.com/img/img_sec.jpg",
 				"size" => "full",
-				"aspectRatio" => "2 =>1"
+				"aspectRatio" => "2:1"
 			  ],
 			  [
 				"type" => "filler"
@@ -19,7 +19,7 @@ $msgapitemplate3 = [
 				"type" => "image",
 				"url" => "https://www.linefriends.com/img/img_sec.jpg",
 				"size" => "full",
-				"aspectRatio" => "2 =>1"
+				"aspectRatio" => "2:1"
 			  ]
 			]
 		  ]
