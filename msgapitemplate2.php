@@ -42,6 +42,6 @@ $msgapitemplate2 = [
       ]
     ]
   ]
-]
+];
 
   ?>
