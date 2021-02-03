@@ -68,9 +68,6 @@ $msgapitemplate2 = [
 				"url" => "https://www.linefriends.com/img/img_sec.jpg"
 			  ],
 			  [
-				"type" => "filler"
-			  ],
-			  [
 				"type" => "image",
 				"url" => "https://www.linefriends.com/img/img_sec.jpg"
 			  ]
