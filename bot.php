@@ -40,7 +40,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
-			$post_body = file_get_contents("flex-box.json");
+			$post_body = array('replyToken: ' . $reply_token, file_get_contents("flex-box.json"));
 			//$post_body = json_decode($string, true);
 		}
 		
@@ -52,19 +52,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 echo "OK";
 
-
-function get_reply_message($url, $post_body)
-{
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    $result = curl_exec($ch);
-    curl_close($ch);
-
-    return $result;
-}
 
 function send_reply_message($url, $post_header, $post_body)
 {
