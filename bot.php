@@ -41,7 +41,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => $msgapitemplate2
+				'messages' => [$msgapitemplate2]
             ];
 		}
 		
