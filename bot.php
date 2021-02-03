@@ -40,10 +40,14 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
-			$string = file_get_contents("flex-block.json");
-			$json_a = json_decode($string, true);
-			$json_a['replyToken'] = $reply_token;
+			//$string = file_get_contents("flex-block.json");
+			//$json_a = json_decode($string, true);
+			//$json_a['replyToken'] = $reply_token;
 			
+			$data = [
+				'replyToken' => $reply_token,
+				'messages' => [['type' => 'text', 'text' => 'Test' ]]
+			];
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			
 			$data = [
