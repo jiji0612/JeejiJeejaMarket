@@ -2,7 +2,7 @@
 
 $msgapitemplate = [
     "type" => "flex",
-    "altText" => "Flex Message",
+    "altText" => "Hello Flex Message",
     "contents" => [
       "type" => "bubble",
       "direction" => "ltr",
@@ -12,7 +12,7 @@ $msgapitemplate = [
         "contents" => [
           [
             "type" => "text",
-            "text" => "รายการสินค้า",
+            "text" => "Soft Your Style",
             "size" => "lg",
             "align" => "start",
             "weight" => "bold",
@@ -20,7 +20,27 @@ $msgapitemplate = [
           ],
           [
             "type" => "text",
-            "text" => "ขนมขบเคี้ยว",
+            "text" => "฿ 100.00",
+            "size" => "3xl",
+            "weight" => "bold",
+            "color" => "#000000"
+          ],
+          [
+            "type" => "text",
+            "text" => "Rabbit Line Pay",
+            "size" => "lg",
+            "weight" => "bold",
+            "color" => "#000000"
+          ],
+          [
+            "type" => "text",
+            "text" => "2019.02.14 21:47 (GMT+0700)",
+            "size" => "xs",
+            "color" => "#B2B2B2"
+          ],
+          [
+            "type" => "text",
+            "text" => "Payment complete.",
             "margin" => "lg",
             "size" => "lg",
             "color" => "#000000"
@@ -28,11 +48,11 @@ $msgapitemplate = [
         ]
       ],
 	  "hero" => [
-			"type" => "image",
-			"url" => "https://www.linefriends.com/img/img_sec.jpg",
-			"size" => "full",
-			"aspectRatio" => "2:1"
-		  ],
+		"type" => "image",
+		"url" => "https://www.linefriends.com/img/img_sec.jpg",
+		"size" => "full",
+		"aspectRatio" => "2:1"
+	  ],
       "body" => [
         "type" => "box",
         "layout" => "vertical",
