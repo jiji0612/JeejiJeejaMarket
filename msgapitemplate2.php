@@ -117,7 +117,7 @@ $msgapitemplate2 = [
             "action" => [
               "type" => "uri",
               "label" => "View Details",
-              "uri" => "https =>//google.co.th/"
+              "uri" => "https://google.co.th/"
             ]
           ]
         ]
