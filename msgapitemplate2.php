@@ -57,23 +57,6 @@ $msgapitemplate2 = [
         "type" => "box",
         "layout" => "vertical",
         "contents" => [
-		[
-	  "type" => "bubble",
-	  "body" => [
-			"type" => "box",
-			"layout" => "horizontal",
-			"contents" => [
-			  [
-				"type" => "image",
-				"url" => "https://www.linefriends.com/img/img_sec.jpg"
-			  ],
-			  [
-				"type" => "image",
-				"url" => "https://www.linefriends.com/img/img_sec.jpg"
-			  ]
-			]
-		  ]
-		],
           [
             "type" => "separator",
             "color" => "#C3C3C3"
