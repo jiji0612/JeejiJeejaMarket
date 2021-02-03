@@ -34,7 +34,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 					  'Hello' => 'สวีสดีจร้า');
         $text = $arrayText[$text];
 
-        if (empty($text){
+        if (!empty($text){
 			$data = [
 				'replyToken' => $reply_token,
 				// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
