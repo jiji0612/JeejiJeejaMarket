@@ -13,8 +13,8 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 
 //include 'msgapitemplate.php';
-//include 'msgapitemplate2.php';
-include 'msgapitemplate3.php';
+include 'msgapitemplate2.php';
+//include 'msgapitemplate3.php';
 
 $arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
                       'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
@@ -41,8 +41,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$data = [
 				'replyToken' => $reply_token,
-				//'messages' => [$msgapitemplate3]
-				'messages' => [['type' => 'text', 'text' => echo $msgapitemplate3 ]]
+				'messages' => [$msgapitemplate2]
+				//'messages' => [['type' => 'text', 'text' => echo $msgapitemplate3 ]]
             ];
 		}
 		
