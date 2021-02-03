@@ -40,8 +40,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}else{
-			$string = file_get_contents("flex-block.json");
-			$json_a = json_decode($string, true);
+			$json_a = file_get_contents("flex-block.json");
 			
 			$post_body = array();
 			$post_body['replyToken'] = $reply_token;
