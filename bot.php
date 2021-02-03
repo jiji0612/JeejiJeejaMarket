@@ -12,9 +12,9 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 
-include 'msgapitemplate.php';
+//include 'msgapitemplate.php';
 include 'msgapitemplate2.php';
-include 'msgapitemplate3.php';
+//include 'msgapitemplate3.php';
 
 if ( sizeof($request_array['events']) > 0 ) {
 
@@ -41,7 +41,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		}else{
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => [$msgapitemplate3]
+				'messages' => [$msgapitemplate2]
             ];
 		}
 		
