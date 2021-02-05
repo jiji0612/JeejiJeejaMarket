@@ -1,5 +1,7 @@
 {
-    "replyToken": "",  
+    "replyToken": "",
+    "messages": [
+        {
             "type": "carousel",
             "contents": [
               {
@@ -260,4 +262,5 @@
                 }
               }
     ]
+}]
   }
