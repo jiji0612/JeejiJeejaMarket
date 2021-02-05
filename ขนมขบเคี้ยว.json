@@ -29,9 +29,9 @@
                     "data": "action=add&itemid=123"
                   },
                   {
-                    "type": "uri",
-                    "label": "ดูสินค้าทั้งหมด",
-                    "uri": "http://example.com/page/123"
+                    "type": "message",
+                    "label": "รายการสินค้าทั้งหมด",
+                    "uri": "รายการสินค้าทั้งหมด"
                   }
               ]
           }
