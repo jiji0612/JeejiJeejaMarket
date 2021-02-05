@@ -16,11 +16,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 //include 'msgapitemplate2.php';
 //include 'msgapitemplate3.php';
 
-$arrayText = array('ขนมขบเคี้ยว' => 'เลือกสินค้า ขนมขบเคี้ยว ได้เลยค่ะ',
-                      'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
-                      'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
-                      'Hi' => 'Hello World!',
-					  'Hello' => 'สวีสดีจร้า');
+include 'autobottext.php';
 					  
 if ( sizeof($request_array['events']) > 0 ) {
 
@@ -28,36 +24,39 @@ if ( sizeof($request_array['events']) > 0 ) {
 		error_log(json_encode($event));
         $reply_message = '';
         $reply_token = $event['replyToken'];
-
+		$send_result = "None action!";
         $text = $event['message']['text'];
 
         if (array_key_exists($text, $arrayText)) {
 			$text = $arrayText[$text];
-			$data = [
-				'replyToken' => $reply_token,
-				// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
-				'messages' => [['type' => 'text', 'text' => $text ]]
-			];
-			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-		}else{
-			$string = file_get_contents("flex-block.json");
-			$json_a = json_decode($string, true);
-			$json_a['replyToken'] = $reply_token;
+			if(startsWith($text,"file")) 
+			{
+				$file = explode('.', $text, 1);
 
-			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+				$string = file_get_contents($file );
+				$json_a = json_decode($string, true);
+				$json_a['replyToken'] = $reply_token;
+
+				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+			} else {
+				$data = [
+					'replyToken' => $reply_token,
+					// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
+					'messages' => [['type' => 'text', 'text' => $text ]]
+				];
+				$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+			}
+
+			$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 		}
-		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
-		
+
 		//Debug Code
-		
 		$data = [
 			'replyToken' => $reply_token,
 			'messages' => [['type' => 'text', 'text' => '"'.$send_result.'"' ]]
 		];
 		$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-		
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
-		
 		
         echo "Result: ".$send_result."\r\n";
     }
@@ -65,6 +64,11 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 echo "OK";
 
+function startsWith ($string, $startString) 
+{ 
+    $len = strlen($startString); 
+    return (substr($string, 0, $len) === $startString); 
+} 
 
 function send_reply_message($url, $post_header, $post_body)
 {
