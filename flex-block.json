@@ -2,10 +2,10 @@
   "replyToken": "",  
   "messages": [
 	{
-	  "type": "template",
+	  "type": "carousel",
 	  "contents": [
 		{
-		  "type": "bubble",
+		  "type": "template",
 		  "size": "nano",
 		  "header": {
 			"type": "box",
