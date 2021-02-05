@@ -11,7 +11,7 @@
             "columns": [
                 {
                     "type": "buttons",
-                    "size": "nano",
+                    "width": "30%",
                     "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
                     "imageAspectRatio": "rectangle",
                     "imageSize": "cover",
