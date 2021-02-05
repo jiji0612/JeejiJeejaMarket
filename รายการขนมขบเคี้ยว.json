@@ -1,7 +1,5 @@
 {
     "replyToken": "",  
-    "carousel": [
-      {
             "type": "carousel",
             "contents": [
               {
@@ -261,7 +259,5 @@
                   "paddingAll": "13px"
                 }
               }
-            ]
-          }
     ]
   }
