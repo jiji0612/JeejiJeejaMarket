@@ -2,6 +2,10 @@
     "replyToken": "",
     "messages": [
         {
+          "type": "template",
+          "altText": "This is a buttons template",
+          "layout": "horizontal",
+          "template": {
             "type": "carousel",
             "contents": [
               {
@@ -63,6 +67,8 @@
                 }
               }
             ]
+        }
           }
         ]
+        
   }
