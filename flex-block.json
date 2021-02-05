@@ -2,7 +2,7 @@
   "replyToken": "",  
   "messages": [
 	{
-	  "type": "carousel",
+	  "type": "template",
 	  "contents": [
 		{
 		  "type": "bubble",
