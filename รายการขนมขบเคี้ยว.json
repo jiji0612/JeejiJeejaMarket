@@ -14,6 +14,7 @@
                     "imageBackgroundColor": "#FFFFFF",
                     "title": "this is menu",
                     "text": "description",
+                    "size": "nano",
                     "defaultAction": {
                         "type": "uri",
                         "label": "LINE",
@@ -32,6 +33,7 @@
                     "imageBackgroundColor": "#000000",
                     "title": "this is menu",
                     "text": "description",
+                    "size": "nano",
                   "defaultAction": {
                     "type": "uri",
                     "label": "LINE",
