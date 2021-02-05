@@ -24,7 +24,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		error_log(json_encode($event));
         $reply_message = '';
         $reply_token = $event['replyToken'];
-		$send_result = "None action!";
+		
         $text = $event['message']['text'];
 
         if (array_key_exists($text, $arrayText)) {
@@ -48,6 +48,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 			}
 
 			$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
+		} else {
+			$send_result = $text;
 		}
 
 		//Debug Code
