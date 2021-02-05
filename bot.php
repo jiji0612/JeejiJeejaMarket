@@ -31,9 +31,9 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$text = $arrayText[$text];
 			if(startsWith($text,"file")) 
 			{
-				$file = explode('.', $text, 1);
+				$file = explode(':', $text);
 
-				$string = file_get_contents($file );
+				$string = file_get_contents($file[1]);
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
 
