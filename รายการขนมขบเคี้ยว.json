@@ -2,247 +2,266 @@
     "replyToken": "",  
     "messages": [
       {
-        "type": "carousel",
-        "contents": [
-          {
-            "type": "bubble",
-            "size": "nano",
-            "header": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "In Progress",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "md",
-                  "gravity": "center"
+            "type": "carousel",
+            "contents": [
+              {
+                "type": "bubble",
+                "size": "micro",
+                "hero": {
+                  "type": "image",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+                  "size": "full",
+                  "aspectMode": "cover",
+                  "aspectRatio": "320:213"
                 },
-                {
-                  "type": "text",
-                  "text": "70%",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "xs",
-                  "gravity": "center",
-                  "margin": "lg"
-                },
-                {
+                "body": {
                   "type": "box",
                   "layout": "vertical",
                   "contents": [
+                    {
+                      "type": "text",
+                      "text": "Brown Cafe",
+                      "weight": "bold",
+                      "size": "sm",
+                      "wrap": true
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "4.0",
+                          "size": "xs",
+                          "color": "#8c8c8c",
+                          "margin": "md",
+                          "flex": 0
+                        }
+                      ]
+                    },
                     {
                       "type": "box",
                       "layout": "vertical",
                       "contents": [
                         {
-                          "type": "filler"
+                          "type": "box",
+                          "layout": "baseline",
+                          "spacing": "sm",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "東京旅行",
+                              "wrap": true,
+                              "color": "#8c8c8c",
+                              "size": "xs",
+                              "flex": 5
+                            }
+                          ]
                         }
-                      ],
-                      "width": "70%",
-                      "backgroundColor": "#0D8186",
-                      "height": "6px"
+                      ]
                     }
                   ],
-                  "backgroundColor": "#9FD8E36E",
-                  "height": "6px",
-                  "margin": "sm"
+                  "spacing": "sm",
+                  "paddingAll": "13px"
                 }
-              ],
-              "backgroundColor": "#27ACB2",
-              "paddingTop": "19px",
-              "paddingAll": "12px",
-              "paddingBottom": "16px"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "Buy milk and lettuce before class",
-                      "color": "#8C8C8C",
-                      "size": "sm",
-                      "wrap": true
-                    }
-                  ],
-                  "flex": 1
-                }
-              ],
-              "spacing": "md",
-              "paddingAll": "12px"
-            },
-            "styles": {
-              "footer": {
-                "separator": false
-              }
-            }
-          },
-          {
-            "type": "bubble",
-            "size": "nano",
-            "header": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "Pending",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "md",
-                  "gravity": "center"
+              },
+              {
+                "type": "bubble",
+                "size": "micro",
+                "hero": {
+                  "type": "image",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip11.jpg",
+                  "size": "full",
+                  "aspectMode": "cover",
+                  "aspectRatio": "320:213"
                 },
-                {
-                  "type": "text",
-                  "text": "30%",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "xs",
-                  "gravity": "center",
-                  "margin": "lg"
-                },
-                {
+                "body": {
                   "type": "box",
                   "layout": "vertical",
                   "contents": [
+                    {
+                      "type": "text",
+                      "text": "Brow&Cony's Restaurant",
+                      "weight": "bold",
+                      "size": "sm",
+                      "wrap": true
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "4.0",
+                          "size": "sm",
+                          "color": "#8c8c8c",
+                          "margin": "md",
+                          "flex": 0
+                        }
+                      ]
+                    },
                     {
                       "type": "box",
                       "layout": "vertical",
                       "contents": [
                         {
-                          "type": "filler"
+                          "type": "box",
+                          "layout": "baseline",
+                          "spacing": "sm",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "東京旅行",
+                              "wrap": true,
+                              "color": "#8c8c8c",
+                              "size": "xs",
+                              "flex": 5
+                            }
+                          ]
                         }
-                      ],
-                      "width": "30%",
-                      "backgroundColor": "#DE5658",
-                      "height": "6px"
+                      ]
                     }
                   ],
-                  "backgroundColor": "#FAD2A76E",
-                  "height": "6px",
-                  "margin": "sm"
+                  "spacing": "sm",
+                  "paddingAll": "13px"
                 }
-              ],
-              "backgroundColor": "#FF6B6E",
-              "paddingTop": "19px",
-              "paddingAll": "12px",
-              "paddingBottom": "16px"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "Wash my car",
-                      "color": "#8C8C8C",
-                      "size": "sm",
-                      "wrap": true
-                    }
-                  ],
-                  "flex": 1
-                }
-              ],
-              "spacing": "md",
-              "paddingAll": "12px"
-            },
-            "styles": {
-              "footer": {
-                "separator": false
-              }
-            }
-          },
-          {
-            "type": "bubble",
-            "size": "nano",
-            "header": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "In Progress",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "md",
-                  "gravity": "center"
+              },
+              {
+                "type": "bubble",
+                "size": "micro",
+                "hero": {
+                  "type": "image",
+                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip12.jpg",
+                  "size": "full",
+                  "aspectMode": "cover",
+                  "aspectRatio": "320:213"
                 },
-                {
-                  "type": "text",
-                  "text": "100%",
-                  "color": "#ffffff",
-                  "align": "start",
-                  "size": "xs",
-                  "gravity": "center",
-                  "margin": "lg"
-                },
-                {
+                "body": {
                   "type": "box",
                   "layout": "vertical",
                   "contents": [
+                    {
+                      "type": "text",
+                      "text": "Tata",
+                      "weight": "bold",
+                      "size": "sm"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "size": "xs",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "4.0",
+                          "size": "sm",
+                          "color": "#8c8c8c",
+                          "margin": "md",
+                          "flex": 0
+                        }
+                      ]
+                    },
                     {
                       "type": "box",
                       "layout": "vertical",
                       "contents": [
                         {
-                          "type": "filler"
+                          "type": "box",
+                          "layout": "baseline",
+                          "spacing": "sm",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "東京旅行",
+                              "wrap": true,
+                              "color": "#8c8c8c",
+                              "size": "xs",
+                              "flex": 5
+                            }
+                          ]
                         }
-                      ],
-                      "width": "100%",
-                      "backgroundColor": "#7D51E4",
-                      "height": "6px"
+                      ]
                     }
                   ],
-                  "backgroundColor": "#9FD8E36E",
-                  "height": "6px",
-                  "margin": "sm"
+                  "spacing": "sm",
+                  "paddingAll": "13px"
                 }
-              ],
-              "backgroundColor": "#A17DF5",
-              "paddingTop": "19px",
-              "paddingAll": "12px",
-              "paddingBottom": "16px"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "horizontal",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "Buy milk and lettuce before class",
-                      "color": "#8C8C8C",
-                      "size": "sm",
-                      "wrap": true
-                    }
-                  ],
-                  "flex": 1
-                }
-              ],
-              "spacing": "md",
-              "paddingAll": "12px"
-            },
-            "styles": {
-              "footer": {
-                "separator": false
               }
-            }
+            ]
           }
-        ]
-      
-        }
     ]
   }
