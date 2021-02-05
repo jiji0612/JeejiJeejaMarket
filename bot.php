@@ -16,12 +16,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 //include 'msgapitemplate2.php';
 //include 'msgapitemplate3.php';
 
-//include 'autobottext.php';
-$arrayText = array('ขนมขบเคี้ยว' => 'file:ขนมขบเคี้ยว.php',
-'อาหาร' => 'เลือกสินค้า อาหาร ได้เลยค่ะ',
-'เครื่องดื่ม' => 'เลือกสินค้า เครื่องดื่ม ได้เลยค่ะ',
-'Hi' => 'Hello World!',
-'Hello' => 'สวีสดีจร้า');
+include 'autobottext.php';
 
 if ( sizeof($request_array['events']) > 0 ) {
 
