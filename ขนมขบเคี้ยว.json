@@ -6,7 +6,7 @@
           "altText": "This is a buttons template",
           "template": {
               "type": "buttons",
-              "thumbnailImageUrl": "https://github.com/jiji0612/JeejiJeejaMarket/blob/main/ขนมขบเคี้ยว.jpg",
+              "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
               "imageAspectRatio": "rectangle",
               "imageSize": "cover",
               "imageBackgroundColor": "#FFFFFF",
