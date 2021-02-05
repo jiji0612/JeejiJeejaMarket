@@ -27,33 +27,6 @@
                   }
               ]
           }
-        },
-        {
-            "type": "template",
-            "altText": "This is a buttons template",
-            "layout": "horizontal",
-            "template": {
-                "type": "buttons",
-                "size": "nano",
-                "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
-                "imageAspectRatio": "rectangle",
-                "imageSize": "cover",
-                "imageBackgroundColor": "#FFFFFF",
-                "title": "เมนู ขนมขบเคี้ยว",
-                "text": "เลือกเมนูด้านล่างค่ะ",
-                "defaultAction": {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg"
-                },
-                "actions": [
-                    {
-                      "type": "message",
-                      "label": "รายการสินค้าทั้งหมด",
-                      "text": "รายการขนมขบเคี้ยว"
-                    }
-                ]
-            }
-          }
+        }
     ]
   }
