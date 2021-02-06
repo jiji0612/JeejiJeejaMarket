@@ -42,7 +42,7 @@ function get_all($projectId)
     ]);
     # [START fs_get_all]
     $usersRef = $db->collection('Order');
-    $snapshot = $usersRef->documents();
+    $snapshot = $usersRef->documents('viOlK4Zr8Kejv05WmC0s');
     foreach ($snapshot as $user) {
         printf('OrderNo: %s' . PHP_EOL, $user->id());
         printf('Items: %s' . PHP_EOL, $user['items']);
