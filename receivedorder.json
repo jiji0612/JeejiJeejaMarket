@@ -3,15 +3,10 @@
     "messages": [
       {
         "type": "text",
-        "text": "$ ลงตะกร้าแล้วค่ะ $",
+        "text": "$ ลงตะกร้าแล้วค่ะ",
         "emojis": [
             {
             "index": 0,
-            "productId": "5ac2216f040ab15980c9b448",
-            "emojiId": "148"
-            },
-            {
-            "index": 13,
             "productId": "5ac2216f040ab15980c9b448",
             "emojiId": "148"
             }
