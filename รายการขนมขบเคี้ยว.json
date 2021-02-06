@@ -7,7 +7,7 @@
             "template": {
                 "type": "carousel",
                 "imageAspectRatio": "rectangle",
-                "imageSize": "cover",
+                "imageSize": "contain",
                 "columns": [
                     {
                         "type": "buttons",
