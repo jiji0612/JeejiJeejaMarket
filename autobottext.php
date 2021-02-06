@@ -1,5 +1,5 @@
 <?php
- $arrayText = array('ขนมขบเคี้ยว'             => 'file:snack.json',
+ $arrayText = array('ขนมขบเคี้ยว'             => 'file:snacklist1.json',
                     'รายการขนมขบเคี้ยว 1'     => 'file:snacklist1.json',
                     'รายการขนมขบเคี้ยว 2'     => 'file:snacklist2.json',
                     'รายการขนมขบเคี้ยว 3'     => 'file:snacklist3.json',
