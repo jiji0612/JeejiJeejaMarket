@@ -21,8 +21,13 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า 430ml ราคา 15",
+                                "label": "430ml 15 บาท",
                                 "text": "order-pepsi430-ราคา:15"
+                            },
+                            {
+                                "type": "message",
+                                "label": "1.29L 29 บาท",
+                                "text": "order-pepsi430-ราคา:29"
                             }
                         ]
                     }
