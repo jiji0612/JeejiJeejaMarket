@@ -21,7 +21,7 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "430ml 15บาท",
+                                "label": "หยิบใส่ตะกร้า",
                                 "text": "order-sunlai500-ราคา:23"
                             }
                         ]
