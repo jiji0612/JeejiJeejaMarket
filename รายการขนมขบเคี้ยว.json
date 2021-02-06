@@ -18,7 +18,6 @@
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "โคอะลามาร์ช",
                         "text": "บิสกิตช็อกโกแลต 195 กรัม 10 ซอง/กล่อง",
-                        "layout": "horizontal",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -28,12 +27,7 @@
                             {
                                 "type": "message",
                                 "label": "สั่งซื้อ",
-                                "text": "Order-coalamach195"
-                            },
-                            {
-                                "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "Order-coalamach195"
+                                "text": "ordered-coalamach195-qty1"
                             }
                         ]
                     },
