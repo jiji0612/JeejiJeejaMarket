@@ -12,7 +12,7 @@
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/coalamach.jpg",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/coalamach.jpg",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
@@ -21,7 +21,7 @@
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "https://jeejijeejamarket.herokuapp.com/coalamach.jpg"
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/coalamach.jpg"
                         },
                         "actions": [
                             {
@@ -34,7 +34,7 @@
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/coalamach.jpg",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.jpg",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
@@ -43,7 +43,7 @@
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "https://jeejijeejamarket.herokuapp.com/coalamach.jpg"
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.jpg"
                         },
                         "actions": [
                             {

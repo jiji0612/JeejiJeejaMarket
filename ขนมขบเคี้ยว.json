@@ -8,7 +8,7 @@
           "template": {
               "type": "buttons",
               "size": "nano",
-              "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
+              "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg",
               "imageAspectRatio": "rectangle",
               "imageSize": "cover",
               "imageBackgroundColor": "#FFFFFF",
@@ -17,7 +17,7 @@
               "defaultAction": {
                   "type": "uri",
                   "label": "View detail",
-                  "uri": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg"
+                  "uri": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg"
               },
               "actions": [
                   {
