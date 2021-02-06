@@ -38,7 +38,17 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$json_a['replyToken'] = $reply_token;
 
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
-			} else {
+			} 
+			else if(startsWith($text,"หยิบใส่ตะกร้า")) 
+			{
+				$data = [
+					'replyToken' => $reply_token,
+					// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
+					'messages' => [['type' => 'text', 'text' => "สินค้าลงตะกร้า" ]]
+				];
+				$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+			} 
+			else {
 				$data = [
 					'replyToken' => $reply_token,
 					// 'messages' => [['type' => 'text', 'text' => json_encode($request_array) ]]  Debug Detail message
