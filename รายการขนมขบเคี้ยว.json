@@ -16,7 +16,7 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "5 บาท",
+                        "title": "20 บาท",
                         "text": "โคอะลามาร์ช บิสกิตช็อกโกแลต 195 กรัม",
                         "defaultAction": {
                             "type": "uri",
@@ -27,7 +27,7 @@
                             {
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order-โคอะลามาร์ช195-ราคา:5"
+                                "text": "order-โคอะลามาร์ช195-ราคา:20"
                             }
                         ]
                     },
