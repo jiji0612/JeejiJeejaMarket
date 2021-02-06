@@ -39,7 +39,7 @@
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.png",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.PNG",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
@@ -48,7 +48,7 @@
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.png"
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/bengbeng.PNG"
                         },
                         "actions": [
                             {
@@ -80,13 +80,40 @@
                         "actions": [
                             {
                                 "type": "message",
+                                "label": "หยิบใส่ตะกร้า ขนาด 5 บาท",
+                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:5"
+                            },
+                            {
+                                "type": "message",
+                                "label": "หยิบใส่ตะกร้า ขนาด 10 บาท",
+                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:10"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "buttons",
+                        "width": "30px",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/oleo5.png",
+                        "imageAspectRatio": "rectangle",
+                        "imageSize": "cover",
+                        "imageBackgroundColor": "#FFFFFF",
+                        "title": "โอรีโอ",
+                        "text": "คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม\r\n5 บาท",
+                        "defaultAction": {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/oleo5.png"
+                        },
+                        "actions": [
+                            {
+                                "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:5"
                             },
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า",
-                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:10"
+                                "label": "",
+                                "text": ""
                             }
                         ]
                     }
