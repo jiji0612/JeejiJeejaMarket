@@ -17,14 +17,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "6 บาท",
-                        "text": "$ บะหมี่กึ่งสำเร็จรูป มาม่า รสต้มยำกุ้ง",
-                        "emojis": [
-                            {
-                            "index": 0,
-                            "productId": "5ac2216f040ab15980c9b448",
-                            "emojiId": "148"
-                            }
-                        ],
+                        "text": "บะหมี่กึ่งสำเร็จรูป มาม่า รสต้มยำกุ้ง",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -34,7 +27,14 @@
                             {
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order-มาม่ารสต้มยำกุ้ง-ราคา:6"
+                                "text": "$ order-มาม่ารสต้มยำกุ้ง-ราคา:6",
+                                "emojis": [
+                                    {
+                                    "index": 0,
+                                    "productId": "5ac2216f040ab15980c9b448",
+                                    "emojiId": "148"
+                                    }
+                                ]
                             }
                         ]
                     }
