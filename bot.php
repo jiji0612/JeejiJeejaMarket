@@ -39,7 +39,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			} 
-			else if(startsWith($text,"หยิบใส่ตะกร้า")) 
+			else if(startsWith($text,"order")) 
 			{
 				$data = [
 					'replyToken' => $reply_token,
