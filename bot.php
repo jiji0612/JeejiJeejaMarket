@@ -28,10 +28,10 @@ if ( sizeof($request_array['events']) > 0 ) {
         $text = $event['message']['text'];
 
         if (array_key_exists($text, $arrayText)) {
-			$text = $arrayText[$text];
-			if(startsWith($text,"file")) 
+			$arr = $arrayText[$text];
+			if(startsWith($arr,"file")) 
 			{
-				$file = explode(':', $text);
+				$file = explode(':', $arr);
 
 				$string = file_get_contents($file[1]);
 				$json_a = json_decode($string, true);
