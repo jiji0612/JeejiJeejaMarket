@@ -31,6 +31,9 @@ use Google\Cloud\Firestore\FirestoreClient;
  * get_all('your-project-id');
  * ```
  */
+
+ get_all('853110720361');
+ 
 function get_all($projectId)
 {
     // Create the Cloud Firestore client
@@ -38,16 +41,12 @@ function get_all($projectId)
         'projectId' => $projectId,
     ]);
     # [START fs_get_all]
-    $usersRef = $db->collection('users');
+    $usersRef = $db->collection('Order');
     $snapshot = $usersRef->documents();
     foreach ($snapshot as $user) {
-        printf('User: %s' . PHP_EOL, $user->id());
-        printf('First: %s' . PHP_EOL, $user['first']);
-        if (!empty($user['middle'])) {
-            printf('Middle: %s' . PHP_EOL, $user['middle']);
-        }
-        printf('Last: %s' . PHP_EOL, $user['last']);
-        printf('Born: %d' . PHP_EOL, $user['born']);
+        printf('OrderNo: %s' . PHP_EOL, $user->id());
+        printf('Items: %s' . PHP_EOL, $user['items']);
+
         printf(PHP_EOL);
     }
     printf('Retrieved and printed out all documents from the users collection.' . PHP_EOL);
