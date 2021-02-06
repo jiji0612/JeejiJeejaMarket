@@ -16,7 +16,7 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "โคอะลามาร์ช",
+                        "title": "โคอะลามาร์ช (5 บาท)",
                         "text": "บิสกิตช็อกโกแลต 195 กรัม",
                         "defaultAction": {
                             "type": "uri",
@@ -27,7 +27,7 @@
                             {
                                 "type": "message",
                                 "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โคอะลามาร์ช195-จำนวน:1"
+                                "text": "สั่งซื้อ-โคอะลามาร์ช195-ราคา:5"
                             }
                         ]
                     },
@@ -38,7 +38,7 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "เบงเบง",
+                        "title": "เบงเบง (5 บาท)",
                         "text": "เวเฟอร์รสช็อกโกแลต 25 กรัม",
                         "defaultAction": {
                             "type": "uri",
@@ -49,7 +49,34 @@
                             {
                                 "type": "message",
                                 "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-เบงเบง-จำนวน:1"
+                                "text": "สั่งซื้อ-เบงเบง-ราคา:5"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "buttons",
+                        "width": "30px",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/pote10.png.png",
+                        "imageAspectRatio": "rectangle",
+                        "imageSize": "cover",
+                        "imageBackgroundColor": "#FFFFFF",
+                        "title": "โปเต้",
+                        "text": "มันฝรั่งกรอบ รสดั้งเดิม 32 กรัม",
+                        "defaultAction": {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/pote10.png.png"
+                        },
+                        "actions": [
+                            {
+                                "type": "message",
+                                "label": "สั่งซื้อ",
+                                "text": "สั่งซื้อ-โปเต้-ราคา:5"
+                            },
+                            {
+                                "type": "message",
+                                "label": "สั่งซื้อ",
+                                "text": "สั่งซื้อ-โปเต้-ราคา:10"
                             }
                         ]
                     }
