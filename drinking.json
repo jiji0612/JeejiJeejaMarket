@@ -21,7 +21,7 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า ขนาด:440ml 15บาท",
+                                "label": "หยิบใส่ตะกร้า",
                                 "text": "order-pepsi430-ราคา:15"
                             }
                         ]
