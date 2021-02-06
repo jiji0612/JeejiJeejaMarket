@@ -17,7 +17,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "20 บาท",
-                        "text": "โคอะลามาร์ช บิสกิตช็อกโกแลต 195 กรัม",
+                        "text": "โคอะลามาร์ช บิสกิตช็อกโกแลต",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -39,7 +39,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "5 บาท",
-                        "text": "เบงเบง เวเฟอร์รสช็อกโกแลต 25 กรัม",
+                        "text": "เบงเบง เวเฟอร์รสช็อกโกแลต",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -61,7 +61,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "5 บาท",
-                        "text": "โปเต้ มันฝรั่งกรอบ รสดั้งเดิม 32 กรัม",
+                        "text": "โปเต้ มันฝรั่งกรอบ",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -83,7 +83,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "5 บาท",
-                        "text": "โอรีโอ คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม",
+                        "text": "โอรีโอ คุกกี้แซนวิชสอดไส้ครีมวานิลลา",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -105,7 +105,7 @@
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "10 บาท",
-                        "text": "คอนเน่ ข้าวโพดกรอบรสดั้งเดิม 56 กรัม",
+                        "text": "คอนเน่ ข้าวโพดกรอบรสดั้งเดิม",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
