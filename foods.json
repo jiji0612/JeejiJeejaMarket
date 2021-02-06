@@ -1,0 +1,38 @@
+{
+    "replyToken": "",
+    "messages": [
+        {
+            "type": "template",
+            "altText": "This is a carousel template",
+            "template": {
+                "type": "carousel",
+                "imageAspectRatio": "rectangle",
+                "imageSize": "contain",
+                "columns": [
+                    {
+                        "type": "buttons",
+                        "width": "30px",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/mamatomyumkung.jpg",
+                        "imageAspectRatio": "rectangle",
+                        "imageSize": "contain",
+                        "imageBackgroundColor": "#FFFFFF",
+                        "title": "6 บาท",
+                        "text": "บะหมี่กึ่งสำเร็จรูป มาม่า รสต้มยำกุ้ง",
+                        "defaultAction": {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/mamatomyumkung.jpg"
+                        },
+                        "actions": [
+                            {
+                                "type": "message",
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "order-มาม่ารสต้มยำกุ้ง-ราคา:ุ"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
