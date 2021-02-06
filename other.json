@@ -12,22 +12,17 @@
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/pepsi.jpg",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/sunlai.jpg",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "Pepsi",
-                        "text": "เครื่องดื่มตรา Pepsi หลายขนาด",
+                        "title": "ซันไลต์เลมอนเทอร์โบ ถุงเติม 500 มล",
+                        "text": "ราคา 23 บาท",
                         "actions": [
                             {
                                 "type": "message",
                                 "label": "430ml 15บาท",
-                                "text": "order-pepsi430-ราคา:15"
-                            },
-                            {
-                                "type": "message",
-                                "label": "1.29L 29บาท",
-                                "text": "order-pepsi430-ราคา:29"
+                                "text": "order-sunlai500-ราคา:23"
                             }
                         ]
                     }

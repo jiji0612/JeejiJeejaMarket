@@ -5,6 +5,7 @@
                     'รายการขนมขบเคี้ยว 3'     => 'file:snacklist3.json',
                     'อาหาร'                 => 'file:foods.json',
                     'เครื่องดื่ม'               => 'file:drinking.json',
+                    'เบ็ดเตล็ด'               => 'file:other.json',
                     'Hi'                    => 'Hello World!',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>
