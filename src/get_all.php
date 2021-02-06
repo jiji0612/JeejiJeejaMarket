@@ -24,7 +24,7 @@
 namespace Google\Cloud\Samples\Firestore;
 
 use Google\Cloud\Firestore\FirestoreClient;
-
+export GOOGLE_APPLICATION_CREDENTIALS="My First Project-10f26652844b.json";
 /**
  * Retrieve all documents from a collection.
  * ```
