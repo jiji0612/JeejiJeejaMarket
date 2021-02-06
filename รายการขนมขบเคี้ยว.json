@@ -5,55 +5,119 @@
             "type": "template",
             "altText": "This is a carousel template",
             "template": {
-            "type": "carousel",
-            "imageAspectRatio": "rectangle",
-            "imageSize": "cover",
-            "columns": [
-                {
-                    "type": "buttons",
-                    "width": "30px",
-                    "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
-                    "imageAspectRatio": "rectangle",
-                    "imageSize": "cover",
-                    "imageBackgroundColor": "#FFFFFF",
-                    "title": "เมนู ขนมขบเคี้ยว",
-                    "text": "เลือกเมนูด้านล่างค่ะ",
-                    "defaultAction": {
-                        "type": "uri",
-                        "label": "View detail",
-                        "uri": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg"
-                    },
-                    "actions": [
-                        {
-                            "type": "message",
-                            "label": "รายการสินค้าทั้งหมด",
-                            "text": "รายการขนมขบเคี้ยว"
+                "type": "carousel",
+                "imageAspectRatio": "rectangle",
+                "imageSize": "cover",
+                "columns": [
+                    {
+                        "type": "bubble",
+                        "size": "micro",
+                        "hero": {
+                          "type": "image",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip10.jpg",
+                          "size": "full",
+                          "aspectMode": "cover",
+                          "aspectRatio": "320:213"
+                        },
+                        "body": {
+                          "type": "box",
+                          "layout": "vertical",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "Brown Cafe",
+                              "weight": "bold",
+                              "size": "sm",
+                              "wrap": true
+                            },
+                            {
+                              "type": "box",
+                              "layout": "baseline",
+                              "contents": [
+                                {
+                                  "type": "icon",
+                                  "size": "xs",
+                                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                                },
+                                {
+                                  "type": "icon",
+                                  "size": "xs",
+                                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                                },
+                                {
+                                  "type": "icon",
+                                  "size": "xs",
+                                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                                },
+                                {
+                                  "type": "icon",
+                                  "size": "xs",
+                                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                                },
+                                {
+                                  "type": "icon",
+                                  "size": "xs",
+                                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "4.0",
+                                  "size": "xs",
+                                  "color": "#8c8c8c",
+                                  "margin": "md",
+                                  "flex": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "box",
+                              "layout": "vertical",
+                              "contents": [
+                                {
+                                  "type": "box",
+                                  "layout": "baseline",
+                                  "spacing": "sm",
+                                  "contents": [
+                                    {
+                                      "type": "text",
+                                      "text": "東京旅行",
+                                      "wrap": true,
+                                      "color": "#8c8c8c",
+                                      "size": "xs",
+                                      "flex": 5
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "spacing": "sm",
+                          "paddingAll": "13px"
                         }
-                    ]
-                },
-                {
-                    "type": "buttons",
-                    "width": "30px",
-                    "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
-                    "imageAspectRatio": "rectangle",
-                    "imageSize": "cover",
-                    "imageBackgroundColor": "#FFFFFF",
-                    "title": "เมนู ขนมขบเคี้ยว",
-                    "text": "เลือกเมนูด้านล่างค่ะ",
-                    "defaultAction": {
-                        "type": "uri",
-                        "label": "View detail",
-                        "uri": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg"
                     },
-                    "actions": [
-                        {
-                            "type": "message",
-                            "label": "รายการสินค้าทั้งหมด",
-                            "text": "รายการขนมขบเคี้ยว"
-                        }
-                    ]
-                }
-              ]
+                    {
+                        "type": "buttons",
+                        "width": "30px",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
+                        "imageAspectRatio": "rectangle",
+                        "imageSize": "cover",
+                        "imageBackgroundColor": "#FFFFFF",
+                        "title": "เมนู ขนมขบเคี้ยว",
+                        "text": "เลือกเมนูด้านล่างค่ะ",
+                        "defaultAction": {
+                            "type": "uri",
+                            "label": "View detail",
+                            "uri": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg"
+                        },
+                        "actions": [
+                            {
+                                "type": "message",
+                                "label": "รายการสินค้าทั้งหมด",
+                                "text": "รายการขนมขบเคี้ยว"
+                            }
+                        ]
+                    }
+                ]
             }
           }
         ]
