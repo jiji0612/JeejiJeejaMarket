@@ -11,7 +11,7 @@
             "columns": [
                 {
                     "type": "buttons",
-                    "width": "30%",
+                    "width": "30px",
                     "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
                     "imageAspectRatio": "rectangle",
                     "imageSize": "cover",
@@ -33,7 +33,7 @@
                 },
                 {
                     "type": "buttons",
-                    "size": "nano",
+                    "width": "30px",
                     "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/ขนมขบเคี้ยว.jpg",
                     "imageAspectRatio": "rectangle",
                     "imageSize": "cover",
