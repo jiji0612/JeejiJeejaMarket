@@ -26,12 +26,12 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า",
+                                "label": "หยิบใส่ตะกร้า ขนาด:440ml 15บาท",
                                 "text": "order-pepsi430-ราคา:15"
                             },
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า",
+                                "label": "หยิบใส่ตะกร้า ขนาด:1.26L 29บาท",
                                 "text": "order-pepsi1260-ราคา:29"
                             }
                         ]
