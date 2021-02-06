@@ -26,13 +26,13 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โคอะลามาร์ช195-ราคา:5"
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "หยิบใส่ตะกร้า-โคอะลามาร์ช195-ราคา:5"
                             },
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โปเต้-ราคา:10"
+                                "label": "-",
+                                "text": "-"
                             }
                         ]
                     },
@@ -53,20 +53,20 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-เบงเบง-ราคา:5"
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "หยิบใส่ตะกร้า-เบงเบง-ราคา:5"
                             },
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โปเต้-ราคา:10"
+                                "label": "-",
+                                "text": "-"
                             }
                         ]
                     },
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/pote10.png.png",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/pote10.png",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
@@ -75,18 +75,18 @@
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "https://jeejijeejamarket.herokuapp.com/images/pote10.png.png"
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/pote10.png"
                         },
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โปเต้-ราคา:5"
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:5"
                             },
                             {
                                 "type": "message",
-                                "label": "สั่งซื้อ",
-                                "text": "สั่งซื้อ-โปเต้-ราคา:10"
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:10"
                             }
                         ]
                     }
