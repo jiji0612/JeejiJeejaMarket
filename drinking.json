@@ -12,22 +12,27 @@
                     {
                         "type": "buttons",
                         "width": "30px",
-                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/mamatomyumkung.jpg",
+                        "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/pepsi.jpg",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "6 บาท",
-                        "text": "บะหมี่กึ่งสำเร็จรูป มาม่า รสต้มยำกุ้ง",
+                        "title": "Pepsi",
+                        "text": "เครื่องดื่มตรา Pepsi หลายขนาด",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
-                            "uri": "https://jeejijeejamarket.herokuapp.com/images/mamatomyumkung.jpg"
+                            "uri": "https://jeejijeejamarket.herokuapp.com/images/pepsi.jpg"
                         },
                         "actions": [
                             {
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order-มาม่ารสต้มยำกุ้ง-ราคา:ุ"
+                                "text": "order-pepsi430-ราคา:15"
+                            },
+                            {
+                                "type": "message",
+                                "label": "หยิบใส่ตะกร้า",
+                                "text": "order-pepsi1260-ราคา:29"
                             }
                         ]
                     }
