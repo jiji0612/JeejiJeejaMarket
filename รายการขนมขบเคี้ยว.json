@@ -16,8 +16,8 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "โคอะลามาร์ช (5 บาท)",
-                        "text": "บิสกิตช็อกโกแลต 195 กรัม",
+                        "title": "5 บาท",
+                        "text": "โคอะลามาร์ช บิสกิตช็อกโกแลต 195 กรัม",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -28,11 +28,6 @@
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "หยิบใส่ตะกร้า-โคอะลามาร์ช195-ราคา:5"
-                            },
-                            {
-                                "type": "message",
-                                "label": "-",
-                                "text": "-"
                             }
                         ]
                     },
@@ -43,8 +38,8 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "เบงเบง (5 บาท)",
-                        "text": "เวเฟอร์รสช็อกโกแลต 25 กรัม",
+                        "title": "5 บาท",
+                        "text": "เบงเบง เวเฟอร์รสช็อกโกแลต 25 กรัม",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -55,11 +50,6 @@
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "หยิบใส่ตะกร้า-เบงเบง-ราคา:5"
-                            },
-                            {
-                                "type": "message",
-                                "label": "-",
-                                "text": "-"
                             }
                         ]
                     },
@@ -70,8 +60,8 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "โปเต้",
-                        "text": "มันฝรั่งกรอบ รสดั้งเดิม 32 กรัม",
+                        "title": "5 บาท",
+                        "text": "โปเต้ มันฝรั่งกรอบ รสดั้งเดิม 32 กรัม",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -80,13 +70,8 @@
                         "actions": [
                             {
                                 "type": "message",
-                                "label": "หยิบใส่ตะกร้า ขนาด 5 บาท",
+                                "label": "หยิบใส่ตะกร้า",
                                 "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:5"
-                            },
-                            {
-                                "type": "message",
-                                "label": "หยิบใส่ตะกร้า ขนาด 10 บาท",
-                                "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:10"
                             }
                         ]
                     },
@@ -97,8 +82,8 @@
                         "imageAspectRatio": "rectangle",
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
-                        "title": "โอรีโอ",
-                        "text": "คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม\r\n<H1>5 บาท</H1>",
+                        "title": "5 บาท",
+                        "text": "โอรีโอ คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -109,11 +94,6 @@
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "หยิบใส่ตะกร้า-โปเต้-ราคา:5"
-                            },
-                            {
-                                "type": "message",
-                                "label": "-",
-                                "text": "-"
                             }
                         ]
                     }
