@@ -98,7 +98,7 @@
                         "imageSize": "cover",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "โอรีโอ",
-                        "text": "คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม\r\n5 บาท",
+                        "text": "คุกกี้แซนวิชสอดไส้ครีมวานิลลา 28.5 กรัม\r\n<H1>5 บาท</H1>",
                         "defaultAction": {
                             "type": "uri",
                             "label": "View detail",
@@ -112,8 +112,8 @@
                             },
                             {
                                 "type": "message",
-                                "label": "",
-                                "text": ""
+                                "label": "-",
+                                "text": "-"
                             }
                         ]
                     }
