@@ -28,7 +28,7 @@
 
     $objQuery = mysqli_query ($conn,"select * from vi_member_order");
 ?>
-	<table width="498" border="1">
+	<table width="100%" border="1">
 	<tr>
 	<th width="87"> <div align="center">MemberID </div></th>
 	<th width="145"> <div align="center">Address </div></th>
