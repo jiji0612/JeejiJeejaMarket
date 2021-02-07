@@ -12,21 +12,21 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "ตะกร้า",
+                      "text": "ร้าน จ้ากะจี้ เฟส1",
                       "weight": "bold",
                       "color": "#1DB446",
                       "size": "sm"
                     },
                     {
                       "type": "text",
-                      "text": "ยอดสั่งซื้อสินค้า",
+                      "text": "รายการสั่งซื้อ",
                       "weight": "bold",
                       "size": "xxl",
                       "margin": "md"
                     },
                     {
                       "type": "text",
-                      "text": "ร้านจ้ากะจี้ เฟส1",
+                      "text": "ตะกร้า",
                       "size": "xs",
                       "color": "#aaaaaa",
                       "wrap": true
