@@ -46,12 +46,12 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
 			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
-			$json_a = json_decode($get_user, true);
+			$get_user_arr = json_decode($get_user, true);
 
 			$string = file_get_contents('defaultemoji.json');
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
-			$json_a['messages']["text"] += $json_a["displayName"];
+			$json_a['messages']["text"] += $get_user_arr["displayName"];
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
 		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
