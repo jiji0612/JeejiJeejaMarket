@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>PHP Test MySql Connection</title>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 </head>
 <body>
 <?php	
@@ -13,7 +13,7 @@
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	mysqli_query("SET NAMES TIS620");
+	mysqli_query("SET NAMES UTF8");
 	
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
