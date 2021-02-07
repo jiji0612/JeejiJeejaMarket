@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	mysql_query("SET NAMES UTF8");
+	//mysql_query("SET NAMES UTF8");
 
 	/*** Update Member ***/
     $strSQL = "INSERT INTO member (memberid,membername) ";
