@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	/***  Add Record ***/
     $strSQL = "INSERT INTO member (memberid,membername,remark) VALUES ('".$uid."','".$user_name."','".$ordersubmit."') WHERE NOT EXISTS (SELECT 1 FROM member WHERE memberid = '".$uid."')";
     if (mysqli_query($conn, $strSQL)) {
-        echo "successfully";
+        echo $strSQL;
     } else {
         echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
     }
