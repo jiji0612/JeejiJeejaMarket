@@ -1,6 +1,4 @@
 <?php
-    echo "Starting";
-
 	$mysqli = new mysqli("us-cdbr-east-03.cleardb.com", "ba7f82c856e7b5", "9090f5ee", "heroku_565ce00c19449b1");
 	if ($mysqli->connect_errno) {
 		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
