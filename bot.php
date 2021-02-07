@@ -38,20 +38,28 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			}
 		} else if(startsWith($text,"order")) {
-			$string = file_get_contents('receivedorder.json');
-			$json_a = json_decode($string, true);
-			$json_a['replyToken'] = $reply_token;
-			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
-		} else {
+			//Postback ordered
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
 			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
 			$get_user_arr = json_decode($get_user, true);
-
+			$user_name = $get_user_arr["displayName"];
+			$ordered_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/addorder.php'
+			, ''
+			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. $text);
+			
+			if ($ordered_result = "successfully"){
+				$string = file_get_contents('receivedorder.json');
+				$json_a = json_decode($string, true);
+				$json_a['replyToken'] = $reply_token;
+				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+			} else {
+				$send_result = $ordered_result;
+			}
+		} else {
 			$string = file_get_contents('defaultemoji.json');
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
-			$json_a['messages']["text"] = '$ ' . $get_user_arr["displayName"];
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
 		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
