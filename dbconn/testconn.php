@@ -54,7 +54,7 @@
 			<?php 
 				$tis620 = iconv("utf-8", "tis-620", $objResult["remark"] );
 				$utf8 = iconv("tis-620", "utf-8", $tis620);
-				echo $utf8;
+				echo $objResult["remark"];
 			?>
 		</td>
 		</tr>
