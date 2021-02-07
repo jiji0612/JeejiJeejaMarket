@@ -12,21 +12,21 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "RECEIPT",
+                      "text": "ตะกร้า",
                       "weight": "bold",
                       "color": "#1DB446",
                       "size": "sm"
                     },
                     {
                       "type": "text",
-                      "text": "Brown Store",
+                      "text": "ยอดสั่งซื้อสินค้า",
                       "weight": "bold",
                       "size": "xxl",
                       "margin": "md"
                     },
                     {
                       "type": "text",
-                      "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                      "text": "ร้านจ้ากะจี้ เฟส1",
                       "size": "xs",
                       "color": "#aaaaaa",
                       "wrap": true
@@ -112,7 +112,7 @@
                           "contents": [
                             {
                               "type": "text",
-                              "text": "ITEMS",
+                              "text": "จำนวน",
                               "size": "sm",
                               "color": "#555555"
                             },
@@ -131,13 +131,13 @@
                           "contents": [
                             {
                               "type": "text",
-                              "text": "TOTAL",
+                              "text": "ยอดรวมสินค้า",
                               "size": "sm",
                               "color": "#555555"
                             },
                             {
                               "type": "text",
-                              "text": "$7.31",
+                              "text": "฿10",
                               "size": "sm",
                               "color": "#111111",
                               "align": "end"
@@ -150,13 +150,13 @@
                           "contents": [
                             {
                               "type": "text",
-                              "text": "CASH",
+                              "text": "ค่าจัดส่ง",
                               "size": "sm",
                               "color": "#555555"
                             },
                             {
                               "type": "text",
-                              "text": "$8.0",
+                              "text": "฿0",
                               "size": "sm",
                               "color": "#111111",
                               "align": "end"
@@ -169,13 +169,13 @@
                           "contents": [
                             {
                               "type": "text",
-                              "text": "CHANGE",
+                              "text": "ทั้งหมด",
                               "size": "sm",
                               "color": "#555555"
                             },
                             {
                               "type": "text",
-                              "text": "$0.69",
+                              "text": "฿10",
                               "size": "sm",
                               "color": "#111111",
                               "align": "end"
@@ -195,14 +195,14 @@
                       "contents": [
                         {
                           "type": "text",
-                          "text": "PAYMENT ID",
+                          "text": "การจ้ายเงิน",
                           "size": "xs",
                           "color": "#aaaaaa",
                           "flex": 0
                         },
                         {
                           "type": "text",
-                          "text": "#743289384279",
+                          "text": "ปลายทาง",
                           "color": "#aaaaaa",
                           "size": "xs",
                           "align": "end"
