@@ -7,6 +7,7 @@
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$link = mysqli_connect ($server, $username, $password, $db);
+	mysqli_query("SET NAMES TIS620");
 	$result = mysqli_query ($link,"select * from vi_member_order");
 
 	while ($member = mysqli_fetch_array ($result)) {
