@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $orderno = $uid;
         $item = $order_submit[1];
         $qty = "1";
-        $price = explode(' ', $order_submit[2])[1];
+        $price = explode('=', $order_submit[2])[1];
 
         $strSQL = "INSERT INTO member_order (orderno,memberid,item,qty,price) VALUES ";
         $strSQL .= "('".$orderno."','".$uid."','".$item."','".$qty."','".$price."')";
