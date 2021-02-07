@@ -4,6 +4,18 @@
 <meta http-equiv=Content-Type content="text/html; charset=tis-620">
 </head>
 <body>
+<?php	
+	/*** Connect ***/
+	$objConnect = mysql_connect("us-cdbr-east-03.cleardb.com","ba7f82c856e7b5","9090f5ee") or die("Error Connect to Database");
+	$objDB = mysql_select_db("heroku_565ce00c19449b1");
+	mysql_query("SET NAMES TIS620");
+
+	/*** List Record ***/
+	$strSQL = "SELECT * FROM vi_member_order";
+	$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+
+	mysql_close($objConnect);
+?>
 
 	<table width="498" border="1">
 	<tr>
