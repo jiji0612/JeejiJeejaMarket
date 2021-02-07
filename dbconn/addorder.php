@@ -1,9 +1,3 @@
-<html>
-<head>
-<title>Add order</title>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
-</head>
-<body>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -46,6 +40,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     print "None POST methods!";
 }
 ?>
-
-</body>
-</html> 
