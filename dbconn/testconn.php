@@ -36,7 +36,7 @@
     <th width="244"> <div align="center">Items Name </div></th>
     <th width="244"> <div align="center">Quantity </div></th>
     <th width="244"> <div align="center">Price </div></th>
-	<th width="244"> <div align="center">Remark </div></th>
+	<th width="100%"> <div align="center">Remark </div></th>
 	</tr>
 	<?php
 	while($objResult = mysqli_fetch_array($objQuery))
