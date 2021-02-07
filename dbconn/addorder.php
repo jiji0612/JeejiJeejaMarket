@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	/*** Update Member ***/
     $strSQL = "INSERT INTO member (memberid,membername) ";
     $strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
-    $strSQL .= "UPDATE member set remark = '".$ordersubmit."' WHERE memberid = '".$uid."'";
+    //$strSQL .= "UPDATE member set remark = '".$ordersubmit."' WHERE memberid = '".$uid."'";
     if (mysqli_query($conn, $strSQL)) {
         echo "successfully";
     } else {
