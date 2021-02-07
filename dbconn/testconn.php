@@ -19,7 +19,7 @@
 	if($_GET["Action"]=="Save")
 	{
 		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
-		mysqli_query($strSQL);
+		mysqli_query($link,$strSQL);
 	}
 
     $objQuery = mysqli_query ($link,"select * from vi_member_order");
