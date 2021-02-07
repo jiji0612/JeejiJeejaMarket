@@ -6,8 +6,8 @@
 <body>
 <?php	
 	/*** Connect ***/
-	$objConnect = mysql_connect("sql12.freemysqlhosting.net","sql12391241","irdEMCJaFj") or die("Error Connect to Database");
-	$objDB = mysql_select_db("sql12391241");
+	$objConnect = mysql_connect("us-cdbr-east-03.cleardb.com","ba7f82c856e7b5","9090f5ee") or die("Error Connect to Database");
+	$objDB = mysql_select_db("heroku_565ce00c19449b1");
 	mysql_query("SET NAMES TIS620");
 	/*
 	// Or //
