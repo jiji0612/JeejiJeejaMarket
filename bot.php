@@ -60,7 +60,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => [['type' => 'text', 'text' => '"'.$get_user.'"' ]]
+				'messages' => [['type' => 'text', 'text' => $get_user["displayName"] ]]
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}
