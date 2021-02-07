@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ThaiCreate.Com PHP & TIS-620</title>
+<title>PHP Test MySql Connection</title>
 <meta http-equiv=Content-Type content="text/html; charset=tis-620">
 </head>
 <body>
