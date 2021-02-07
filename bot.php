@@ -48,7 +48,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			, ''
 			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. $text);
 			
-			if ($ordered_result = "successfully"){
+			if ($ordered_result == "successfully"){
 				$string = file_get_contents('receivedorder.json');
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
