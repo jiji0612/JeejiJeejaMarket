@@ -36,6 +36,7 @@
     <th width="244"> <div align="center">Items Name </div></th>
     <th width="244"> <div align="center">Quantity </div></th>
     <th width="244"> <div align="center">Price </div></th>
+	<th width="244"> <div align="center">Remark </div></th>
 	</tr>
 	<?php
 	while($objResult = mysqli_fetch_array($objQuery))
@@ -48,6 +49,7 @@
         <td><?php echo $objResult["item"];?></td>
         <td><?php echo $objResult["total_qty"];?></td>
         <td><?php echo $objResult["total_price"];?></td>
+		<td><?php echo $objResult["remark"];?></td>
 		</tr>
 	<?php
 	}
@@ -60,6 +62,7 @@
 	      <td></td>
           <td></td>
           <td></td>
+		  <td></td>
 	  </tr>
 </form>	  
 
