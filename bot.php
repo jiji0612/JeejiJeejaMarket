@@ -23,7 +23,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 		error_log(json_encode($event));
         $reply_message = '';
         $reply_token = $event['replyToken'];
-		
+		$uid = $event['source']['userId'];
         $text = $event['message']['text'];
 
         if (array_key_exists($text, $arrayText)) {
@@ -43,27 +43,16 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$json_a['replyToken'] = $reply_token;
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		} else {
-			//$string = file_get_contents('defaultemoji.json');
-			//$json_a = json_decode($string, true);
-			//$json_a['replyToken'] = $reply_token;
-			//$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
-
-			$uid = $event['source']['userId'];
-			// HTTP Request
-			//GET https://api.line.me/v2/bot/profile/userId
-
-			// Headers
-			//Authorization: Bearer CHANNEL-ACCESS-TOKEN
-			//Get User Frofile
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
 			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
 			$json_a = json_decode($get_user, true);
-			$data = [
-				'replyToken' => $reply_token,
-				'messages' => [['type' => 'text', 'text' => '"'.$json_a["displayName"].'"' ]]
-			];
-			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+
+			$string = file_get_contents('defaultemoji.json');
+			$json_a = json_decode($string, true);
+			$json_a['replyToken'] = $reply_token;
+			$json_a['messages']["text"] += $json_a["displayName"];
+			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
 		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
