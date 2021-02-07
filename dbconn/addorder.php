@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	/***  Add Record ***/
     $strSQL = "INSERT INTO member (memberid,membername,remark) ";
-    $strSQL .= "SELECT * FROM ('".$uid."','".$user_name."','".$ordersubmit."') AS MB WHERE NOT EXISTS (SELECT 1 FROM member WHERE memberid = '".$uid."');";
+    $strSQL .= "SELECT '".$uid."','".$user_name."','".$ordersubmit."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."')";
     if (mysqli_query($conn, $strSQL)) {
         echo "successfully";
     } else {
