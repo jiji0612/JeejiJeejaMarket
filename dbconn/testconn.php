@@ -50,12 +50,14 @@
 	?>		
 	<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
-		  <td>
-	      </td>
 		  <td><input name="txtMember" type="text" id="txtMember"></td>
 		  <td><input name="txtAddr" type="text" id="txtAddr">
-	      <input name="btnSubmit" type="submit" id="btnSubmit" value="Submit"></td>
+          <td></td>
+	      <td></td>
+          <td></td>
+          <td></td>
 	  </tr>
+      <input name="btnSubmit" type="submit" id="btnSubmit" value="Submit">
 </form>	  
 
 </table>
