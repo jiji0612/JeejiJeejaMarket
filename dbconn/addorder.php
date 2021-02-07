@@ -15,11 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	//mysqli_query("SET NAMES TIS620");
-    mysqli_query("SET character_set_results=tis620");
-    mysqli_query("SET character_set_client=tis620");
-    mysqli_query("SET character_set_connection=tis620");
-	
+	mysqli_query("SET NAMES TIS620");
+
 	/*** Update Member ***/
     $strSQL = "INSERT INTO member (memberid,membername) ";
     $strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
