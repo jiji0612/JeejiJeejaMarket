@@ -1,4 +1,3 @@
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
@@ -27,16 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($conn, $strSQL);
 
         //Add new Order
-        print "successfully";
+        echo "successfully";
     } else {
-        print "Error:" . mysqli_error($conn);
+        echo "Error:" . mysqli_error($conn);
     }
     
 
     mysqli_close($conn);
- 
   }
 } else {
-    print "None POST methods!";
+    echo "None POST methods!";
 }
 ?>
