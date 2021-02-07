@@ -26,12 +26,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_query($conn, $strSQL);
 
         //Add new Order
-        echo "successfully";
+        $order_submit = explode(' ', $ordersubmit);
+        $orderno = $uid;
+        $item = $order_submit[1];
+        $qty = "1";
+        $price = explode(' ', $order_submit[2])[1];
+
+        $strSQL = "INSERT INTO member_order (orderno,memberid,item,qty,price) VALUES ";
+        $strSQL .= "('".$orderno."','".$uid."','".$item."','".$qty."','".$price."')";
+        if (mysqli_query($conn, $strSQL)) {
+            echo "successfully";
+        }else {
+            echo "Error:Add Order";
+        }
     } else {
         echo "Error:" . mysqli_error($conn);
     }
     
-
     mysqli_close($conn);
   }
 } else {

@@ -22,7 +22,7 @@
                             {
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order-sunlai500-ราคา:23"
+                                "text": "order ซันไลต์500 ราคา=23"
                             }
                         ]
                     }

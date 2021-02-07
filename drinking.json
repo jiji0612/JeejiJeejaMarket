@@ -22,12 +22,12 @@
                             {
                                 "type": "message",
                                 "label": "430ml 15บาท",
-                                "text": "order-pepsi430-ราคา:15"
+                                "text": "order pepsi430 ราคา=15"
                             },
                             {
                                 "type": "message",
                                 "label": "1.29L 29บาท",
-                                "text": "order-pepsi430-ราคา:29"
+                                "text": "order pepsi430 ราคา=29"
                             }
                         ]
                     }
