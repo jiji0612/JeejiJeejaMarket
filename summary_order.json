@@ -2,9 +2,9 @@
     "replyToken": "",
     "messages": [
         {
-            "type": "template",
-            "altText": "This is a carousel template",
-            "template": {
+            "type": "flex",
+            "altText": "Hello Flex Message",
+            "contents": {
                 "type": "bubble",
                 "body": {
                   "type": "box",
