@@ -50,7 +50,13 @@
         <td><?php echo $objResult["item"];?></td>
         <td><?php echo $objResult["total_qty"];?></td>
         <td><?php echo $objResult["total_price"];?></td>
-		<td><?php echo iconv("tis-620", "utf-8",  $objResult["remark"] );?></td>
+		<td>
+			<?php 
+				$tis620 = iconv("utf-8", "tis-620", $$objResult["remark"] );
+				$utf8 = iconv("tis-620", "utf-8", $tis620 );
+				echo iconv("tis-620", "utf-8",  $utf8 );
+			?>
+		</td>
 		</tr>
 	<?php
 	}
