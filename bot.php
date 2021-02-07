@@ -47,6 +47,9 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$string = file_get_contents('defaultemoji.json');
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
+
+			$uid = $event['source']['userId'];
+			$json_a['replyToken']["text"] = $json_a['replyToken']["text"] . $uid;
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		}
 		$send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
