@@ -13,7 +13,7 @@
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	mysqli_query("SET NAMES TIS620");
+	//mysqli_query("SET NAMES TIS620");
 	
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
@@ -50,7 +50,7 @@
         <td><?php echo $objResult["item"];?></td>
         <td><?php echo $objResult["total_qty"];?></td>
         <td><?php echo $objResult["total_price"];?></td>
-		<td><?php echo iconv("utf-8","tis-620",  $objResult["remark"] );?></td>
+		<td><?php echo iconv("tis-620", "utf-8",  $objResult["remark"] );?></td>
 		</tr>
 	<?php
 	}
