@@ -25,7 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
     if (mysqli_query($conn, $strSQL)) {
         //Update Last Order
-        $strSQL = "UPDATE member set remark = '".$ordersubmit."' WHERE memberid = '".$uid."'";
+        $ordersubmit = iconv("tis-620", "utf-8", $ordersubmit);
+        $strSQL = "UPDATE member set remark = '". $ordersubmit ."' WHERE memberid = '".$uid."'";
         mysqli_query($conn, $strSQL);
 
         //Add new Order
