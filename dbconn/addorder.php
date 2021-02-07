@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	mysqli_query("SET NAMES TIS620");
 	
 	/***  Add Record ***/
-    $strSQL = "INSERT INTO member (memberid,membername,remark) \n";
-    $strSQL .= "SELECT * FROM ('".$uid."','".$user_name."','".$ordersubmit."') AS MB WHERE NOT EXISTS (SELECT 1 FROM member WHERE memberid = '".$uid."')";
+    $strSQL = "INSERT INTO member (memberid,membername,remark) ";
+    $strSQL .= "SELECT * FROM ('".$uid."','".$user_name."','".$ordersubmit."') AS MB WHERE NOT EXISTS (SELECT 1 FROM member WHERE memberid = '".$uid."');";
     if (mysqli_query($conn, $strSQL)) {
         echo "successfully";
     } else {
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     mysqli_close($conn);
-
+ 
   }
 } else {
     echo "None POST methods!";
