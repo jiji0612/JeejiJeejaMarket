@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_query($conn, $strSQL)) {
         //Update Last Order
         $tis620 = iconv("utf-8", "tis-620", $ordersubmit );
-        $utf8 = iconv("tis-620", "utf-8", $tis620 );
-        $strSQL = "UPDATE member set remark = '". $utf8 ."' WHERE memberid = '".$uid."'";
+        //$utf8 = iconv("tis-620", "utf-8", $tis620 );
+        $strSQL = "UPDATE member set remark = '". $tis620 ."' WHERE memberid = '".$uid."'";
         mysqli_query($conn, $strSQL);
 
         //Add new Order
