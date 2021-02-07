@@ -24,15 +24,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_query("SET NAMES TIS620");
 	
-	/*** Update Member ***/
+	/*** Ass Member ***/
     $strSQL = "INSERT INTO member (memberid,membername,remark) ";
-    $strSQL .= "SELECT '".$uid."','".$user_name."','".$ordersubmit."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."'); ";
-    $strSQL .= "UPDATE member set remark = '".$ordersubmit."' WHERE memberid = '".$uid."'); ";
+    $strSQL .= "SELECT '".$uid."','".$user_name."','".$ordersubmit."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
     if (mysqli_query($conn, $strSQL)) {
-        echo "successfully";
+        /*** Ass Member Last Order ***/
+        $strSQL = "UPDATE member set remark = '".$ordersubmit."' WHERE memberid = '".$uid."') ";
+        if (mysqli_query($conn, $strSQL)) {
+             /*** Add Order ***/
+
+             echo "successfully";
+        } else {
+            echo "Error:" . mysqli_error($conn);
+        }
     } else {
         echo "Error:" . mysqli_error($conn);
     }
+
+    
 
     mysqli_close($conn);
  
