@@ -34,7 +34,7 @@
     <th width="244"> <div align="center">Price </div></th>
 	</tr>
 	<?php
-	while($objResult = mysql_fetch_array($objQuery))
+	while($objResult = mysqli_fetch_array($objQuery))
 	{
 	?>
 		<tr>
