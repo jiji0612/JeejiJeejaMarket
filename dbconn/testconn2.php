@@ -1,14 +1,15 @@
-<?php
-	$mysqli = new mysqli("us-cdbr-east-03.cleardb.com", "ba7f82c856e7b5", "9090f5ee", "heroku_565ce00c19449b1", 3306);
-	if ($mysqli->connect_errno) {
-		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-	}
-	echo $mysqli->host_info . "\n";
 
-	$mysqli = new mysqli("127.0.0.1", "ba7f82c856e7b5", "9090f5ee", "heroku_565ce00c19449b1", 3306);
-	if ($mysqli->connect_errno) {
-		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-	}
+<? php
+	$url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
 
-	echo $mysqli->host_info . "\n";
+	$server = $url ["host"];
+	$username = $url ["user"];
+	$password = $url ["pass"];
+	$db = substr ($url ["path"], 1);
+	$link = mysqli_connect ($server, $username, $password, $db);
+	$result = mysqli_query ($link,"select * from user");
+
+	while ($user = mysqli_fetch_array ($result)) {
+	echo $user ['id'],":" ;, $user ['name'],"<br>" ;;
+	}
 ?>
