@@ -12,17 +12,21 @@
 	$username = $url ["user"];
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
-	$link = mysqli_connect ($server, $username, $password, $db);
+	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_query("SET NAMES TIS620");
 	
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
 		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
-		mysqli_query($link,$strSQL);
+        if (mysqli_query($conn, $strSQL)) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
+          }
 	}
 
-    $objQuery = mysqli_query ($link,"select * from vi_member_order");
+    $objQuery = mysqli_query ($conn,"select * from vi_member_order");
 ?>
 	<table width="498" border="1">
 	<tr>
@@ -61,6 +65,8 @@
 </form>	  
 
 </table>
-
+<?php
+mysqli_close($conn);
+?>
 </body>
 </html> 
