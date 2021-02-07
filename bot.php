@@ -56,7 +56,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			//Authorization: Bearer CHANNEL-ACCESS-TOKEN
 			//Get User Frofile
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
-			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
+			$GET_HEADER = array('Content-Type: application/json, Authorization: Bearer ' . $ACCESS_TOKEN);
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
 			$data = [
 				'replyToken' => $reply_token,
