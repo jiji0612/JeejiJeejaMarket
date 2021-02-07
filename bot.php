@@ -1,10 +1,3 @@
-<html>
-<head>
-<title>SoftYourStyle Line Bot</title>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
-</head>
-<body>
-
 <?php
 
 
@@ -119,6 +112,3 @@ function get_reply_message($url, $post_header)
 }
 
 ?>
-
-</body>
-</html> 
