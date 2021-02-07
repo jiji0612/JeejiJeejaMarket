@@ -6,26 +6,23 @@
 <body>
 <?php	
 	/*** Connect ***/
-	$objConnect = mysql_connect("us-cdbr-east-03.cleardb.com","ba7f82c856e7b5","9090f5ee") or die("Error Connect to Database");
-	$objDB = mysql_select_db("heroku_565ce00c19449b1");
-	mysql_query("SET NAMES TIS620");
-	/*
-	// Or //
-	mysql_query("SET character_set_results=tis620");
-	mysql_query("SET character_set_client=tis620");
-	mysql_query("SET character_set_connection=tis620");
-	*/
+	$url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
 
+	$server = $url ["host"];
+	$username = $url ["user"];
+	$password = $url ["pass"];
+	$db = substr ($url ["path"], 1);
+	$link = mysqli_connect ($server, $username, $password, $db);
+	mysqli_query("SET NAMES TIS620");
+	
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
 		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
-		mysql_query($strSQL);
+		mysqli_query($strSQL);
 	}
-	
-	/*** List Record ***/
-	$strSQL = "SELECT * FROM vi_member_order";
-	$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+
+    $objQuery = mysqli_query ($link,"select * from vi_member_order");
 ?>
 	<table width="498" border="1">
 	<tr>
@@ -62,8 +59,6 @@
 </form>	  
 
 </table>
-	<?php
-	mysql_close($objConnect);
-	?>
+
 </body>
 </html> 
