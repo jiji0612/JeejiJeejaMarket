@@ -7,8 +7,8 @@ echo "Starting";
 	$password = $url["pass"];
 	$db = substr ($url["path"], 1);
 	$link = mysqli_connect ($server, $username, $password, $db);
-	echo $link;
-	
+	echo $server.$username.$password.$db;
+
 	$result = mysqli_query ($link,"select * from vi_member_order");
 
 	while ($user = mysqli_fetch_array ($result)) {
