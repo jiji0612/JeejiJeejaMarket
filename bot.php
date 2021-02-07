@@ -61,7 +61,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$json_a = json_decode($get_user, true);
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => [['type' => 'text', 'text' => $json_a["displayName"] ]]
+				'messages' => [['type' => 'text', 'text' => '"'.$json_a["displayName"].'"' ]]
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}
