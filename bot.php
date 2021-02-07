@@ -58,10 +58,10 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
 			$GET_HEADER = array('Content-Type: application/json, Authorization: Bearer ' . $ACCESS_TOKEN);
 			$get_user = get_reply_message($API_GET, $GET_HEADER);
-			$json_a = json_decode($get_user, true);
+			//$json_a = json_decode($get_user, true);
 			$data = [
 				'replyToken' => $reply_token,
-				'messages' => [['type' => 'text', 'text' => '"'.$json_a.'"' ]]
+				'messages' => [['type' => 'text', 'text' => '"'.$get_user.'"' ]]
 			];
 			$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 		}
