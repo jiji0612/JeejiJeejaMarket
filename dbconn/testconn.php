@@ -43,7 +43,7 @@
 		<tr>
 		<td><div align="center"><?php echo $objResult["memberid"];?></div></td>
 		<td><?php echo $objResult["addr"];?></td>
-		<td><?php echo $objResult["order_no"];?></td>
+		<td><?php echo $objResult["orderno"];?></td>
         <td><?php echo $objResult["item"];?></td>
         <td><?php echo $objResult["total_qty"];?></td>
         <td><?php echo $objResult["total_price"];?></td>
