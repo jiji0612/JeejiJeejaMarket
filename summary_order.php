@@ -10,32 +10,46 @@ $conn = mysqli_connect ($server, $username, $password, $db);
 mysqli_query("SET NAMES UTF8");
 
 $objQuery = mysqli_query ($conn,"select * from vi_member_order");
-$arr_order_lst = '{
-    "type": "box",
-    "layout": "horizontal",
-    "contents": [
-        {
-        "type": "text",
-        "text": "Energy Drink",
-        "size": "sm",
-        "color": "#555555",
-        "flex": 0
-        },
-        {
-        "type": "text",
-        "text": "$2.99",
-        "size": "sm",
-        "color": "#111111",
-        "align": "end"
-        }
-    ]
-    },
-    ';
+$arr_order_lst = '';
 
 while($objResult = mysqli_fetch_array($objQuery))
-	{
+{
+    <td><?php echo $objResult["addr"];?></td>
+    <td><?php echo $objResult["orderno"];?></td>
+    <td><?php echo $objResult["item"];?></td>
+    <td><?php echo $objResult["total_qty"];?></td>
+    <td><?php echo $objResult["total_price"];?></td>
 
-    }
+    $arr_order_lst .= '{
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+            {
+            "type": "text",
+            "text": "'.$objResult["item"].'",
+            "size": "sm",
+            "color": "#555555",
+            "flex": 0
+            },
+            {
+            "type": "text",
+            "text": "'.$objResult["total_qty"].'",
+            "size": "sm",
+            "color": "#111111",
+            "align": "end"
+            }
+            ,
+            {
+            "type": "text",
+            "text": "'.$objResult["total_price"].'฿",
+            "size": "sm",
+            "color": "#111111",
+            "align": "end"
+            }
+        ]
+        },
+        ';
+}
 
 
     $jsonobj = '{
