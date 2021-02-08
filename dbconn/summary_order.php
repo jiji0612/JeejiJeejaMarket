@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "contents": [
                                 {
                                 "type": "text",
-                                "text": "จำนวนทั้งหมด",
+                                "text": "จำนวนรวม",
                                 "size": "sm",
                                 "color": "#555555"
                                 },
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "contents": [
                                 {
                                 "type": "text",
-                                "text": "ราคาทั้งหมด",
+                                "text": "ราคารวม",
                                 "size": "sm",
                                 "color": "#555555"
                                 },
@@ -167,6 +167,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     ]
                     },
+                    "actions": [
+                        {
+                            "type": "message",
+                            "label": "ขนมเด็ก",
+                            "text": "รายการขนมขบเคี้ยว 1"
+                        },
+                        {
+                            "type": "message",
+                            "label": "กรอบๆ ทานเล่น",
+                            "text": "รายการขนมขบเคี้ยว 2"
+                        },
+                        {
+                            "type": "message",
+                            "label": "อื่นๆ",
+                            "text": "รายการขนมขบเคี้ยว 3"
+                        }
+                        ],
                     "styles": {
                     "footer": {
                         "separator": true
