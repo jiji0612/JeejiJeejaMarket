@@ -224,5 +224,5 @@ $jsonobj = '{
 
 //var_dump(json_decode($jsonobj, true));
 
-var_dump($jsonobj);
+echo $jsonobj;
 ?>
