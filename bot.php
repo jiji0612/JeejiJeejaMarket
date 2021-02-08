@@ -36,6 +36,12 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+			} else {
+				$data = [
+					'replyToken' => $reply_token,
+					'messages' => [['type' => 'text', 'text' => '"'.$arr.'"' ]]
+				];
+				$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 			}
 		} else if(startsWith($text,"order")) {
 			//Postback ordered
@@ -57,9 +63,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$send_result = $ordered_result;
 			}
 		} else if(startsWith($text,"CancelOrder")) {
-			$del_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php'
-			, ''
-			, 'uid='.$uid);
+			$del_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php', '', 'uid='.$uid);
 			if ($del_result == "successfully"){
 				$sum_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php', '', 'uid='.$uid);
 				$json_a = json_decode($sum_result, true);
