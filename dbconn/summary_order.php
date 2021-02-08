@@ -14,7 +14,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_query("SET NAMES UTF8");
 
     $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
-    $arr_order_lst = '';
+    $arr_order_lst = '{
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+            {
+            "type": "text",
+            "text": "สินค้า",
+            "size": "sm",
+            "color": "#555555",
+            "flex": 0
+            },
+            {
+            "type": "text",
+            "text": "ราคา",
+            "size": "sm",
+            "color": "#111111",
+            "align": "end"
+            }
+        ]
+        },
+        ';
     $sum_qty = '0';
     $sum_price = '0';
 
