@@ -139,20 +139,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             ]
                             },
                             {
-                            "type": "box",
-                            "layout": "vertical",
-                            "spacing": "sm",
-                            "contents": [
-                                {
-                                "type": "button",
-                                "style": "link",
-                                "height": "sm",
-                                "action": {
-                                    "type": "uri",
-                                    "label": "CALL",
-                                    "uri": "https://linecorp.com"
-                                }
-                            ]
+                                "type": "box",
+                                "layout": "horizontal",
+                                "contents": [
+                                    {
+                                    "type": "text",
+                                    "text": "ราคารวม",
+                                    "size": "sm",
+                                    "color": "#555555"
+                                    },
+                                    {
+                                    "type": "text",
+                                    "text": "dd",
+                                    "size": "sm",
+                                    "color": "#111111",
+                                    "align": "end"
+                                    }
+                                ]
                             }
                         ]
                         },
