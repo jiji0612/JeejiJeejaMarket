@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "type": "text",
             "text": "สินค้า",
             "size": "sm",
+            "weight": "bold",
             "color": "#555555",
             "flex": 0
             },
@@ -29,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "type": "text",
             "text": "ราคา",
             "size": "sm",
+            "weight": "bold",
             "color": "#111111",
             "align": "end"
             }
@@ -47,14 +49,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 {
                 "type": "text",
                 "text": "'.$objResult["item"].'  ('.$objResult["total_qty"].')",
-                "size": "xl",
+                "size": "sm",
                 "color": "#555555",
                 "flex": 0
                 },
                 {
                 "type": "text",
                 "text": "'.$objResult["total_price"].'฿",
-                "size": "xl",
+                "size": "sm",
                 "color": "#111111",
                 "align": "end"
                 }
