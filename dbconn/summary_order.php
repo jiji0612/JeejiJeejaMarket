@@ -164,38 +164,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "align": "end"
                             }
                         ]
-                        },
-                        {
-                            "type": "buttons",
-                            "size": "nano",
-                            "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg",
-                            "imageAspectRatio": "rectangle",
-                            "imageSize": "cover",
-                            "imageBackgroundColor": "#FFFFFF",
-                            "title": "เมนู ขนมขบเคี้ยว",
-                            "text": "เลือกเมนูด้านล่างค่ะ",
-                            "defaultAction": {
-                                "type": "uri",
-                                "label": "View detail",
-                                "uri": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg"
-                            },
-                            "actions": [
-                                {
-                                  "type": "message",
-                                  "label": "ขนมเด็ก",
-                                  "text": "รายการขนมขบเคี้ยว 1"
-                                },
-                                {
-                                  "type": "message",
-                                  "label": "กรอบๆ ทานเล่น",
-                                  "text": "รายการขนมขบเคี้ยว 2"
-                                },
-                                {
-                                  "type": "message",
-                                  "label": "อื่นๆ",
-                                  "text": "รายการขนมขบเคี้ยว 3"
-                                }
-                            ]
                         }
                     ]
                     },
