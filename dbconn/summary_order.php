@@ -24,14 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "contents": [
                 {
                 "type": "text",
-                "text": "'.$objResult["item"].'",
+                "text": "'.$objResult["item"].'  ('.$objResult["total_qty"].')",
                 "size": "sm",
                 "color": "#555555",
                 "flex": 0
                 },
                 {
                 "type": "text",
-                "text": "('.$objResult["total_qty"].')  '.$objResult["total_price"].'฿",
+                "text": "'.$objResult["total_price"].'฿",
                 "size": "sm",
                 "color": "#111111",
                 "align": "end"
