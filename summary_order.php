@@ -54,8 +54,8 @@ while($objResult = mysqli_fetch_array($objQuery))
                             "layout": "vertical",
                             "margin": "xxl",
                             "spacing": "sm",
-                            "contents": [
-                                {
+                            "contents": ['
+                                .'{
                                 "type": "box",
                                 "layout": "horizontal",
                                 "contents": [
@@ -74,48 +74,8 @@ while($objResult = mysqli_fetch_array($objQuery))
                                     "align": "end"
                                     }
                                 ]
-                                },
-                                {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                    "type": "text",
-                                    "text": "Chewing Gum",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "flex": 0
-                                    },
-                                    {
-                                    "type": "text",
-                                    "text": "$0.99",
-                                    "size": "sm",
-                                    "color": "#111111",
-                                    "align": "end"
-                                    }
-                                ]
-                                },
-                                {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                    "type": "text",
-                                    "text": "Bottled Water",
-                                    "size": "sm",
-                                    "color": "#555555",
-                                    "flex": 0
-                                    },
-                                    {
-                                    "type": "text",
-                                    "text": "$3.33",
-                                    "size": "sm",
-                                    "color": "#111111",
-                                    "align": "end"
-                                    }
-                                ]
-                                },
-                                {
+                                },'.
+                               '{
                                 "type": "separator",
                                 "margin": "xxl"
                                 },
