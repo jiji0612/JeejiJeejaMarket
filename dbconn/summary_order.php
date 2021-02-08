@@ -31,15 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 },
                 {
                 "type": "text",
-                "text": "'.$objResult["total_qty"].'",
-                "size": "sm",
-                "color": "#111111",
-                "align": "end"
-                }
-                ,
-                {
-                "type": "text",
-                "text": "'.$objResult["total_price"].'฿",
+                "text": "('.$objResult["total_qty"].')  '.$objResult["total_price"].'฿",
                 "size": "sm",
                 "color": "#111111",
                 "align": "end"
@@ -188,7 +180,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "contents": [
                                 {
                                 "type": "text",
-                                "text": "การจ้ายเงิน",
+                                "text": "การจ่ายเงิน",
                                 "size": "xs",
                                 "color": "#aaaaaa",
                                 "flex": 0
