@@ -56,16 +56,14 @@ if ( sizeof($request_array['events']) > 0 ) {
 			} else {
 				$send_result = $ordered_result;
 			}
-		}
-		else if(startsWith($text,"ตะกร้า")) {
+		} else if(startsWith($text,"ตะกร้า")) {
 			$sum_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php'
 			, ''
 			, 'uid='.$uid.);
 			$json_a = json_decode($sum_result, true);
 			$json_a['replyToken'] = $reply_token;
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
-		} 
-		else {
+		} else {
 			$string = file_get_contents('defaultemoji.json');
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
