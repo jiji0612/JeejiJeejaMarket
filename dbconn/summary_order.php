@@ -149,11 +149,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "color": "#555555"
                                     },
                                     {
-                                    "type": "text",
-                                    "text": "dd",
-                                    "size": "sm",
-                                    "color": "#111111",
-                                    "align": "end"
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "WEBSITE",
+                                        "uri": "https://linecorp.com"
+                                        }
                                     }
                                 ]
                             }
