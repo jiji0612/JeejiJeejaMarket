@@ -62,7 +62,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			} else {
 				$send_result = $ordered_result;
 			}
-		} else if(startsWith($text,"CancelOrder")) {
+		} else if(startsWith($text,"ยกเลิกสั่งซื้อ")) {
 			$del_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php', '', 'uid='.$uid);
 			if ($del_result == "successfully"){
 				$sum_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php', '', 'uid='.$uid);
