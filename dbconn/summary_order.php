@@ -139,23 +139,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             ]
                             },
                             {
+                                "type": "separator",
+                                "margin": "xxl"
+                            },
+                            {
                                 "type": "box",
                                 "layout": "horizontal",
                                 "contents": [
                                     {
-                                    "type": "text",
-                                    "text": "ราคารวม",
-                                    "size": "sm",
-                                    "color": "#555555"
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
+                                    "action": {
+                                        "type": "message",
+                                        "label": "ยกเลิก",
+                                        "text": "ยกเลิกสั่งซื้อ"
+                                        }
                                     },
                                     {
                                     "type": "button",
                                     "style": "link",
                                     "height": "sm",
                                     "action": {
-                                        "type": "uri",
-                                        "label": "WEBSITE",
-                                        "uri": "https://linecorp.com"
+                                        "type": "message",
+                                        "label": "ยืนยัน",
+                                        "text": "ยืนยันสั่งซื้อ"
                                         }
                                     }
                                 ]
