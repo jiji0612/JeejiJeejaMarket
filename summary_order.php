@@ -14,12 +14,6 @@ $arr_order_lst = '';
 
 while($objResult = mysqli_fetch_array($objQuery))
 {
-    <td><?php echo $objResult["addr"];?></td>
-    <td><?php echo $objResult["orderno"];?></td>
-    <td><?php echo $objResult["item"];?></td>
-    <td><?php echo $objResult["total_qty"];?></td>
-    <td><?php echo $objResult["total_price"];?></td>
-
     $arr_order_lst .= '{
         "type": "box",
         "layout": "horizontal",
