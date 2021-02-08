@@ -8,6 +8,6 @@
                     'เบ็ดเตล็ด'               => 'file:other.json',
                     'ยืนยันสั่งซื้อ'             => 'file:confirmorder.json',
                     'Hi'                    => 'Hello World!',
-                    'ConfirmOrder'          => 'กำลังจัดส่งให้ถึงหน้าบ้านโดยด่วนค่ะ',
+                    'ConfirmOrder'          => 'กำลังจัดส่งให้ด่วนค่ะ',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>

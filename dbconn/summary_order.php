@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         "text": "ยกเลิกสั่งซื้อ"
                                         }
                                     },
-                                    {
+                                    { 
                                     "type": "button",
                                     "style": "link",
                                     "height": "sm",
