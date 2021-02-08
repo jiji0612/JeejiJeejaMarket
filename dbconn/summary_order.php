@@ -47,14 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 {
                 "type": "text",
                 "text": "'.$objResult["item"].'  ('.$objResult["total_qty"].')",
-                "size": "sm",
+                "size": "xl",
                 "color": "#555555",
                 "flex": 0
                 },
                 {
                 "type": "text",
                 "text": "'.$objResult["total_price"].'฿",
-                "size": "sm",
+                "size": "xl",
                 "color": "#111111",
                 "align": "end"
                 }
