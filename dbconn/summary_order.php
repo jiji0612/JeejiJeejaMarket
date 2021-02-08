@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "action": {
                                         "type": "message",
                                         "label": "ยกเลิก",
-                                        "text": "CancelOrder"
+                                        "text": "ยกเลิกสั่งซื้อ"
                                         }
                                     },
                                     {
