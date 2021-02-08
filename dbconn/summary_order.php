@@ -164,7 +164,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "align": "end"
                             }
                         ]
-                        }
+                        },
+                        "actions": [
+                            {
+                              "type": "message",
+                              "label": "ขนมเด็ก",
+                              "text": "รายการขนมขบเคี้ยว 1"
+                            },
+                            {
+                              "type": "message",
+                              "label": "กรอบๆ ทานเล่น",
+                              "text": "รายการขนมขบเคี้ยว 2"
+                            },
+                            {
+                              "type": "message",
+                              "label": "อื่นๆ",
+                              "text": "รายการขนมขบเคี้ยว 3"
+                            }
+                        ]
                     ]
                     },
                     "styles": {
