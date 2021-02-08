@@ -157,7 +157,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         }
                                     },
                                     {
-                                    "type": "confirm",
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
                                     "action": {
                                         "type": "message",
                                         "label": "ยืนยัน",
