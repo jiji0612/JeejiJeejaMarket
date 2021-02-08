@@ -158,19 +158,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     },
                                     {
                                     "type": "confirm",
-                                    "actions": [
-                                        {
+                                    "action": {
                                         "type": "message",
-                                        "label": "Yes",
-                                        "text": "Yes"
-                                        },
-                                        {
-                                        "type": "message",
-                                        "label": "No",
-                                        "text": "No"
+                                        "label": "ยืนยัน",
+                                        "text": "ยืนยันสั่งซื้อ"
                                         }
-                                    ],
-                                    "text": "Continue?"
                                     }
                                 ]
                             }
