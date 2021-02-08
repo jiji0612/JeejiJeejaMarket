@@ -147,9 +147,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 "style": "link",
                                 "height": "sm",
                                 "action": {
-                                "type": "uri",
-                                "label": "CALL",
-                                "uri": "https://linecorp.com"
+                                    "type": "uri",
+                                    "label": "CALL",
+                                    "uri": "https://linecorp.com"
                                 }
                             ]
                             }
