@@ -181,17 +181,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "contents": [
                             {
                             "type": "text",
-                            "text": "การจ่ายเงิน",
-                            "size": "xs",
+                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่งด้วยนะ",
+                            "size": "sm",
                             "color": "#aaaaaa",
                             "flex": 0
-                            },
-                            {
-                            "type": "text",
-                            "text": "ปลายทาง",
-                            "color": "#aaaaaa",
-                            "size": "xs",
-                            "align": "end"
                             }
                         ]
                         }
