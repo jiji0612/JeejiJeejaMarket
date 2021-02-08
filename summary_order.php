@@ -218,5 +218,5 @@ while($objResult = mysqli_fetch_array($objQuery))
 
 //var_dump(json_decode($jsonobj, true));
 mysqli_close($conn);
-echo $jsonobj;
+echo $arr_order_lst;
 ?>
