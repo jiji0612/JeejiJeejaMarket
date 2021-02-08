@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "action": {
                                         "type": "message",
                                         "label": "ยกเลิก",
-                                        "text": "ยกเลิกสั่งซื้อ"
+                                        "text": "CancelOrder"
                                         }
                                     },
                                     {
@@ -181,9 +181,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "contents": [
                             {
                             "type": "text",
-                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่งด้วยนะ",
+                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่ง ยืนยัน ด้วยนร้า",
                             "size": "sm",
-                            "color": "#aaaaaa",
+                            "color": "#1DB446",
                             "flex": 0
                             }
                         ]
