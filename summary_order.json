@@ -58,6 +58,13 @@
                               "size": "sm",
                               "color": "#111111",
                               "align": "end"
+                            },
+                            {
+                              "type": "text",
+                              "text": "$2.99",
+                              "size": "sm",
+                              "color": "#111111",
+                              "align": "end"
                             }
                           ]
                         },
@@ -71,6 +78,13 @@
                               "size": "sm",
                               "color": "#555555",
                               "flex": 0
+                            },
+                            {
+                              "type": "text",
+                              "text": "$2.99",
+                              "size": "sm",
+                              "color": "#111111",
+                              "align": "end"
                             },
                             {
                               "type": "text",
@@ -91,6 +105,13 @@
                               "size": "sm",
                               "color": "#555555",
                               "flex": 0
+                            },
+                            {
+                              "type": "text",
+                              "text": "$2.99",
+                              "size": "sm",
+                              "color": "#111111",
+                              "align": "end"
                             },
                             {
                               "type": "text",
