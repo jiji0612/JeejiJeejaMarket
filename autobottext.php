@@ -6,7 +6,7 @@
                     'อาหาร'                 => 'file:foods.json',
                     'เครื่องดื่ม'               => 'file:drinking.json',
                     'เบ็ดเตล็ด'               => 'file:other.json',
-                    'ยืนยันสั่งซื้อ'             => 'file:confirmorder.json',
+                    'ยกเลิกสั่งซื้อ'             => 'file:confirmorder.json',
                     'Hi'                    => 'Hello World!',
                     'ConfirmOrder'          => 'กำลังจัดส่งให้ด่วนค่ะ *ให้ส่งที่ใหนดีคะ*',
 					'Hello'                 => 'สวีสดีจร้า');

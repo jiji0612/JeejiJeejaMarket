@@ -10,7 +10,7 @@
             {
               "type": "message",
               "label": "Yes",
-              "text": "ConfirmOrder"
+              "text": "CancelOrder"
             },
             {
               "type": "message",
@@ -18,7 +18,7 @@
               "text": "No"
             }
           ],
-          "text": "โปรดยืนยันการสั่งซื้อ อีกครั้ง ค่ะ"
+          "text": "กรุณายืนยันอีกครั้งค่ะ"
         }
       }
     ]
