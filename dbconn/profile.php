@@ -65,7 +65,7 @@ div {
 	{
     	$uid = $_GET['uid'];
 		$_SESSION['uid'] = $uid;
-		$user_name = $_POST['uname'];
+		$user_name = $_GET['uname'];
 	}
 
 	/***  Add Record ***/
