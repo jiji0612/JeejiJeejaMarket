@@ -183,9 +183,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "style": "link",
                                     "height": "sm",
                                     "action": {
-                                        "type": "uri",
+                                        "type": "message",
                                         "label": "ยืนยัน",
-                                        "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/confirmorder.php?uid=Uf59d3e6c430c3c10b631eed5f511b320"
+                                        "text": "ยืนยันสั่งซื้อ"
                                         }
                                     }
                                 ]

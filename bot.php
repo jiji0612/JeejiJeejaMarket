@@ -30,20 +30,43 @@ if ( sizeof($request_array['events']) > 0 ) {
 			$arr = $arrayText[$text];
 			if(startsWith($arr,"file")) 
 			{
-				$file = explode(':', $arr);
+				$file = explode(';', $arr);
 
 				$string = file_get_contents($file[1]);
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
-			} else {
+			} 
+			else if(startsWith($arr,"url")) 
+			{
+				$url = explode(';', $arr);
+				$del_result = send_reply_message($url[1], '', 'uid='.$uid);
+				if ($del_result == "successfully"){
+					$data = [
+						'replyToken' => $reply_token,
+						'messages' => [['type' => 'text', 'text' => '"'.$del_result.'"' ]]
+					];
+					$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+				} else {
+					$send_result = $del_result;
+				}
+			} 
+			else if(startsWith($arr,"json")) 
+			{
+				$jsonurl = explode(';', $arr);
+				$sum_result = send_reply_message(jsonurl[1], '', 'uid='.$uid);
+				$json_a = json_decode($sum_result, true);
+				$json_a['replyToken'] = $reply_token;
+				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+			} 
+			else {
 				$data = [
 					'replyToken' => $reply_token,
 					'messages' => [['type' => 'text', 'text' => '"'.$arr.'"' ]]
 				];
 				$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 			}
-		} else if(startsWith($text,"order")) {
+		} else if(startsWith($text,"order")) { //Add order
 			//Postback ordered
 			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
 			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
@@ -62,22 +85,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 			} else {
 				$send_result = $ordered_result;
 			}
-		} else if(startsWith($text,"CancelOrder")) {
-			$del_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php', '', 'uid='.$uid);
-			if ($del_result == "successfully"){
-				$data = [
-					'replyToken' => $reply_token,
-					'messages' => [['type' => 'text', 'text' => '"'.$del_result.'"' ]]
-				];
-				$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-			} else {
-				$send_result = $del_result;
-			}
-		} else if(startsWith($text,"ตะกร้า")) {
-			$sum_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php', '', 'uid='.$uid);
-			$json_a = json_decode($sum_result, true);
-			$json_a['replyToken'] = $reply_token;
-			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 		} else {
 			$string = file_get_contents('defaultemoji.json');
 			$json_a = json_decode($string, true);

@@ -10,7 +10,7 @@
             {
               "type": "message",
               "label": "Yes",
-              "text": "ConfirmOrder"
+              "text": "CancelOrder"
             },
             {
               "type": "message",
