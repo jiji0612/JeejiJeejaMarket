@@ -98,7 +98,7 @@ div {
 		</table>
 
 		<div class="footer">
-			<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า"></td>
+			<input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า">
 		</div>
 		</form>	 
 	</div>
