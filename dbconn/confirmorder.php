@@ -64,7 +64,8 @@ div {
 		//Update address to member
 		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
         if (mysqli_query($conn, $strSQL)) {
-            echo $_POST["txtaddr"] . "   " . $_SESSION['uid'] ;
+            print "ยืนยันรายการ เรียบร้อยค่ะ";
+			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
@@ -77,12 +78,14 @@ div {
 	<div>
 		<table width="100%" border="1">
 		<tr>
-			<th colspan="2" width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
+			<thwidth="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
 		</tr>
 		<form name="frmMain" method="post" action="?Action=Save">
 			<tr>
 				<td width="100%"><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"></td>
-				<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></td>
+			</tr>
+			<tr>
+				<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า"></td>
 			</tr>
 		</form>	 
 		</table>
