@@ -39,13 +39,6 @@ div {
 }
 </style>
 
-<script>
-    function closeMe() {
-        var win = window.open("","_self"); /* url = "" or "about:blank"; target="_self" */
-        win.close();
-    }
-</script>
-
 <body>
 <?php	
 	session_start();
@@ -81,16 +74,14 @@ div {
           }
 	}
 
-	$strSQL = "INSERT INTO member (memberid,membername) ";
-	$strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
-	mysqli_query($conn, $strSQL);
+	
 	
 	//Get Address of member
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 	<div>
-	
+		<H1>ถ้าไม่พบข้อมูล ลองกลับไปเลือกสินค้าลงตะกร้าก่อนค่ะ</H1>
 		<table width="100%" border="1">
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
