@@ -71,13 +71,9 @@ div {
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."';";
-
-		$strSQL .= "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status) ";
-		$strSQL .= "SELECT DATE_FORMAT(NOW(), '%Y%M%d%T'),memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $_SESSION['uid'] ."';";
-
-		$strSQL .= "DELETE FROM member_order Where memberid = '". $_SESSION['uid'] ."';";
-        if (mysqli_multi_query($conn, $strSQL)) {
+		$strSQL = "DELETE FROM member WHERE memberid = '".$uid."';";
+		$strSQL = "INSERT INTO member (memberid,membername,addr) SELECT '".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."' FROM DUAL;";
+    	if (mysqli_multi_query($conn, $strSQL)) {
 
             echo "<script>closeMe();</script>";
 			return;
@@ -94,9 +90,11 @@ div {
 	<form name="frmMain" method="post" action="?Action=Save">
 		<table width="100%" border="1">
 		<tr>
-			<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
+			<td width="100%"><div align='center '><H1>ชื่อสมาชิก</H1></div></td>
+			<td width="100%"><H1><input name="txtname" type="text" id="txtname" value="<?php echo $objResult["membername"];?>"><H1></td>
 		</tr>
 		<tr>
+			<td width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></td>
 			<td width="100%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 		</tr>
 		</table>

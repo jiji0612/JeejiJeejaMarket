@@ -7,7 +7,7 @@
                     'เครื่องดื่ม'               => 'file;drinking.json',
                     'เบ็ดเตล็ด'               => 'file;other.json',
                     'ยกเลิกสั่งซื้อ'             => 'file;cancelorder.json',
-                    'ยืรยันสั่งซื้อ'              => 'file;confirmorder.json',
+                    'ยืนยันสั่งซื้อ'              => 'file;confirmorder.json',
                     'Hi'                    => 'Hello World!',
                     'CancelOrder'           => 'url;https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php',
                     'ConfirmOrder'          => 'url;https://jeejijeejamarket.herokuapp.com/dbconn/conorder.php',
