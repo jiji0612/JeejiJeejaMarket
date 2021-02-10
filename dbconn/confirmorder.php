@@ -72,7 +72,7 @@ div {
 		$strSQL .= "DELETE FROM confirm_order Where memberid = '". $_SESSION['uid'] ."';";
         if (mysqli_query($conn, $strSQL)) {
 
-            print "<div align='center '><H1>ยืนยันรายการ เรียบร้อยค่ะ</H1></div>";
+            echo "<script>window.close();</script>";
 			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
