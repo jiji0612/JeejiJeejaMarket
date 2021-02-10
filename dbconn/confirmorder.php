@@ -28,9 +28,9 @@
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
+		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
         if (mysqli_query($conn, $strSQL)) {
-            echo $_POST["txtAddr"] . "   " . $_SESSION['uid'] ;
+            echo $_POST["txtaddr"] . "   " . $_SESSION['uid'] ;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
@@ -47,8 +47,8 @@
 	</tr>
 	<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
-			<th width="100%"><input name="txtaddr" type="text" id="txtaddr"></th>
-			<th width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></th>
+			<td width="100%"><input name="txtaddr" type="text" id="txtaddr"></td>
+			<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></td>
 		</tr>
 	</form>	 
 	</table>
