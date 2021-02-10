@@ -6,11 +6,12 @@
                     'อาหาร'                 => 'file;foods.json',
                     'เครื่องดื่ม'               => 'file;drinking.json',
                     'เบ็ดเตล็ด'               => 'file;other.json',
-                    'ยกเลิกสั่งซื้อ'             => 'file;cancelorder.json',
-                    'ยืนยันสั่งซื้อ'              => 'file;confirmorder.json',
+                    'ยกเลิกสั่งซื้อ'            => 'file;cancelorder.json',
+                    'ยืนยันสั่งซื้อ'             => 'file;confirmorder.json',
+                    'Profile'               => 'file;profilredit.json',
                     'Hi'                    => 'Hello World!',
-                    'CancelOrder'           => 'url;https://jeejijeejamarket.herokuapp.com/dbconn/delorder.php',
-                    'ConfirmOrder'          => 'url;https://jeejijeejamarket.herokuapp.com/dbconn/conorder.php',
-                    'ตะกร้า'                 => 'json;https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php',
+                    'CancelOrder'           => 'url;dbconn/delorder.php',
+                    'ConfirmOrder'          => 'url;dbconn/conorder.php',
+                    'ตะกร้า'                 => 'json;dbconn/summary_order.php',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>

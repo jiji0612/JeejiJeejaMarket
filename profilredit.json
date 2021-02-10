@@ -1,0 +1,25 @@
+{
+    "replyToken": "",  
+    "messages": [
+      {
+        "type": "template",
+        "altText": "this is a confirm template",
+        "template": {
+          "type": "confirm",
+          "actions": [
+            {
+              "type": "uri",
+              "label": "แก้ไข",
+              "uri": ""
+            },
+            {
+              "type": "message",
+              "label": "ยกเลิก",
+              "text": "No"
+            }
+          ],
+          "text": "Proflit Edit"
+        }
+      }
+    ]
+  }
