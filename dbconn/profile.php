@@ -79,26 +79,23 @@ div {
 	//Get Address of member
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
-	{?>
-	<div>
+	{
+	echo '<div>
 		<table width="100%" border="1">
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
-			<td width="30%"><div align='center'><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value="<?php echo $objResult["membername"];?>"><H1></td>
+			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
+			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value="' . $objResult["membername"] . '><H1></td>
 		</tr>
 		<tr>
-			<td width="30%"><div align='center'><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
+			<td width="30%"><div align"center"><H1>ที่อยู่จัดส่ง</H1></div></td>
+			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="' . $objResult["addr"] . '><H1></td>
 		</tr>
 		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
 		</form>	
 		</table>
-			
-	 
-	</div>
-	<?php
-	}
+	</div>';
+
 		mysqli_close($conn);
 	?>
 </body>
