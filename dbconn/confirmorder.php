@@ -15,7 +15,7 @@
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_query("SET NAMES UTF8");
 	
-	$uid  = "";
+	$uid  = "dummy";
 	if(isset($_GET["uid"]))
 	{
     	$uid = $_GET['uid'];
@@ -38,9 +38,9 @@
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 
-	<form name="frmMain" method="post" action="?Action=Save&uid="<?php $_GET['uid'];?>>
+	<form name="frmMain" method="post" action="?Action=Save&uid="<?php echo $uid;?>>
 		<div align='center '><H1>ที่อยู่จัดส่ง</H1></div>";
-		<input name="txtaddr" type="text" id="txtaddr" value="<?php $objResult["addr"];?>">
+		<input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>">
 		<div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div>
 	</form>	  
 
