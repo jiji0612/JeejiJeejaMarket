@@ -70,7 +70,7 @@ div {
 		$strSQL .= "SELECT orderno,memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $_SESSION['uid'] ."';";
 
 		$strSQL .= "DELETE FROM confirm_order Where memberid = '". $_SESSION['uid'] ."';";
-        if (mysqli_query($conn, $strSQL)) {
+        if (mysqli_multi_query($conn, $strSQL)) {
 
             echo "<script>window.close();</script>";
 			return;
