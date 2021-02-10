@@ -13,6 +13,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: large;
 }
 
 input[type=submit] {
@@ -25,6 +26,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: large;
 }
 
 .footer {
@@ -32,7 +34,6 @@ input[type=submit] {
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: red;
    color: white;
    text-align: center;
 }
