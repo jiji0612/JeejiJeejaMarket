@@ -5,6 +5,8 @@
 </head>
 <body>
 <?php	
+	session_start();
+
 	/*** Connect ***/
 	$url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
 
@@ -19,13 +21,14 @@
 	if(isset($_GET["uid"]))
 	{
     	$uid = $_GET['uid'];
+		$_SESSION["uid"]=>$uid;
 	}
 
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '".$uid."'";
+		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '". $_SESSION["uid"] ."'";
         if (mysqli_query($conn, $strSQL)) {
             echo "New record created successfully";
           } else {
@@ -34,14 +37,23 @@
 	}
 
 	//Get Address of member
-    $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '".$uid."'");
+    $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '". $_SESSION["uid"] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 
 	<form name="frmMain" method="post" action="?Action=Save">
-		<div align='center '><H1>ที่อยู่จัดส่ง</H1></div>
-		<div align="left"; width="100%"><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"></div>
-		<div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div>
+		<table width="100%" border="1">
+		<tr>
+			<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
+		</tr>
+		<tr>
+			<th width="100%"><div align="left"; width="100%"><input name="txtaddr" type="text" id="txtaddr"
+			value="<?php echo $objResult["addr"];?>"></div></th>
+		</tr>
+		<tr>
+			<th width="100%"><div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div></th>
+		</tr>
+		</table>
 	</form>	  
 
 	<?php
