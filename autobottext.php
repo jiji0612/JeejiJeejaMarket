@@ -10,8 +10,8 @@
                     'ยืนยันสั่งซื้อ'             => 'file;confirmorder.json',
                     'Profile'               => 'file;profilredit.json',
                     'Hi'                    => 'Hello World!',
-                    'CancelOrder'           => 'url;dbconn/delorder.php',
-                    'ConfirmOrder'          => 'url;dbconn/conorder.php',
-                    'ตะกร้า'                 => 'json;dbconn/summary_order.php',
+                    'CancelOrder'           => 'url;/dbconn/delorder.php',
+                    'ConfirmOrder'          => 'url;/dbconn/conorder.php',
+                    'ตะกร้า'                 => 'json;/dbconn/summary_order.php',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>

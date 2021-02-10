@@ -10,7 +10,7 @@
             {
               "type": "uri",
               "label": "แก้ไข",
-              "uri": ""
+              "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/profile.php?uid=@uid"
             },
             {
               "type": "message",

@@ -26,6 +26,13 @@ if ( sizeof($request_array['events']) > 0 ) {
 		$uid = $event['source']['userId'];
         $text = $event['message']['text'];
 
+		//Get Line ID & Information
+		$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
+		$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
+		$get_user = get_reply_message($API_GET, $GET_HEADER);
+		$get_user_arr = json_decode($get_user, true);
+		$user_name = $get_user_arr["displayName"];
+
         if (array_key_exists($text, $arrayText)) {
 			$arr = $arrayText[$text];
 			if(startsWith($arr,"file")) 
@@ -33,6 +40,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$file = explode(';', $arr);
 
 				$string = file_get_contents($file[1]);
+				$string = str_replace("@uid",$uid,$string);
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
@@ -54,8 +62,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"json")) 
 			{
 				$jsonurl = explode(';', $arr);
-				$sum_result = send_reply_message($jsonurl[1], '', 'uid='.$uid);
-				$json_a = json_decode($sum_result, true);
+				$json_result = send_reply_message($jsonurl[1], '', 'uid='.$uid);
+				$json_a = json_decode($json_result, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			} 
@@ -68,11 +76,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 			}
 		} else if(startsWith($text,"order")) { //Add order
 			//Postback ordered
-			$API_GET = "https://api.line.me/v2/bot/profile/" . $uid;
-			$GET_HEADER = array('Authorization: Bearer ' . $ACCESS_TOKEN);
-			$get_user = get_reply_message($API_GET, $GET_HEADER);
-			$get_user_arr = json_decode($get_user, true);
-			$user_name = $get_user_arr["displayName"];
 			$ordered_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/addorder.php'
 			, ''
 			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. $text);
