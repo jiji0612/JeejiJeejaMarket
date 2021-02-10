@@ -20,22 +20,12 @@ input[type=submit] {
   width: 100%;
   height: 300px;
   background-color: #4CAF50;
-  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 150%;
-}
-
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
 }
 
 input[type=submit]:hover {
@@ -97,8 +87,6 @@ div {
 			<td width="100%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 		</tr>
 		</table>
-		</div>
-		<div class="footer">
 			<input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า">
 		</div>
 		</form>	 
