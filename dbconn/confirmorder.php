@@ -38,7 +38,7 @@
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 
-	<form name="frmMain" method="post" action="?Action=Save&uid="<?php echo $uid;?>>
+	<form name="frmMain" method="post" action="?Action=Save">
 		<div align='center '><H1>ที่อยู่จัดส่ง</H1></div>
 		<input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>">
 		<div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div>
