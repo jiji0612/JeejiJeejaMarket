@@ -39,7 +39,7 @@
 	{?>
 
 	<form name="frmMain" method="post" action="?Action=Save&uid="<?php echo $uid;?>>
-		<div align='center '><H1>ที่อยู่จัดส่ง</H1></div>";
+		<div align='center '><H1>ที่อยู่จัดส่ง</H1></div>
 		<input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>">
 		<div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div>
 	</form>	  
