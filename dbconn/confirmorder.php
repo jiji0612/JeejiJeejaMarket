@@ -21,7 +21,7 @@
 	if(isset($_GET["uid"]))
 	{
     	$uid = $_GET['uid'];
-		$_SESSION["uid"]=>$uid;
+		$_SESSION["uid"] = $uid;
 	}
 
 	/***  Add Record ***/
