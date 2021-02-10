@@ -41,20 +41,20 @@
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 
+	<table width="100%" border="1">
+	<tr>
+		<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
+	</tr>
 	<form name="frmMain" method="post" action="?Action=Save">
-		<table width="100%" border="1">
-		<tr>
-			<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
-		</tr>
 		<tr>
 			<th width="100%"><input name="txtaddr" type="text" id="txtaddr"></th>
 		</tr>
 		<tr>
 			<th width="100%"><div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div></th>
 		</tr>
-		</table>
-	</form>	  
-
+	</form>	 
+	</table>
+	 
 	<?php
 	}
 		mysqli_close($conn);
