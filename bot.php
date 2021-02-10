@@ -41,8 +41,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$file = explode(';', $arr);
 
 				$string = file_get_contents($host_php . $file[1]);
+				$string = str_replace("@uid",$uid,$string);
 				$json_a = json_decode($string, true);
-				$json_a = str_replace("@uid",$uid,$json_a,$i);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			} 
