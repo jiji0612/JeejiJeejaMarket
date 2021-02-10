@@ -96,12 +96,12 @@ div {
 			<td width="100%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 		</tr>
 		</table>
-
+		</div>
 		<div class="footer">
 			<input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า">
 		</div>
 		</form>	 
-	</div>
+	
 	<?php
 	}
 		mysqli_close($conn);
