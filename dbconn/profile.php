@@ -74,14 +74,13 @@ div {
           }
 	}
 
-	
+	echo "<H1>ถ้าไม่พบข้อมูล ลองกลับไปเลือกสินค้าลงตะกร้าก่อนค่ะ</H1>";
 	
 	//Get Address of member
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 	<div>
-		<H1>ถ้าไม่พบข้อมูล ลองกลับไปเลือกสินค้าลงตะกร้าก่อนค่ะ</H1>
 		<table width="100%" border="1">
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
