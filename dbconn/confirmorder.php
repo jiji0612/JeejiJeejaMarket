@@ -21,14 +21,14 @@
 	if(isset($_GET["uid"]))
 	{
     	$uid = $_GET['uid'];
-		$_SESSION["uid"] = $uid;
+		$_SESSION['uid'] = $uid;
 	}
 
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '". $_SESSION["uid"] ."'";
+		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
         if (mysqli_query($conn, $strSQL)) {
             echo "New record created successfully";
           } else {
@@ -37,7 +37,7 @@
 	}
 
 	//Get Address of member
-    $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '". $_SESSION["uid"] ."'");
+    $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 
