@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Order Confirm</title>
+<title>Member Profile</title>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 </head>
 
@@ -95,8 +95,9 @@ div {
 		</form>	
 		</table>
 	</div>';
-
-		mysqli_close($conn);
+	}
+	
+	mysqli_close($conn);
 	?>
 </body>
 </html> 
