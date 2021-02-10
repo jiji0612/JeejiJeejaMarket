@@ -185,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "action": {
                                         "type": "uri",
                                         "label": "ยืนยัน",
-                                        "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/confirmorder.php?uid=Uf59d3e6c430c3c10b631eed5f511b320
+                                        "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/confirmorder.php?uid=Uf59d3e6c430c3c10b631eed5f511b320"
                                         }
                                     }
                                 ]
