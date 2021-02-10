@@ -82,7 +82,7 @@ div {
 		</tr>
 		<form name="frmMain" method="post" action="?Action=Save">
 			<tr>
-				<td width="100%"><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"></td>
+				<td width="100%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 			</tr>
 			<tr>
 				<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า"></td>
