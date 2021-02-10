@@ -54,7 +54,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"json")) 
 			{
 				$jsonurl = explode(';', $arr);
-				$sum_result = send_reply_message(jsonurl[1], '', 'uid='.$uid);
+				$sum_result = send_reply_message($jsonurl[1], '', 'uid='.$uid);
 				$json_a = json_decode($sum_result, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
