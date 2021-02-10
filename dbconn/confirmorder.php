@@ -64,9 +64,15 @@ div {
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
+		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."';";
+
+		$strSQL .= "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status) ";
+		$strSQL .= "SELECT orderno,memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $_SESSION['uid'] ."';";
+
+		$strSQL .= "DELETE FROM confirm_order Where memberid = '". $_SESSION['uid'] ."';";
         if (mysqli_query($conn, $strSQL)) {
-            print "ยืนยันรายการ เรียบร้อยค่ะ";
+
+            print "<div align='center '><H1>ยืนยันรายการ เรียบร้อยค่ะ</H1></div>";
 			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
