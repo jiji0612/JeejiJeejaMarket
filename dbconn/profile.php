@@ -75,7 +75,7 @@ div {
 		$strSQL .= "INSERT INTO member (memberid,membername,addr) SELECT '".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."' FROM DUAL;";
     	if (mysqli_multi_query($conn, $strSQL)) {
 
-            echo "<script>closeMe();</script>";
+            echo "sucessfully";
 			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
