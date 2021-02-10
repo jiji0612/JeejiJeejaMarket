@@ -47,8 +47,7 @@
 			<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
 		</tr>
 		<tr>
-			<th width="100%"><div align="left"; width="100%"><input name="txtaddr" type="text" id="txtaddr"
-			value="<?php echo $objResult["addr"];?>"></div></th>
+			<th width="100%"><div align="left"; width="100%"><input name="txtaddr" type="text" id="txtaddr"></div></th>
 		</tr>
 		<tr>
 			<th width="100%"><div align="right"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></div></th>
