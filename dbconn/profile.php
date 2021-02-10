@@ -83,19 +83,19 @@ div {
 	}
 
 	//Get Address of member
-    $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '". $_SESSION['uid'] ."'");
+    $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
 	<div>
 	<form name="frmMain" method="post" action="?Action=Save">
 		<table width="100%" border="1">
 		<tr>
-			<td width="100%"><div align='center '><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="100%"><H1><input name="txtname" type="text" id="txtname" value="<?php echo $objResult["membername"];?>"><H1></td>
+			<td width="50%"><div align='center '><H1>ชื่อสมาชิก</H1></div></td>
+			<td width="50%"><H1><input name="txtname" type="text" id="txtname" value="<?php echo $objResult["membername"];?>"><H1></td>
 		</tr>
 		<tr>
-			<td width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="100%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
+			<td width="50%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></td>
+			<td width="50%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 		</tr>
 		</table>
 			<input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยันสั่งสินค้า">
