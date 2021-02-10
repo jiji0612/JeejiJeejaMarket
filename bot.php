@@ -67,11 +67,11 @@ if ( sizeof($request_array['events']) > 0 ) {
 			if ($del_result == "successfully"){
 				$data = [
 					'replyToken' => $reply_token,
-					'messages' => [['type' => 'text', 'text' => '"'.$send_result.'"' ]]
+					'messages' => [['type' => 'text', 'text' => '"'.$del_result.'"' ]]
 				];
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
 			} else {
-				$send_result = $ordered_result;
+				$send_result = $del_result;
 			}
 		} else if(startsWith($text,"ตะกร้า")) {
 			$sum_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/summary_order.php', '', 'uid='.$uid);
