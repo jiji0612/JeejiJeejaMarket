@@ -3,6 +3,40 @@
 <title>Order Confirm</title>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 </head>
+
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
 <body>
 <?php	
 	session_start();
@@ -40,19 +74,19 @@
     $objQuery = mysqli_query($conn, "Select addr From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{?>
-
-	<table width="100%" border="1">
-	<tr>
-		<th width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
-	</tr>
-	<form name="frmMain" method="post" action="?Action=Save">
+	<div>
+		<table width="100%" border="1">
 		<tr>
-			<td width="100%"><input name="txtaddr" type="text" id="txtaddr"></td>
-			<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></td>
+			<th colspan="2" width="100%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></th>
 		</tr>
-	</form>	 
-	</table>
-	 
+		<form name="frmMain" method="post" action="?Action=Save">
+			<tr>
+				<td width="100%"><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"></td>
+				<td width="100%"><input name="btnSubmit" type="submit" id="btnSubmit" value="ยืนยัน"></td>
+			</tr>
+		</form>	 
+		</table>
+	</div>
 	<?php
 	}
 		mysqli_close($conn);
