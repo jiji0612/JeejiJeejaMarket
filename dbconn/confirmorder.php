@@ -39,6 +39,13 @@ div {
 }
 </style>
 
+<script>
+    function closeMe() {
+        var win = window.open("","_self"); /* url = "" or "about:blank"; target="_self" */
+        win.close();
+    }
+</script>
+
 <body>
 <?php	
 	session_start();
@@ -67,12 +74,12 @@ div {
 		$strSQL = "Update member Set addr = '".$_POST["txtaddr"]."' Where memberid = '". $_SESSION['uid'] ."';";
 
 		$strSQL .= "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status) ";
-		$strSQL .= "SELECT orderno,memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $_SESSION['uid'] ."';";
+		$strSQL .= "SELECT DATE_FORMAT(NOW(), '%Y%M%d%T'),memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $_SESSION['uid'] ."';";
 
 		$strSQL .= "DELETE FROM member_order Where memberid = '". $_SESSION['uid'] ."';";
         if (mysqli_multi_query($conn, $strSQL)) {
 
-            echo "<script>window.close();</script>";
+            echo "<script>closeMe();</script>";
 			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
