@@ -98,9 +98,8 @@ div {
 		</tr>
 		</table>
 			<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
-		</div>
 		</form>	 
-	
+	</div>
 	<?php
 	}
 		mysqli_close($conn);
