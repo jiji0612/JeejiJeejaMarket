@@ -65,6 +65,7 @@ div {
 	{
     	$uid = $_GET['uid'];
 		$_SESSION['uid'] = $uid;
+		$user_name = $_POST['uname'];
 	}
 
 	/***  Add Record ***/
@@ -74,11 +75,14 @@ div {
 		$strSQL = "DELETE FROM member WHERE memberid = '".$uid."';";
 		$strSQL .= "INSERT INTO member (memberid,membername,addr) VALUES ('".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."');";
     	if (mysqli_multi_query($conn, $strSQL)) {
-
             echo "sucessfully";
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
+	} else {
+		$strSQL = "INSERT INTO member (memberid,membername) ";
+    	$strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
+    	mysqli_query($conn, $strSQL);
 	}
 
 	//Get Address of member
@@ -98,7 +102,7 @@ div {
 		</tr>
 		</table>
 			<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
-		</form>	 
+	</form>	 
 	</div>
 	<?php
 	}
