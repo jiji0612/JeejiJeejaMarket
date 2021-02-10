@@ -30,7 +30,7 @@
 		//Update address to member
 		$strSQL = "Update member Set addr = '".$_POST["txtAddr"]."' Where memberid = '". $_SESSION['uid'] ."'";
         if (mysqli_query($conn, $strSQL)) {
-            echo "New record created successfully";
+            echo $_POST["txtAddr"] . "   " . $_SESSION['uid'] ;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
