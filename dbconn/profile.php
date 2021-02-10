@@ -79,12 +79,12 @@ div {
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
-	} else {
-		$strSQL = "INSERT INTO member (memberid,membername) ";
-    	$strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
-    	mysqli_query($conn, $strSQL);
 	}
 
+	$strSQL = "INSERT INTO member (memberid,membername) ";
+	$strSQL .= "SELECT '".$uid."','".$user_name."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$uid."') ";
+	mysqli_query($conn, $strSQL);
+	
 	//Get Address of member
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
