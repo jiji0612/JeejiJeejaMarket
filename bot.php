@@ -16,6 +16,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 //include 'msgapitemplate3.php';
 
 include 'autobottext.php';
+$host_php = "https://jeejijeejamarket.herokuapp.com/";
 
 if ( sizeof($request_array['events']) > 0 ) {
 
@@ -39,7 +40,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			{
 				$file = explode(';', $arr);
 
-				$string = file_get_contents($file[1]);
+				$string = file_get_contents($host_php . $file[1]);
 				$string = str_replace("@uid",$uid,$string);
 				$json_a = json_decode($string, true);
 				$json_a['replyToken'] = $reply_token;
@@ -48,7 +49,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"url")) 
 			{
 				$url = explode(';', $arr);
-				$del_result = send_reply_message($url[1], '', 'uid='.$uid);
+				$del_result = send_reply_message($host_php . $url[1], '', 'uid='.$uid);
 				if ($del_result == "successfully"){
 					$data = [
 						'replyToken' => $reply_token,
@@ -62,7 +63,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"json")) 
 			{
 				$jsonurl = explode(';', $arr);
-				$json_result = send_reply_message($jsonurl[1], '', 'uid='.$uid);
+				$json_result = send_reply_message($host_php . $jsonurl[1], '', 'uid='.$uid);
 				$json_a = json_decode($json_result, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
@@ -76,7 +77,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			}
 		} else if(startsWith($text,"order")) { //Add order
 			//Postback ordered
-			$ordered_result = send_reply_message('https://jeejijeejamarket.herokuapp.com/dbconn/addorder.php'
+			$ordered_result = send_reply_message($host_php.'dbconn/addorder.php'
 			, ''
 			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. $text);
 			
