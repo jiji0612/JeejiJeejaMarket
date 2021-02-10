@@ -72,11 +72,10 @@ div {
 	{
 		//Update address to member
 		$strSQL = "DELETE FROM member WHERE memberid = '".$uid."';";
-		$strSQL .= "INSERT INTO member (memberid,membername,addr) SELECT '".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."' FROM DUAL;";
+		$strSQL .= "INSERT INTO member (memberid,membername,addr) VALUES ('".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."');";
     	if (mysqli_multi_query($conn, $strSQL)) {
 
             echo "sucessfully";
-			return;
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
