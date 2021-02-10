@@ -40,6 +40,9 @@ div {
 </style>
 
 <body>
+<div align='center'><H1>แก้ไขข้อมูลส่วนตัว</H1></div>
+<div align='center'><H2>ถ้าไม่พบข้อมูล ลองกลับไปเลือกสินค้าลงตะกร้าก่อนค่ะ</H2></div>
+
 <?php	
 	session_start();
 
@@ -58,7 +61,6 @@ div {
 	{
     	$uid = $_GET['uid'];
 		$_SESSION['uid'] = $uid;
-		$user_name = $_GET['uname'];
 	}
 
 	/***  Add Record ***/
@@ -73,8 +75,6 @@ div {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
           }
 	}
-
-	echo "<H1>ถ้าไม่พบข้อมูล ลองกลับไปเลือกสินค้าลงตะกร้าก่อนค่ะ</H1>";
 	
 	//Get Address of member
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
@@ -84,11 +84,11 @@ div {
 		<table width="100%" border="1">
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
-			<td width="30%"><div align='center '><H1>ชื่อสมาชิก</H1></div></td>
+			<td width="30%"><div align='center'><H1>ชื่อสมาชิก</H1></div></td>
 			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value="<?php echo $objResult["membername"];?>"><H1></td>
 		</tr>
 		<tr>
-			<td width="30%"><div align='center '><H1>ที่อยู่จัดส่ง</H1></div></td>
+			<td width="30%"><div align='center'><H1>ที่อยู่จัดส่ง</H1></div></td>
 			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $objResult["addr"];?>"><H1></td>
 		</tr>
 		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
