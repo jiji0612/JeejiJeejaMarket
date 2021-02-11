@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $status = $_POST['status'];
+    $status = $_GET['status'];
 
     /*** Connect ***/
     $url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
