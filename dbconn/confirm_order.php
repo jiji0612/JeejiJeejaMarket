@@ -15,6 +15,8 @@
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_set_charset($conn, "utf8");
 	
+    $status = $_GET['status'];
+    
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
