@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $tis620 = iconv("utf-8", "tis-620", $objResult["items_desc"] );
 		$utf8 = iconv("tis-620", "utf-8", $objResult["items_desc"] );
-        $itmdesc = $utf8;
+        $itmdesc = $tis620;
 
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
