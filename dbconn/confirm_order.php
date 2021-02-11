@@ -1,208 +1,72 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+<html>
+<head>
+<title>Order Management</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+</head>
+<body>
+<?php	
+	/*** Connect ***/
+	$url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
 
-    $ord = $_POST['ord'];
+	$server = $url ["host"];
+	$username = $url ["user"];
+	$password = $url ["pass"];
+	$db = substr ($url ["path"], 1);
+	$conn = mysqli_connect ($server, $username, $password, $db);
+	mysqli_set_charset($conn, "utf8");
+	
+	/***  Add Record ***/
+	if($_GET["Action"]=="Save")
+	{
+		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
+        if (mysqli_query($conn, $strSQL)) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
+          }
+	}
 
-    /*** Connect ***/
-    $url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
-
-    $server = $url ["host"];
-    $username = $url ["user"];
-    $password = $url ["pass"];
-    $db = substr ($url ["path"], 1);
-    $conn = mysqli_connect ($server, $username, $password, $db);
-    mysqli_set_charset($conn, "utf8");
-
-    $objQuery = mysqli_query ($conn,"select * from vi_confirm_order where orderno = '".$ord."' order by orderno,item asc");
-    $arr_order_lst = '';
-    $sum_qty = '0';
-    $sum_price = '0';
-    $membername = "";
-
-    while($objResult = mysqli_fetch_array($objQuery))
-    {
-        $arr_order_lst .= '{
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-                {
-                "type": "text",
-                "text": "'.$objResult["item"].'  ('.$objResult["total_qty"].')",
-                "size": "sm",
-                "color": "#555555",
-                "flex": 0
-                },
-                {
-                "type": "text",
-                "text": "'.$objResult["total_price"].'฿",
-                "size": "sm",
-                "color": "#111111",
-                "align": "end"
-                }
-            ]
-            },
-        ';
-    }
-
-    //Summary
-    $objQuery = mysqli_query ($conn,"select sum(total_qty) as total_qty,sum(total_price) as total_price from vi_member_order where memberid = '".$uid."'");
-    while($objResult = mysqli_fetch_array($objQuery))
-    {
-        $sum_qty = $objResult["total_qty"];
-        $sum_price = $objResult["total_price"];
-    }
-
-    $jsonobj = '{
-        "replyToken": "",
-        "messages": [
-            {
-                "type": "flex",
-                "altText": "Hello Flex Message",
-                "contents": {
-                    "type": "bubble",
-                    "body": {
-                    "type": "box",
-                    "layout": "vertical",
-                    "contents": [
-                        {
-                        "type": "text",
-                        "text": "ร้าน จ้ากะจี้ เฟส1",
-                        "weight": "bold",
-                        "color": "#1DB446",
-                        "size": "sm"
-                        },
-                        {
-                        "type": "text",
-                        "text": "รายการสั่งซื้อ",
-                        "weight": "bold",
-                        "size": "xxl",
-                        "margin": "md"
-                        },
-                        {
-                        "type": "text",
-                        "text": "ตะกร้า",
-                        "size": "xs",
-                        "color": "#aaaaaa",
-                        "wrap": true
-                        },
-                        {
-                        "type": "separator",
-                        "margin": "xxl"
-                        },
-                        {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "xxl",
-                        "spacing": "sm",
-                        "contents": ['
-                            .$arr_order_lst.
-                            '{
-                            "type": "separator",
-                            "margin": "xxl"
-                            },
-                            {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "margin": "xxl",
-                            "contents": [
-                                {
-                                "type": "text",
-                                "text": "จำนวนรวม",
-                                "size": "sm",
-                                "color": "#555555"
-                                },
-                                {
-                                "type": "text",
-                                "text": "'.$sum_qty.'",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "end"
-                                }
-                            ]
-                            },
-                            {
-                            "type": "box",
-                            "layout": "horizontal",
-                            "contents": [
-                                {
-                                "type": "text",
-                                "text": "ราคารวม",
-                                "size": "sm",
-                                "color": "#555555"
-                                },
-                                {
-                                "type": "text",
-                                "text": "'.$sum_price.'฿",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "end"
-                                }
-                            ]
-                            },
-                            {
-                                "type": "separator",
-                                "margin": "xxl"
-                            },
-                            {
-                                "type": "box",
-                                "layout": "horizontal",
-                                "contents": [
-                                    {
-                                    "type": "button",
-                                    "style": "link",
-                                    "height": "sm",
-                                    "action": {
-                                        "type": "message",
-                                        "label": "ยกเลิก",
-                                        "text": "ยกเลิกสั่งซื้อ"
-                                        }
-                                    },
-                                    { 
-                                    "type": "button",
-                                    "style": "link",
-                                    "height": "sm",
-                                    "action": {
-                                        "type": "message",
-                                        "label": "ยืนยัน",
-                                        "text": "ยืนยันสั่งซื้อ"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                        },
-                        {
-                        "type": "separator",
-                        "margin": "xxl"
-                        },
-                        {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
-                            {
-                            "type": "text",
-                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่งหลัง ยืนยัน ด้วยนร้า",
-                            "size": "sm",
-                            "color": "#1DB446",
-                            "flex": 0
-                            }
-                        ]
-                        }
-                    ]
-                    },
-                    "styles": {
-                    "footer": {
-                        "separator": true
-                    }
-                    }
-                }
-            }
-        ]
-    }';
-
-    //var_dump(json_decode($jsonobj, true));
-    mysqli_close($conn);
-    echo $jsonobj;
-}
+    $objQuery = mysqli_query ($conn,"select * from vi_confirm_order where status = '".$status."' order by orderno,memberid asc");
 ?>
+	<table width="100%" border="1">
+	<tr>
+    <th width="244"> <div align="center">Order No </div></th>
+	<th width="87"> <div align="center">MemberID </div></th>
+	<th width="145"> <div align="center">Address </div></th>
+    <th width="244"> <div align="center">Items Name </div></th>
+    <th width="244"> <div align="center">Quantity </div></th>
+    <th width="244"> <div align="center">Price </div></th>
+	</tr>
+	<?php
+	while($objResult = mysqli_fetch_array($objQuery))
+	{
+	?>
+		<tr>
+		<td><?php echo $objResult["orderno"];?></td>
+		<td><?php echo $objResult["memberid"];?></td>
+        <td><?php echo $objResult["addr"];?></td>
+        <td><?php echo $objResult["item"];?></td>
+        <td><?php echo $objResult["total_qty"];?></td>
+        <td><?php echo $objResult["total_price"];?></td>
+		</tr>
+	<?php
+	}
+	?>		
+	<form name="frmMain" method="post" action="?Action=Save">
+		<tr>
+		  <td><input name="txtMember" type="text" id="txtMember"></td>
+		  <td><input name="txtAddr" type="text" id="txtAddr">
+          <td><input name="btnSubmit" type="submit" id="btnSubmit" value="Submit"></td>
+	      <td></td>
+          <td></td>
+          <td></td>
+		  <td></td>
+	  </tr>
+</form>	  
+
+</table>
+<?php
+	mysqli_close($conn);
+?>
+</body>
+</html> 

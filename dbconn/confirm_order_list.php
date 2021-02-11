@@ -129,26 +129,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             {
                             "type": "box",
                             "layout": "horizontal",
-                            "margin": "xxl",
-                            "contents": [
-                                {
-                                "type": "text",
-                                "text": "จำนวนรวม",
-                                "size": "sm",
-                                "color": "#555555"
-                                },
-                                {
-                                "type": "text",
-                                "text": "'.$sum_qty.'",
-                                "size": "sm",
-                                "color": "#111111",
-                                "align": "end"
-                                }
-                            ]
-                            },
-                            {
-                            "type": "box",
-                            "layout": "horizontal",
                             "contents": [
                                 {
                                 "type": "text",
