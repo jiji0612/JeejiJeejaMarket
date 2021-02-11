@@ -85,15 +85,15 @@ div {
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
 			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value="' . $objResult["membername"] . '><H1></td>
+			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value="' . $objResult["membername"] . '"><H1></td>
 		</tr>
 		<tr> 
 			<td width="30%"><div align"center"><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="' . $objResult["addr"] . '><H1></td>
+			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="' . $objResult["addr"] . '"><H1></td>
 		</tr>
 		<tr>
-			<td colspn="2">
-                        	<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+			<td colspan="2">
+                             <input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
 			</td>
                 </tr>
 		</form>	
