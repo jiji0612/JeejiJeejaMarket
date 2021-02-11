@@ -16,7 +16,7 @@
 	mysqli_set_charset($conn, "utf8");
 	
     $status = $_GET['status'];
-    
+
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
@@ -33,9 +33,9 @@
 	<table width="100%" border="1">
 	<tr>
     <th width="244"> <div align="center">Order No </div></th>
-	<th width="87"> <div align="center">MemberID </div></th>
+	<th width="87"> <div align="center">Member </div></th>
 	<th width="145"> <div align="center">Address </div></th>
-    <th width="244"> <div align="center">Items Name </div></th>
+    <th width="244"> <div align="center">Items </div></th>
     <th width="244"> <div align="center">Quantity </div></th>
     <th width="244"> <div align="center">Price </div></th>
 	</tr>
@@ -45,7 +45,7 @@
 	?>
 		<tr>
 		<td><?php echo $objResult["orderno"];?></td>
-		<td><?php echo $objResult["memberid"];?></td>
+		<td><?php echo $objResult["membername"];?></td>
         <td><?php echo $objResult["addr"];?></td>
         <td><?php echo $objResult["item"];?></td>
         <td><?php echo $objResult["total_qty"];?></td>
