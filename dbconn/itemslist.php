@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $url ["pass"];
     $db = substr ($url ["path"], 1);
     $conn = mysqli_connect ($server, $username, $password, $db);
-    mysqli_query("SET NAMES UTF8");
+    //mysqli_query("SET NAMES UTF8");
 
     $objQuery = mysqli_query ($conn,"select * from items where cate = '".$itmgrp."'");
     $arr_items_lst = '';
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $tis620 = iconv("utf-8", "tis-620", $objResult["items_desc"] );
 		$utf8 = iconv("tis-620", "utf-8", $objResult["items_desc"] );
-        $itmdesc = $tis620;
+        $itmdesc = $objResult["items_desc"];
 
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
