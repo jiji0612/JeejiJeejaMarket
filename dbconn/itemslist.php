@@ -27,14 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $imagefile = $objResult["image"];
         
         $arr_items_lst .= '{
-            "type": "template",
-            "altText": "This is a carousel template",
-            "template": {
-                "type": "carousel",
-                "imageAspectRatio": "rectangle",
-                "imageSize": "contain",
-                "columns": [
-                    {
                         "type": "buttons",
                         "width": "30px",
                         "thumbnailImageUrl": "' . $host_php . 'images/' . $imagefile  . '",
@@ -50,10 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 "text": "order ' . $itmname . ' ราคา=' . $itmprice . '"
                             }
                         ]
-                    }
-                ]
-            }
-        }';
+                    }';
         $i = $i + 1;
 
         if($i < $row_cnt){
@@ -64,7 +53,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jsonobj = '{
         "replyToken": "",
         "messages": [
-            ' . $arr_items_lst . '
+            {
+                "type": "template",
+                "altText": "This is a carousel template",
+                "template": {
+                    "type": "carousel",
+                    "imageAspectRatio": "rectangle",
+                    "imageSize": "contain",
+                    "columns": [
+                    ' . $arr_items_lst . '
+                ]
+            }
+        }
         ]
     }';
 
