@@ -87,26 +87,26 @@ div {
 ?>
 	
 	<div>
-		<form name="frmMain" method="post" action="?Action=Save">
-			<table width="100%" border="1">
-			<tr>
-				<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-				<td width="70%"><H3><?php echo $membername; ?></H3>
-					<input name="txtname" type="text" id="txtname" value="">
-				</td>
-			</tr>
-			<tr> 
-				<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
-				<td width="70%"><H3><?php echo $memberaddr; ?></H3>
-					<input name="txtaddr" type="text" id="txtaddr" value="">
-				</td>
-			</tr>
-			</table>
-		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
-		</form>	
+		<table width="100%" border="1">
+		<tr>
+			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
+			<td width="70%"><H3><?php echo $membername; ?></H3>
+				<input name="txtname" type="text" id="txtname" value="">
+			</td>
+		</tr>
+		<tr> 
+			<form name="frmMain" method="post" action="?Action=Save">
+			<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
+			<td width="70%"><H3><?php echo $memberaddr; ?></H3>
+				<input name="txtaddr" type="text" id="txtaddr" value="">
+				<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+			</td>
+			</form>	
+		</tr>
+		</table>
 	</div>
 <?php
-	  mysqli_close($conn);
+	mysqli_close($conn);
 ?>
 </body>
 </html> 
