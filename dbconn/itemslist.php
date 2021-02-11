@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $itmname = $objResult["items_name"];
 
         $tis620 = iconv("utf-8", "tis-620", $objResult["items_desc"] );
-		$utf8 = iconv("tis-620", "utf-8", $tis620);
+		$utf8 = iconv("tis-620", "utf-8", $objResult["items_desc"] );
         $itmdesc = $utf8;
 
         $itmprice = $objResult["items_price"];
