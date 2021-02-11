@@ -15,7 +15,12 @@
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_set_charset($conn, "utf8");
 	
-    $status = $_GET['status'];
+    $status  = "dummy";
+	if(isset($_GET["status"]))
+	{
+    	$status = $_GET['status'];
+		$_SESSION['status'] = $status;
+	}
 
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
@@ -28,7 +33,7 @@
           }
 	}
 
-    $objQuery = mysqli_query ($conn,"select * from vi_confirm_order where status = '".$status."' order by orderno,memberid asc");
+    $objQuery = mysqli_query ($conn,"select * from vi_confirm_order where status = '".$_SESSION['status'] ."' order by orderno,memberid asc");
 ?>
 	<table width="100%" border="1">
 	<tr>
