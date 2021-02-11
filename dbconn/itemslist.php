@@ -11,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $url ["pass"];
     $db = substr ($url ["path"], 1);
     $conn = mysqli_connect ($server, $username, $password, $db);
-    mysqli_query("SET character_set_client='utf8'");
-    mysqli_query("SET character_set_connection='utf8'");
-    mysqli_query("collation_connection = utf8_unicode_ci");
-    mysqli_query("collation_database = utf8_unicode_ci");
-    mysqli_query("collation_server = utf8_unicode_ci");
+    mysql_query("SET character_set_client='utf8'");
+    mysql_query("SET character_set_connection='utf8'");
+    mysql_query("collation_connection = utf8_unicode_ci");
+    mysql_query("collation_database = utf8_unicode_ci");
+    mysql_query("collation_server = utf8_unicode_ci");
 
     $objQuery = mysqli_query ($conn,"select * from items where cate = '".$itmgrp."'");
     $arr_items_lst = '';
