@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "contents": [
                         {
                         "type": "text",
-                        "text": "ร้าน จ้ากะจี้ เฟส1",
+                        "text": "สำหรับผู้ดูแลระบบ",
                         "weight": "bold",
                         "color": "#1DB446",
                         "size": "sm"
@@ -179,8 +179,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "ยกเลิก",
-                                        "text": "ยกเลิกสั่งซื้อ"
+                                        "label": "-",
+                                        "text": "-"
                                         }
                                     },
                                     { 
@@ -188,30 +188,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "style": "link",
                                     "height": "sm",
                                     "action": {
-                                        "type": "message",
-                                        "label": "ยืนยัน",
-                                        "text": "ยืนยันสั่งซื้อ"
+                                        "type": "uri",
+                                        "label": "จัดการ",
+                                        "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/confirm_order.php"
                                         }
                                     }
                                 ]
-                            }
-                        ]
-                        },
-                        {
-                        "type": "separator",
-                        "margin": "xxl"
-                        },
-                        {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "md",
-                        "contents": [
-                            {
-                            "type": "text",
-                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่งหลัง ยืนยัน ด้วยนร้า",
-                            "size": "sm",
-                            "color": "#1DB446",
-                            "flex": 0
                             }
                         ]
                         }
