@@ -89,27 +89,23 @@ div {
 ?>
 	
 	<div>
-		<table width="100%" border="1">
 		<form name="frmMain" method="post" action="?Action=Save">
-		<tr>
-			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="70%">
-				<H1><input name="txtname" type="text" id="txtname" value="<?php echo $membername; ?>"><H1>
-			</td>
-		</tr>
-		<tr> 
-			<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="70%"><H3><?php echo $memberaddr; ?></H3>
-				<H1><input name="txtaddr" type="text" id="txtaddr"><H1>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2">
-                             <input name="btnSubmit" type="submit" id="btnSubmit">บันทึก</input>
-			</td>
-                </tr>
+			<table width="100%" border="1">
+			<tr>
+				<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
+				<td width="70%">
+					<H1><input name="txtname" type="text" id="txtname" value="<?php echo $membername; ?>"><H1>
+				</td>
+			</tr>
+			<tr> 
+				<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
+				<td width="70%"><H3><?php echo $memberaddr; ?></H3>
+					<H1><input name="txtaddr" type="text" id="txtaddr"><H1>
+				</td>
+			</tr>
+			</table>
+		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
 		</form>	
-		</table>
 	</div>
 </body>
 </html> 
