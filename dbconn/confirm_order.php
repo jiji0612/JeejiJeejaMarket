@@ -15,14 +15,14 @@
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_query("SET NAMES UTF8");
 	
-    $objQueryHD = mysqli_query ($conn,"select Distinct membername,addr from vi_confirm_order where status = 'Order' order by membername asc");
+    $objQueryHD = mysqli_query ($conn,"select Distinct memberid,membername,addr from vi_confirm_order where status = 'Order' order by membername asc");
     while($objResultHD = mysqli_fetch_array($objQueryHD))
 	{
         $membername = $objResultHD["membername"];
         echo "<H1>" . $membername . "</H1>";
         echo "<H1>" . $objResultHD["addr"] . "</H1>";
 
-        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where membername = '".$membername."' status = 'Order' order by orderno asc");
+        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where memberid = '".$objResultHD["memberid"]."' and status = 'Order' order by orderno asc");
         ?>
         <table width="100%" border="1">
             <tr>
