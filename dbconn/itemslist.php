@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $itmgrp = $_POST['itmgrp'];
+    $itmgrp = $_GET['itmgrp'];
 
     /*** Connect ***/
     $url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
