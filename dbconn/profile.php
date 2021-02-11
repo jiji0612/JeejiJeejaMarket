@@ -67,10 +67,8 @@ div {
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "DELETE FROM member WHERE memberid = '".$uid."';";
-		$strSQL .= "INSERT INTO member (memberid,membername,addr) VALUES ('".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."');";
+	$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$uid."';";
     	if (mysqli_multi_query($conn, $strSQL)) {
-		mysqli_commit($conn);
             echo "sucessfully";
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
@@ -94,8 +92,8 @@ div {
 			<table width="100%" border="1">
 			<tr>
 				<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-				<td width="70%">
-					<H1><input name="txtname" type="text" id="txtname" value="<?php echo $membername; ?>"><H1>
+				<td width="70%"><H3><?php echo $membername; ?></H3>
+					<H1><input name="txtname" type="text" id="txtname" value=""><H1>
 				</td>
 			</tr>
 			<tr> 
