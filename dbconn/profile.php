@@ -93,13 +93,13 @@ div {
 			<tr>
 				<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
 				<td width="70%"><H3><?php echo $membername; ?></H3>
-					<H1><input name="txtname" type="text" id="txtname" value=""><H1>
+					<input name="txtname" type="text" id="txtname" value="">
 				</td>
 			</tr>
 			<tr> 
 				<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
 				<td width="70%"><H3><?php echo $memberaddr; ?></H3>
-					<H1><input name="txtaddr" type="text" id="txtaddr" value=""><H1>
+					<input name="txtaddr" type="text" id="txtaddr" value="">
 				</td>
 			</tr>
 			</table>
