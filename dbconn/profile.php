@@ -70,6 +70,7 @@ div {
 		$strSQL = "DELETE FROM member WHERE memberid = '".$uid."';";
 		$strSQL .= "INSERT INTO member (memberid,membername,addr) VALUES ('".$_SESSION['uid']."','".$_POST["txtname"]."','".$_POST["txtaddr"]."');";
     	if (mysqli_multi_query($conn, $strSQL)) {
+		mysqli_commit($conn);
             echo "sucessfully";
           } else {
             echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
@@ -100,7 +101,7 @@ div {
 			<tr> 
 				<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
 				<td width="70%"><H3><?php echo $memberaddr; ?></H3>
-					<H1><input name="txtaddr" type="text" id="txtaddr"><H1>
+					<H1><input name="txtaddr" type="text" id="txtaddr" value=""><H1>
 				</td>
 			</tr>
 			</table>
