@@ -67,9 +67,9 @@ div {
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-		$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$uid."'";
+		$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$_SESSION['uid']."'";
 		if (mysqli_query($conn, $strSQL)) {
-		    echo $_POST["txtaddr"];
+		    echo "Successfully";
 		  } else {
 		    echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
 		  }
@@ -94,15 +94,17 @@ div {
 				<input name="txtname" type="text" id="txtname" value="">
 			</td>
 		</tr>
-		<tr> 
 			<form name="frmMain" method="post" action="?Action=Save">
+		<tr> 
+		     
 			<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
 			<td width="70%"><H3><?php echo $memberaddr; ?></H3>
 				<input name="txtaddr" type="text" id="txtaddr" value="">
-				<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
 			</td>
-			</form>	
+		    
 		</tr>
+			<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+			</form>	
 		</table>
 	</div>
 <?php
