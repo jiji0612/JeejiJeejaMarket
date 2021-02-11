@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $que = "select membername, sum(total_price) as total_price from vi_confirm_order ";
     $que .= "where status = '".$status."' ";
     $que .= "group by membername ";
-    $que .= "order by membername asc";
 
     $objQuery = mysqli_query($conn,$que);
     $arr_order_lst = '';
