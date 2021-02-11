@@ -15,56 +15,41 @@
 	$conn = mysqli_connect ($server, $username, $password, $db);
 	mysqli_query("SET NAMES UTF8");
 	
-	/***  Add Record ***/
-	if($_GET["Action"]=="Save")
+    $objQueryHD = mysqli_query ($conn,"select Distinct membername,addr from vi_confirm_order where status = 'Order' order by membername asc");
+    while($objResultHD = mysqli_fetch_array($objQueryHD))
 	{
-		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
-        if (mysqli_query($conn, $strSQL)) {
-            echo "New record created successfully";
-          } else {
-            echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
-          }
-	}
+        $membername = $objResultHD["membername"];
+        echo "<H1>" . $membername . "</H1>";
+        echo "<H1>" . $objResultHD["addr"] . "</H1>";
 
-    $objQuery = mysqli_query ($conn,"select * from vi_confirm_order where status = 'Order' order by orderno,memberid asc");
-?>
-	<table width="100%" border="1">
-	<tr>
-    <th width="244"> <div align="center">Order No </div></th>
-	<th width="87"> <div align="center">Member </div></th>
-	<th width="145"> <div align="center">Address </div></th>
-    <th width="244"> <div align="center">Items </div></th>
-    <th width="244"> <div align="center">Quantity </div></th>
-    <th width="244"> <div align="center">Price </div></th>
-	</tr>
-	<?php
-	while($objResult = mysqli_fetch_array($objQuery))
-	{
-	?>
-		<tr>
-		<td><?php echo $objResult["orderno"];?></td>
-		<td><?php echo $objResult["membername"];?></td>
-        <td><?php echo $objResult["addr"];?></td>
-        <td><?php echo $objResult["item"];?></td>
-        <td><?php echo $objResult["total_qty"];?></td>
-        <td><?php echo $objResult["total_price"];?></td>
-		</tr>
-	<?php
-	}
+        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where membername = '".$membername."' status = 'Order' order by orderno asc");
+        ?>
+        <table width="100%" border="1">
+            <tr>
+            <th width="244"> <div align="center">Order No </div></th>
+            <th width="244"> <div align="center">Items </div></th>
+            <th width="244"> <div align="center">Quantity </div></th>
+            <th width="244"> <div align="center">Price </div></th>
+            </tr>
+        <?php
+        while($objResult = mysqli_fetch_array($objQuery))
+        {
+        ?>
+            <tr>
+            <td><?php echo $objResult["orderno"];?></td>
+            <td><?php echo $objResult["item"];?></td>
+            <td><?php echo $objResult["total_qty"];?></td>
+            <td><?php echo $objResult["total_price"];?></td>
+            </tr>
+        <?php
+        }
+        ?>	
+        </table>
+    <?php
+    }
 	?>		
-	<form name="frmMain" method="post" action="?Action=Save">
-		<tr>
-		  <td><input name="txtMember" type="text" id="txtMember"></td>
-		  <td><input name="txtAddr" type="text" id="txtAddr">
-          <td><input name="btnSubmit" type="submit" id="btnSubmit" value="Submit"></td>
-	      <td></td>
-          <td></td>
-          <td></td>
-		  <td></td>
-	  </tr>
-</form>	  
 
-</table>
+
 <?php
 	mysqli_close($conn);
 ?>
