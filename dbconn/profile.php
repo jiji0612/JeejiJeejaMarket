@@ -92,7 +92,9 @@ div {
 			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="' . $objResult["addr"] . '><H1></td>
 		</tr>
 		<tr>
-                        <input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+			<td colspn="2">
+                        	<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+			</td>
                 </tr>
 		</form>	
 		</table>
