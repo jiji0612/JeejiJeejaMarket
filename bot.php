@@ -1,3 +1,10 @@
+<html>
+<head>
+<title>JijeeJijaMarketAPI</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+</head>
+<body>
+
 <?php
 
 
@@ -145,3 +152,6 @@ function get_reply_message($url, $post_header)
 }
 
 ?>
+
+</body>
+</html> 
