@@ -12,6 +12,6 @@
                     'CancelOrder'           => 'url;/dbconn/delorder.php',
                     'ConfirmOrder'          => 'url;/dbconn/conorder.php',
                     'ตะกร้า'                 => 'json;/dbconn/summary_order.php',
-                    'items'                 => 'json;/dbconn/itemslist.php?itmgrp=snack1',
+                    'chkord'                => 'json;/dbconn/confirm_order_list.php?status=order',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>
