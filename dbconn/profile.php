@@ -91,7 +91,9 @@ div {
 			<td width="30%"><div align"center"><H1>ที่อยู่จัดส่ง</H1></div></td>
 			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value="' . $objResult["addr"] . '><H1></td>
 		</tr>
-		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+		<tr>
+                        <input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+                </tr>
 		</form>	
 		</table>
 	</div>';
