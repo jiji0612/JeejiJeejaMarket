@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = mysqli_connect ($server, $username, $password, $db);
     mysqli_set_charset($conn, "utf8");
 
-    $que = "select membername, sum(total_price) as total_price from vi_confirm_order ";
-    $que .= "where status = '".$status."' ";
-    $que .= "group by membername ";
+    $query = "select membername, sum(total_price) as total_price from vi_confirm_order ";
+    $query .= "where status = '".$status."' ";
+    $query .= "group by membername ";
 
-    $objQuery = mysqli_query($conn,$que);
+    $objQuery = mysqli_query($conn,$query);
     $arr_order_lst = '';
     $sum_qty = '0';
     $sum_price = '0';
@@ -32,18 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 {
                 "type": "message",
                 "label": "'.$objResult["membername"].'",
-                "text": "getord:'.$objResult["membername"].'",
-                "size": "sm",
-                "color": "#555555",
-                "flex": 0
+                "text": "getord:'.$objResult["membername"].'"
                 },
                 {
                 "type": "message",
                 "label": "'.$objResult["total_price"].'",
-                "text": "getord:'.$objResult["total_price"].'฿",
-                "size": "sm",
-                "color": "#111111",
-                "align": "end"
+                "text": "getord:'.$objResult["total_price"].'฿"
                 }
             ]
             },
