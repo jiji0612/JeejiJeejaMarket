@@ -69,7 +69,7 @@ div {
 		//Update address to member
 		$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$uid."'";
 		if (mysqli_query($conn, $strSQL)) {
-		    echo "sucessfully";
+		    echo $_POST["txtaddr"];
 		  } else {
 		    echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
 		  }
