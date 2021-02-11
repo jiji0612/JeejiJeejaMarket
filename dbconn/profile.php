@@ -87,25 +87,24 @@ div {
 ?>
 	
 	<div>
+		<form name="frmMain" method="post" action="?Action=Save">
 		<table width="100%" border="1">
 		<tr>
 			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="70%"><H3><?php echo $membername; ?></H3>
-				<input name="txtname" type="text" id="txtname" value="">
+			<td width="70%">
+				<H3><input name="txtname" type="text" id="txtname" value="<?php echo $membername; ?>"></H3>
 			</td>
 		</tr>
-			<form name="frmMain" method="post" action="?Action=Save">
+			
 		<tr> 
-		     
 			<td width="30%"><div align="center"><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="70%"><H3><?php echo $memberaddr; ?></H3>
-				<input name="txtaddr" type="text" id="txtaddr" value="">
+			<td width="70%">
+				<H3><input name="txtaddr" type="text" id="txtaddr" value="<?php echo $memberaddr; ?>"></H3>
 			</td>
-		    
 		</tr>
-			<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
-			</form>	
 		</table>
+		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
+		</form>	
 	</div>
 <?php
 	mysqli_close($conn);
