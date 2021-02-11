@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         },
                         {
                         "type": "text",
-                        "text": "รายการสั่งซื้อ",
+                        "text": "Order Summary",
                         "weight": "bold",
                         "size": "xxl",
                         "margin": "md"

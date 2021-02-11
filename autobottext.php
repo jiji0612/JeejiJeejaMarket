@@ -12,6 +12,6 @@
                     'CancelOrder'           => 'url;/dbconn/delorder.php',
                     'ConfirmOrder'          => 'url;/dbconn/conorder.php',
                     'ตะกร้า'                 => 'json;/dbconn/summary_order.php',
-                    'chkord'                => 'json;/dbconn/confirm_order_list.php?status=order',
+                    'chkord'                => 'json;/dbconn/confirm_order_list.php?status=Order',
 					'Hello'                 => 'สวีสดีจร้า');
 ?>
