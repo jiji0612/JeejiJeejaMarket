@@ -18,7 +18,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query .= "group by membername ";
 
     $objQuery = mysqli_query($conn,$query);
-    $arr_order_lst = '';
+    $arr_order_lst = '{
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+            {
+            "type": "text",
+            "text": "สินค้า",
+            "size": "sm",
+            "weight": "bold",
+            "color": "#555555",
+            "flex": 0
+            },
+            {
+            "type": "text",
+            "text": "ยอดสั่งซื้อ",
+            "size": "sm",
+            "weight": "bold",
+            "color": "#111111",
+            "align": "end"
+            }
+        ]
+        },
+        ';
     $sum_qty = '0';
     $sum_price = '0';
     $membername = "";
@@ -30,14 +52,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "layout": "horizontal",
             "contents": [
                 {
-                "type": "message",
-                "label": "'.$objResult["membername"].'",
-                "text": "getord:'.$objResult["membername"].'"
+                "type": "text",
+                "text": "'.$objResult["membername"].'",
+                "size": "sm",
+                "color": "#555555",
+                "flex": 0
                 },
                 {
-                "type": "message",
-                "label": "'.$objResult["total_price"].'",
-                "text": "getord:'.$objResult["total_price"].'฿"
+                "type": "text",
+                "text": "'.$objResult["total_price"].'฿",
+                "size": "sm",
+                "color": "#111111",
+                "align": "end"
                 }
             ]
             },
