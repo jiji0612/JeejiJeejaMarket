@@ -11,9 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $url ["pass"];
     $db = substr ($url ["path"], 1);
     $conn = mysqli_connect ($server, $username, $password, $db);
-    mysqli_query("SET character_set_results=utf8");
-    mysqli_query("SET character_set_client=utf8");
-    mysqli_query("SET character_set_connection=utf8");
+    mysqli_set_charset($objCon, "utf8");
 
     $objQuery = mysqli_query ($conn,"select * from items where cate = '".$itmgrp."'");
     $arr_items_lst = '';
