@@ -93,11 +93,15 @@ div {
 		<form name="frmMain" method="post" action="?Action=Save">
 		<tr>
 			<td width="30%"><div align="center"><H1>ชื่อสมาชิก</H1></div></td>
-			<td width="70%"><H1><input name="txtname" type="text" id="txtname" value=" . <?php echo $membername; ?> . "><H1></td>
+			<td width="70%"><?php echo $membername; ?>
+				<H1><input name="txtname" type="text" id="txtname"><H1>
+			</td>
 		</tr>
 		<tr> 
 			<td width="30%"><div align"center"><H1>ที่อยู่จัดส่ง</H1></div></td>
-			<td width="70%"><H1><input name="txtaddr" type="text" id="txtaddr" value=" . <?php echo $memberaddr; ?> . "><H1></td>
+			<td width="70%"><?php echo $memberaddr; ?>
+				<H1><input name="txtaddr" type="text" id="txtaddr"><H1>
+			</td>
 		</tr>
 		<tr>
 			<td colspan="2">
