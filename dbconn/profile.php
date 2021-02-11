@@ -67,12 +67,12 @@ div {
 	if($_GET["Action"]=="Save")
 	{
 		//Update address to member
-	$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$uid."';";
-    	if (mysqli_multi_query($conn, $strSQL)) {
-            echo "sucessfully";
-          } else {
-            echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
-          }
+		$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$uid."'";
+		if (mysqli_query($conn, $strSQL)) {
+		    echo "sucessfully";
+		  } else {
+		    echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
+		  }
 	}
 	
 	//Get Address of member
