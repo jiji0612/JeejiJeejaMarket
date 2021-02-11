@@ -13,7 +13,7 @@
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	mysqli_set_charset($conn, "utf8");
+	mysqli_query("SET NAMES UTF8");
 	
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
