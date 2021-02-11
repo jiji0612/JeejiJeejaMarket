@@ -84,7 +84,6 @@ div {
 		$membername = $objResult["membername"];
 		$memberaddr = $objResult["addr"];
 	}
-	  mysqli_close($conn);
 ?>
 	
 	<div>
@@ -106,5 +105,8 @@ div {
 		<input name="btnSubmit" type="submit" id="btnSubmit" value="บันทึก">
 		</form>	
 	</div>
+<?php
+	  mysqli_close($conn);
+?>
 </body>
 </html> 
