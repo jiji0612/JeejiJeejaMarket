@@ -13,6 +13,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = mysqli_connect ($server, $username, $password, $db);
     mysqli_query("SET NAMES UTF8");
 
+    //Get Profile
+    $membername = "";
+    $memberaddr = "";
+    $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $uid ."'");
+	while($objResult = mysqli_fetch_array($objQuery))
+	{
+        $membername = $objResult["membername"];
+		$memberaddr = $objResult["addr"];
+    }
+    
+    $confrimtext = "ยืนยันสั่งซื้อ";
+    $confrimlabel = "ยืนยันสั่งซื้อ";
+    $infofooter = "เราจะรีบจัดส่งให้นะคะ";
+    if ($memberaddr == ""){
+        $confrimtext = "Profile";
+        $confrimlabel = "ใส่ที่อยู่จัดส่ง";
+        $infofooter = "ใส่ที่อยู่จัดส่งก่อน ยืนยัน นะคะ";
+    }
+
     $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
     $arr_order_lst = '{
         "type": "box",
@@ -87,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "contents": [
                         {
                         "type": "text",
-                        "text": "ร้าน จ้ากะจี้ เฟส1",
+                        "text": "ชื่อสมาชิก : ",' . $membername . '
                         "weight": "bold",
                         "color": "#1DB446",
                         "size": "sm"
@@ -101,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         },
                         {
                         "type": "text",
-                        "text": "ตะกร้า",
+                        "text": "ที่อยู่ : ",' . $memberaddr . '
                         "size": "xs",
                         "color": "#aaaaaa",
                         "wrap": true
@@ -174,8 +193,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "ยกเลิก",
-                                        "text": "ยกเลิกสั่งซื้อ"
+                                        "label": "ช็อปต่อ",
+                                        "text": "Category"
                                         }
                                     },
                                     { 
@@ -184,8 +203,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "ยืนยัน",
-                                        "text": "ยืนยันสั่งซื้อ"
+                                        "label": "'.$confrimlabel.'",
+                                        "text": "'.$confrimtext.'"
                                         }
                                     }
                                 ]
@@ -203,7 +222,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "contents": [
                             {
                             "type": "text",
-                            "text": "*อย่าลืม* ใส่ที่อยู่จัดส่งหลัง ยืนยัน ด้วยนร้า",
+                            "text": "'.$infofooter.'",
                             "size": "sm",
                             "color": "#1DB446",
                             "flex": 0

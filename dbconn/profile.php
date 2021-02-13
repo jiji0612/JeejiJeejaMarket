@@ -78,7 +78,7 @@ div {
 	//Get Address of member
 	$membername = "";
 	$memberaddr = "";
-    	$objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
+    $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $_SESSION['uid'] ."'");
 	while($objResult = mysqli_fetch_array($objQuery))
 	{
 		$membername = $objResult["membername"];

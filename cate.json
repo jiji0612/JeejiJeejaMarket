@@ -1,0 +1,47 @@
+{
+    "replyToken": "",  
+    "messages": [
+      {
+          "type": "template",
+          "altText": "This is a buttons template",
+          "layout": "horizontal",
+          "template": {
+              "type": "buttons",
+              "size": "nano",
+              "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg",
+              "imageAspectRatio": "rectangle",
+              "imageSize": "cover",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "หมวดหมู่",
+              "text": "เลือกหมวดหมู่สินค้า",
+              "defaultAction": {
+                  "type": "uri",
+                  "label": "View detail",
+                  "uri": "https://jeejijeejamarket.herokuapp.com/images/ขนมขบเคี้ยว.jpg"
+              },
+              "actions": [
+                  {
+                    "type": "message",
+                    "label": "ขนมขบเคี้ยว",
+                    "text": "ขนมขบเคี้ยว"
+                  },
+                  {
+                    "type": "message",
+                    "label": "อาหาร",
+                    "text": "อาหาร"
+                  },
+                  {
+                    "type": "message",
+                    "label": "เครื่องดื่ม",
+                    "text": "เครื่องดื่ม"
+                  },
+                  {
+                    "type": "message",
+                    "label": "เบ็ดเตล็ด",
+                    "text": "เบ็ดเตล็ด"
+                  }
+              ]
+          }
+        }
+    ]
+  }

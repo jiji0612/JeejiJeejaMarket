@@ -6,6 +6,7 @@
                     'อาหาร'                 => 'json;/dbconn/itemslist.php?itmgrp=food1',
                     'เครื่องดื่ม'               => 'json;/dbconn/itemslist.php?itmgrp=drinking1',
                     'เบ็ดเตล็ด'               => 'json;/dbconn/itemslist.php?itmgrp=other1',
+                    'Category'              => 'file;cate.json',
                     'ยกเลิกสั่งซื้อ'            => 'file;cancelorder.json',
                     'ยืนยันสั่งซื้อ'             => 'file;confirmorder.json',
                     'Profile'               => 'file;profilredit.json',
