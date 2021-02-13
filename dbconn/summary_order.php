@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "contents": [
                         {
                         "type": "text",
-                        "text": "ชื่อสมาชิก : ,' . $membername . '"'
+                        "text": "ชื่อสมาชิก : ' . $membername . '",
                         "weight": "bold",
                         "color": "#1DB446",
                         "size": "sm"
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         },
                         {
                         "type": "text",
-                        "text": "ที่อยู่ : ,' . $memberaddr . '"'
+                        "text": "ที่อยู่ : ' . $memberaddr . '",
                         "size": "xs",
                         "color": "#aaaaaa",
                         "wrap": true
