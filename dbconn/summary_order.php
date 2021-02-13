@@ -25,11 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $confrimtext = "ยืนยันสั่งซื้อ";
     $confrimlabel = "ยืนยันสั่งซื้อ";
+
     $infofooter = "เราจะรีบจัดส่งให้นะคะ";
+    $coloralert = "#1DB446";
     if ($memberaddr == ""){
         $confrimtext = "Profile";
         $confrimlabel = "ใส่ที่อยู่จัดส่ง";
         $infofooter = "ใส่ที่อยู่จัดส่งก่อน ยืนยัน นะคะ";
+        $coloralert = "#FF0000";
     }
 
     $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
@@ -224,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             "type": "text",
                             "text": "'.$infofooter.'",
                             "size": "sm",
-                            "color": "#1DB446",
+                            "color": "'.$coloralert.'",
                             "flex": 0
                             }
                         ]
