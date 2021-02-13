@@ -720,7 +720,7 @@
     </div>
     <div class="tab-content">
       <div class="tab-empty">
-        
+        <?php include "dashboard1.php" ?>
       </div>
       <div class="tab-loading">
         <div>
