@@ -196,8 +196,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "ช็อปต่อ",
-                                        "text": "Category"
+                                        "label": "ยกเลิกสั่งซื้อ",
+                                        "text": "ยกเลิกสั่งซื้อ"
                                         }
                                     },
                                     { 
