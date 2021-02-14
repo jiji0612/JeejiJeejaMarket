@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_query("SET NAMES UTF8");
 
     $orderNo = date("YmdHis");
-    $strSQL = "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status) ";
-    $strSQL .= "SELECT '" . $orderNo . "',memberid,item,total_qty,total_price,'Order'FROM vi_member_order Where memberid = '". $uid ."';";
+    $strSQL = "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status,orderdate) ";
+    $strSQL .= "SELECT '" . $orderNo . "',memberid,item,total_qty,total_price,'Order',NOW() FROM vi_member_order Where memberid = '". $uid ."';";
 
     $strSQL .= "DELETE FROM member_order Where memberid = '". $uid ."';";
     if (mysqli_multi_query($conn, $strSQL)) {

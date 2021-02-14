@@ -35,11 +35,11 @@ input[type=submit]:hover {
 	
     if($_GET["Action"]=="Save")
 	{
-        $updatemember = $_GET["memberid"];
+        $updateorder = $_GET["orderno"];
         $status = $_GET["status"];
 
 		$strSQL = "UPDATE confirm_order SET status = '" . $status . "' ";
-        $strSQL .= "WHERE memberid = '" . $updatemember . "'";
+        $strSQL .= "WHERE orderno = '" . $updateorder . "'";
         if (mysqli_query($conn, $strSQL)) {
             echo "Update Status successfully";
         } else {
@@ -47,15 +47,18 @@ input[type=submit]:hover {
         }
 	}
 
-    $objQueryHD = mysqli_query ($conn,"select Distinct memberid,membername,addr from vi_confirm_order where status in ('Order','Prepare') order by membername asc");
+    $objQueryHD = mysqli_query ($conn,"select Distinct orderno,orderdate,memberid,membername,addr from vi_confirm_order where status in ('Order','Prepare') order by orderdate asc");
     while($objResultHD = mysqli_fetch_array($objQueryHD))
 	{
+        $orderno = $objResultHD["orderno"];
         $memberid = $objResultHD["memberid"];
         $membername = $objResultHD["membername"];
-        echo "<H1>ชื่อสมาชิก : " . $membername . "</H1>";
+        echo "<H1>Order No. : " . $orderno . "</H1>";
+        echo "<H2>Order Date : " . $objResultHD["orderdate"] . "</H2>";
+        echo "<H2>ชื่อสมาชิก : " . $membername . "</H2>";
         echo "<H2>ที่อยู่จัดส่ง : " . $objResultHD["addr"] . "</H2>";
 
-        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where memberid = '".$objResultHD["memberid"]."' and status in ('Order','Prepare') order by orderno asc");
+        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where orderno = '".$orderno."' and status in ('Order','Prepare')");
         ?>
         <table width="100%" border="1">
             <tr>
@@ -84,17 +87,17 @@ input[type=submit]:hover {
         <table width="100%">
         <tr>
             <td>
-                <form name="frmMainCancel" method="post" action="?Action=Save&memberid=<?php echo $memberid;?>&status=Cancel">
+                <form name="frmMainCancel" method="post" action="?Action=Save&orderno=<?php echo $orderno;?>&status=Cancel">
                     <input name="btnSubmitCancel" type="submit" id="btnSubmitCancel" value="ยกเลิก">
                 </form>	
             </td>
             <td>
-                <form name="frmMainPrepare" method="post" action="?Action=Save&memberid=<?php echo $memberid;?>&status=Prepare">
+                <form name="frmMainPrepare" method="post" action="?Action=Save&orderno=<?php echo $orderno;?>&status=Prepare">
                     <input name="btnSubmitPrepare" type="submit" id="btnSubmitPrepare" value="จัดเตรียมสินค้า">
                 </form>	
             </td>
             <td>
-                <form name="frmMainFinished" method="post" action="?Action=Save&memberid=<?php echo $memberid;?>&status=Finished">
+                <form name="frmMainFinished" method="post" action="?Action=Save&orderno=<?php echo $orderno;?>&status=Finished">
                     <input name="btnSubmitFinished" type="submit" id="btnSubmitFinished" value="ส่งสินค้าเรียบร้อย">
                 </form>	
             </td>
