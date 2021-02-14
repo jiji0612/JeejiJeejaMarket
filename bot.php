@@ -18,7 +18,7 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 //Admin
-$admin_uid1 = "Uf59d3e6c430c3c10b631eed5f511b320"; //Joker Line
+$admin_uid1 = "Ufde7010531c26c79954c081c9b794e4c"; //๋Jubjang
 
 //include 'msgapitemplate.php';
 //include 'msgapitemplate2.php';
