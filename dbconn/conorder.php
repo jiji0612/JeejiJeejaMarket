@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $orderNo = date("YmdHis");
     $strSQL = "INSERT INTO confirm_order(orderno,memberid,item,qty,price,status,orderdate) ";
-    $strSQL .= "SELECT '" . $orderNo . "',memberid,item,total_qty,total_price,'Order',NOW() FROM vi_member_order Where memberid = '". $uid ."';";
+    $strSQL .= "SELECT '" . $orderNo . "',memberid,item,total_qty,total_price,'Order',(now() + 7 hours) FROM vi_member_order Where memberid = '". $uid ."';";
 
     $strSQL .= "DELETE FROM member_order Where memberid = '". $uid ."';";
     if (mysqli_multi_query($conn, $strSQL)) {
