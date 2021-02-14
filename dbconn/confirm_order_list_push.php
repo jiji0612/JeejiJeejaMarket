@@ -85,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }else{
         $objQuery .= "where status in ('Order','Prepare') ";
     }
+
     while($objResult = mysqli_fetch_array($objQuery))
     {
         $sum_qty = $objResult["total_qty"];
