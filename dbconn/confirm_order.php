@@ -36,12 +36,16 @@ input[type=submit]:hover {
 	
     if($_GET["Action"]=="Save")
 	{
-		$strSQL = "INSERT INTO member (memberid,addr) VALUES ('".$_POST["txtMember"]."','".$_POST["txtAddr"]."')";
+        $updatemember = $_GET["memberid"];
+        $status = $_GET["status"];
+
+		$strSQL = "UPDATE confirm_order SET status = '" . $status . "' ";
+        $strSQL .= "WHERE memberid = '" . $updatemember . "'";
         if (mysqli_query($conn, $strSQL)) {
-            echo "New record created successfully";
-          } else {
-            echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
-          }
+            echo "Update Status successfully";
+        } else {
+        echo "Error: " . $strSQL . "<br>" . mysqli_error($conn);
+        }
 	}
 
     $objQueryHD = mysqli_query ($conn,"select Distinct memberid,membername,addr from vi_confirm_order where status in ('Order','Prepare') order by membername asc");
@@ -70,8 +74,8 @@ input[type=submit]:hover {
             <td><?php echo $objResult["orderno"];?></td>
             <td><?php echo $objResult["item"];?></td>
             <td style="text-align:center"><?php echo $objResult["total_qty"];?></td>
-            <td><?php echo $objResult["total_price"];?></td>
-            <td><?php echo $objResult["status"];?></td>
+            <td style="text-align:center"><?php echo $objResult["total_price"];?></td>
+            <td style="text-align:center"><?php echo $objResult["status"];?></td>
             </tr>
         <?php
         }
