@@ -14,8 +14,8 @@
             },
             {
               "type": "message",
-              "label": "ยกเลิก",
-              "text": "No"
+              "label": "ช็อปต่อ",
+              "text": "Category"
             }
           ],
           "text": "แก้ไข ข้อมูลส่วนตัว"
