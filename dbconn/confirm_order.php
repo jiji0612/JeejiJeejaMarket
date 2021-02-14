@@ -56,7 +56,7 @@ input[type=submit]:hover {
         echo "<H1>ชื่อสมาชิก : " . $membername . "</H1>";
         echo "<H2>ที่อยู่จัดส่ง : " . $objResultHD["addr"] . "</H2>";
 
-        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where memberid = '".$objResultHD["memberid"]."' and status = 'Order' order by orderno asc");
+        $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where memberid = '".$objResultHD["memberid"]."' and status in ('Order','Prepare') order by orderno asc");
         ?>
         <table width="100%" border="1">
             <tr>
