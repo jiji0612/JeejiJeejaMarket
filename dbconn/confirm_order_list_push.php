@@ -14,7 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_set_charset($conn, "utf8");
 
     $query = "select membername, sum(total_price) as total_price from vi_confirm_order ";
-    $query .= "where status in ('" . str_replace(",","','" $status) . "') ";
+    if(isset($_GET['status'])){
+        $status = $_GET['status'];
+        $query .= "where status = '".$status."' ";
+    }else{
+        $query .= "where status in ('Order','Prepare') ";
+    }
     $query .= "group by membername ";
 
     $objQuery = mysqli_query($conn,$query);
