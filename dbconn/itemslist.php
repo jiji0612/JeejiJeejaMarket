@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = mysqli_connect ($server, $username, $password, $db);
     mysqli_set_charset($conn, "utf8");
 
-    $objQuery = mysqli_query ($conn,"select * from items where cate = '".$itmgrp."' order items_name asc");
+    $objQuery = mysqli_query ($conn,"select * from items where cate = '".$itmgrp."' order by items_name asc");
     $arr_items_lst = '';
     $host_php = "https://jeejijeejamarket.herokuapp.com/";
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $itmdesc = $objResult["items_desc"];
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
-        //$nextgroup = $objResult["nextgroup"];
+        $nextgroup = $objResult["nextgroup"];
         
         $arr_items_lst .= '{
                         "type": "buttons",
@@ -40,6 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 "type": "message",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "order ' . $itmname . ' ราคา=' . $itmprice . '"
+                            },
+                            {
+                                "type": "message",
+                                "label": "สินค้าเพิ่มเติม",
+                                "text": "' . $nextgroup . '"
                             }
                         ]
                     }';
