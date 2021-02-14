@@ -59,10 +59,10 @@ if ( sizeof($request_array['events']) > 0 ) {
 			{
 				$url = explode(';', $arr);
 				$del_result = send_reply_message($host_php . $url[1], 'Content-Type content="text/html; charset=utf-8', 'uid='.$uid);
-				if ($del_result == "successfully"){
+				if (startsWith($del_result,"successfully")){
 					$data = [
 						'replyToken' => $reply_token,
-						'messages' => [['type' => 'text', 'text' => '"'.$del_result.'"' ]]
+						'messages' => [['type' => 'text', 'text' => $del_result ]]
 					];
 					$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 

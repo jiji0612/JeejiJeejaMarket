@@ -173,8 +173,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "-",
-                                        "text": "-"
+                                        "label": "เช็คยอด",
+                                        "text": "chkord"
                                         }
                                     },
                                     { 
