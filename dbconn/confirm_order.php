@@ -24,7 +24,6 @@ input[type=submit]:hover {
 
 <body>
 <?php	
-	/*** Connect ***/
 	$url = parse_url (getenv ("CLEARDB_DATABASE_URL"));
 
 	$server = $url ["host"];

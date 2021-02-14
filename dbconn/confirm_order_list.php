@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    session_start();
     $status = "";
 
     /*** Connect ***/
@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "select membername, sum(total_price) as total_price from vi_confirm_order ";
     if(isset($_GET['status'])){
         $status = $_GET['status'];
+        $_SESSION['status'] = $status;
         $query .= "where status = '".$status."' ";
     }else{
         $query .= "where status in ('Order','Prepare') ";
@@ -76,7 +77,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //Summary
-    $objQuery = mysqli_query ($conn,"select sum(total_qty) as total_qty,sum(total_price) as total_price from vi_confirm_order where status = '".$status."'");
+    $objQuery = mysqli_query ($conn,"select sum(total_qty) as total_qty,sum(total_price) as total_price from vi_confirm_order");
+    if(isset($_GET['status'])){
+        $status = $_GET['status'];
+        $objQuery .= "where status = '".$status."' ";
+    }else{
+        $objQuery .= "where status in ('Order','Prepare') ";
+    }
     while($objResult = mysqli_fetch_array($objQuery))
     {
         $sum_qty = $objResult["total_qty"];
