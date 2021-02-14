@@ -17,6 +17,8 @@ $POST_HEADER = array('Content-Type: application/json;', 'Authorization: Bearer '
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+//Admin
+$admin_uid = "Uf59d3e6c430c3c10b631eed5f511b320"; //Joker Line
 
 //include 'msgapitemplate.php';
 //include 'msgapitemplate2.php';
@@ -63,8 +65,20 @@ if ( sizeof($request_array['events']) > 0 ) {
 						'messages' => [['type' => 'text', 'text' => '"'.$del_result.'"' ]]
 					];
 					$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+
+					//Push Summary Order to Admin ======================
+					if($text == "ConfirmOrder"){
+						$arr = $arrayText["pushord"];
+						$jsonurl = explode(';', $arr);
+						$json_result = send_reply_message($host_php . $jsonurl[1], '', 'uid='.$uid);
+						$json_a = json_decode($json_result, true);
+						$json_a['to'] = $admin_uid;
+						$post_body_push = json_encode($json_a, JSON_UNESCAPED_UNICODE);
+						send_reply_message($API_URL.'/push', $POST_HEADER, $post_body_push);
+					}
 				} else {
 					$send_result = $del_result;
+					$arr = $arrayText["pushord"];
 				}
 			} 
 			else if(startsWith($arr,"json")) 

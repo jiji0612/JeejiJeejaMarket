@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $jsonobj = '{
-        "replyToken": "",
+        "to": "",
         "messages": [
             {
                 "type": "flex",
@@ -159,8 +159,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "height": "sm",
                                     "action": {
                                         "type": "message",
-                                        "label": "เช็คยอด",
-                                        "text": "chkord"
+                                        "label": "-",
+                                        "text": "-"
                                         }
                                     },
                                     { 
