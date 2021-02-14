@@ -51,7 +51,6 @@ input[type=submit]:hover {
         $membername = $objResultHD["membername"];
         echo "<H1>ชื่อสมาชิก : " . $membername . "</H1>";
         echo "<H2>ที่อยู่จัดส่ง : " . $objResultHD["addr"] . "</H2>";
-        echo "<H3>สถานะ : " . $objResultHD["status"] . "</H3>";
 
         $objQueryLN = mysqli_query ($conn,"select * from vi_confirm_order where memberid = '".$objResultHD["memberid"]."' and status = 'Order' order by orderno asc");
         ?>
@@ -61,6 +60,7 @@ input[type=submit]:hover {
             <th width="244"> <div align="center">Items </div></th>
             <th width="244"> <div align="center">Quantity </div></th>
             <th width="244"> <div align="center">Price </div></th>
+            <th width="244"> <div align="center">สถานะ </div></th>
             </tr>
         <?php
         while($objResult = mysqli_fetch_array($objQueryLN))
@@ -69,8 +69,9 @@ input[type=submit]:hover {
             <tr>
             <td><?php echo $objResult["orderno"];?></td>
             <td><?php echo $objResult["item"];?></td>
-            <td><?php echo $objResult["total_qty"];?></td>
+            <td style="text-align:center"><?php echo $objResult["total_qty"];?></td>
             <td><?php echo $objResult["total_price"];?></td>
+            <td><?php echo $objResult["status"];?></td>
             </tr>
         <?php
         }
