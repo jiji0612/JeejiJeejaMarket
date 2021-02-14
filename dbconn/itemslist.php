@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $arr_items_lst .= '{
                         "type": "buttons",
-                        "width": "30px",
                         "thumbnailImageUrl": "' . $host_php . 'images/' . $imagefile  . '",
                         "imageAspectRatio": "rectangle",
                         "imageSize": "contain",
