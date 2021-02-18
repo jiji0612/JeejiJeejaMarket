@@ -100,7 +100,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			//Postback ordered
 			$ordered_result = send_reply_message($host_php.'dbconn/addorder.php'
 			, ''
-			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. $text);
+			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. str_replace(' ','',$text));
 			
 			if ($ordered_result == "successfully"){
 				//$string = file_get_contents('receivedorder.json');
