@@ -61,10 +61,6 @@ div {
 	{
     	$uid = $_GET['uid'];
 		$_SESSION['uid'] = $uid;
-
-		$strSQL = "INSERT INTO member (memberid,membername) ";
-		$strSQL .= "SELECT '".$_SESSION['uid']."','' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$_SESSION['uid']."') ";
-		mysqli_query($conn, $strSQL));
 	}
 
 	/***  Add Record ***/
