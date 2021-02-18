@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $i = 0;
     while($objResult = mysqli_fetch_array($objQuery))
     {
-        $itmname = $objResult["items_id"] ;
+        $itmname = $objResult["items_name"] ;
         $itmdesc = $objResult["items_desc"];
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 "type": "message",
                                 "weight": "bold",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order;' . $itmname . ';price=' . $itmprice . '"
+                                "text": "order;' . $itmname . ';ราคา=' . $itmprice . '"
                             },
                             {
                                 "type": "message",
