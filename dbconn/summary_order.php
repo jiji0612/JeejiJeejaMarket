@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "contents": [
                 {
                 "type": "text",
-                "text": "'.$objResult["item"].'  ('.$objResult["total_qty"].')",
+                "text": "'.str_replace(" ","",$objResult["item"]).'  ('.$objResult["total_qty"].')",
                 "size": "sm",
                 "color": "#555555",
                 "flex": 0
