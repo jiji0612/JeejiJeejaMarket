@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 "type": "message",
                                 "weight": "bold",
                                 "label": "หยิบใส่ตะกร้า",
-                                "text": "order ' . $itmname . ' ราคา=' . $itmprice . '"
+                                "text": "order;' . $itmname . ';ราคา=' . $itmprice . '"
                             },
                             {
                                 "type": "message",

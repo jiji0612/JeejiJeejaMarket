@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //mysqli_query($conn, $strSQL);
 
         //Add new Order
-        $order_submit = explode(' ', $ordersubmit);
+        $order_submit = explode(';', $ordersubmit);
         $orderno = $uid;
         $item = $order_submit[1];
         $qty = "1";
