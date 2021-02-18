@@ -61,15 +61,15 @@ div {
 	{
     	$uid = $_GET['uid'];
 		$_SESSION['uid'] = $uid;
+
+		$strSQL = "INSERT INTO member (memberid,membername) ";
+		$strSQL .= "SELECT '".$_SESSION['uid']."','' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$_SESSION['uid']."') ";
+		mysqli_query($conn, $strSQL));
 	}
 
 	/***  Add Record ***/
 	if($_GET["Action"]=="Save")
 	{
-		$strSQL = "INSERT INTO member (memberid,membername) ";
-		$strSQL .= "SELECT '".$_SESSION['uid']."','".$_POST["txtname"]."' FROM DUAL WHERE NOT EXISTS (SELECT memberid FROM member WHERE memberid = '".$_SESSION['uid']."') ";
-		mysqli_query($conn, $strSQL));
-
 		//Update address to member
 		$strSQL = "UPDATE member SET membername = '".$_POST["txtname"]."', addr = '".$_POST["txtaddr"]."' WHERE memberid = '".$_SESSION['uid']."'";
 		if (mysqli_query($conn, $strSQL)) {
