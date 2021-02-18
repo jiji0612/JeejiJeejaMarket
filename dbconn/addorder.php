@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Add new Order
         $order_submit = explode(';', $ordersubmit);
         $orderno = $uid;
-        $item = str_replace(" ","_",$order_submit[1]);
+        $item = str_replace(" ","",$order_submit[1]);
         $qty = "1";
         $price = explode('=', $order_submit[2])[1];
 
