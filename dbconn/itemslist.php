@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "actions": [
                             {
                                 "type": "message",
+                                "weight": "bold",
                                 "label": "หยิบใส่ตะกร้า",
                                 "text": "order ' . $itmname . ' ราคา=' . $itmprice . '"
                             },
