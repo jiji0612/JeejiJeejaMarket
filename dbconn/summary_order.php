@@ -64,13 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     while($objResult = mysqli_fetch_array($objQuery))
     {
+        $itms = $objResult["item"];
+        $len = strlen($itms);
+        if($len > 10){
+            $itms = substr($itms, 0, 15);
+        }
+
         $arr_order_lst .= '{
             "type": "box",
             "layout": "horizontal",
             "contents": [
                 {
                 "type": "text",
-                "text": "'. $objResult["item"] .'  ('.$objResult["total_qty"].')",
+                "text": "'. $itms .'  ('.$objResult["total_qty"].')",
                 "size": "sm",
                 "color": "#555555",
                 "flex": 0
