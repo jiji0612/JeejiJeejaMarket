@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "contents": [
                 {
                 "type": "text",
-                "wrap": "true",
+                "wrap": true,
                 "text": "'. $objResult["item"]. '  ('.$objResult["total_qty"].')",
                 "size": "sm",
                 "color": "#555555",
