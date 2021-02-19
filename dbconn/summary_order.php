@@ -64,12 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     while($objResult = mysqli_fetch_array($objQuery))
     {
-        $itms = $objResult["item"];
-        $len = strlen($itms);
-        if ($len > 30){
-            $itms = substr($objResult["item"], 0, 30);
-        }
-
         $arr_order_lst .= '{
             "type": "box",
             "layout": "horizontal",
