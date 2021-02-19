@@ -62,11 +62,11 @@ input[type=submit]:hover {
         ?>
         <table width="100%" border="1">
             <tr>
-            <th width="244"> <div align="center">Order No </div></th>
-            <th width="244"> <div align="center">Items </div></th>
-            <th width="244"> <div align="center">Quantity </div></th>
-            <th width="244"> <div align="center">Price </div></th>
-            <th width="244"> <div align="center">สถานะ </div></th>
+            <th width="20%"> <div align="center">Order No </div></th>
+            <th width="30%"> <div align="center">Items </div></th>
+            <th width="15%"> <div align="center">Quantity </div></th>
+            <th width="15%"> <div align="center">Price </div></th>
+            <th width="20%"> <div align="center">สถานะ </div></th>
             </tr>
         <?php
         while($objResult = mysqli_fetch_array($objQueryLN))
