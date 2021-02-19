@@ -31,7 +31,7 @@ input[type=submit]:hover {
 	$password = $url ["pass"];
 	$db = substr ($url ["path"], 1);
 	$conn = mysqli_connect ($server, $username, $password, $db);
-	mysqli_query("SET NAMES UTF8");
+	mysqli_set_charset($conn, "utf8");
 	
     if($_GET["Action"]=="Save")
 	{
