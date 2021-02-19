@@ -28,7 +28,7 @@
         <a href="dashboard1.php" class="nav-link">Home</a>
       </li>
     </ul>
-
+  </nav>
  
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -106,7 +106,7 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-  </nav>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
