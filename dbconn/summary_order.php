@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "contents": [
                 {
                 "type": "text",
-                "text": "'. $itms .'  ('.$objResult["total_qty"].')",
+                "text": "'. $len .'  ('.$objResult["total_qty"].')",
                 "size": "sm",
                 "color": "#555555",
                 "flex": 0
