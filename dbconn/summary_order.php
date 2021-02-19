@@ -66,8 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
         $itms = $objResult["item"];
         $len = strlen($itms);
-        if($len > 30){
-            $itms = substr($itms, 0, 30);
+        if($len > 20){
+            $itms = substr($itms, 0, 20);
         }
 
         $arr_order_lst .= '{
