@@ -56,7 +56,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="dashboard1.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sale Dashboard</p>
                 </a>
@@ -68,7 +68,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Forms
+                Master Data
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
