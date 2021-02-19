@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
         $itms = $objResult["item"];
         $len = strlen($itms);
-        if($len > 10){
+        if($len > 30){
             $itms = substr($itms, 0, 15);
         }
 
