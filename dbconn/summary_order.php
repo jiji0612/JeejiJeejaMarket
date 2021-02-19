@@ -84,6 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 },
                 {
                 "type": "text",
+                "wrap": true,
                 "text": "'.$objResult["total_price"].'฿",
                 "size": "sm",
                 "color": "#111111",
