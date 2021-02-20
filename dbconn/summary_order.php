@@ -206,10 +206,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "type": "button",
                                     "style": "link",
                                     "height": "sm",
+                                    "color": "'.$coloralert.'",
                                     "action": {
                                         "type": "message",
                                         "label": "'.$confrimlabel.'",
-                                        "color": "'.$coloralert.'",
                                         "text": "'.$confrimtext.'"
                                         }
                                     }
