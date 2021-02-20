@@ -209,6 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "action": {
                                         "type": "message",
                                         "label": "'.$confrimlabel.'",
+                                        "color": "'.$coloralert.'",
                                         "text": "'.$confrimtext.'"
                                         }
                                     }
