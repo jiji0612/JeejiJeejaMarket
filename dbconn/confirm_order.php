@@ -20,6 +20,17 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 150%;
+}
+
 </style>
 
 <body>
@@ -108,6 +119,8 @@ input[type=submit]:hover {
     }
 	?>		
 
+<input type="button" id="btnClose"
+onclick="javascript:var win = window.open('', '_self');win.close();return false;" value="Close" />
 
 <?php
 	mysqli_close($conn);
