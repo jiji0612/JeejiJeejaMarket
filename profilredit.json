@@ -9,13 +9,13 @@
           "actions": [
             {
               "type": "uri",
-              "label": "แก้ไข",
+              "label": "แก้ไขที่อยู่",
               "uri": "https://jeejijeejamarket.herokuapp.com/dbconn/profile.php?uid=@uid"
             },
             {
               "type": "message",
-              "label": "ช็อปต่อ",
-              "text": "Category"
+              "label": "ไปที่ตะกร้า",
+              "text": "ตะกร้า"
             }
           ],
           "text": "แก้ไข ข้อมูลส่วนตัว"
