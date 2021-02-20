@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($memberaddr == ""){
         $confrimtext = "Profile";
         $confrimlabel = "ใส่ที่อยู่จัดส่ง";
-        $infofooter = "ใส่ที่อยู่จัดส่งก่อน ยืนยัน นะคะ";
+        $infofooter = "ใส่ที่อยู่จัดส่ง *เฉพาะครั้งแรก* ก่อนค่ะ";
         $coloralert = "#FF0000";
     }
 

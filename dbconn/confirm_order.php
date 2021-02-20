@@ -120,7 +120,7 @@ input[type=button] {
 	?>		
 
 <input type="button" id="btnClose"
-onclick="javascript:var win = window.open('', '_self');win.close();return false;" value="Close" />
+onclick="window.opener='x';window.close();" value="Close" />
 
 <?php
 	mysqli_close($conn);
