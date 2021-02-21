@@ -11,13 +11,6 @@
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
   <style>
-.container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
 iframe {
     display: block;       /* iframes are inline by default */
     background: #000;
