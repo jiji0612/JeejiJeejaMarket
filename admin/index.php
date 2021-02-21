@@ -18,15 +18,12 @@
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 80%;
-  border: none;
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
 }
 </style>
 
@@ -54,17 +51,19 @@
   <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
     <div class="nav navbar navbar-expand-lg navbar-white navbar-light border-bottom p-0">
       <div class="container"> 
-        <iframe class="responsive-iframe" src="dashboard1.php"></iframe>
+        <iframe src="dashboard1.php"></iframe>
       </div>
-   </div>
+    </div>
   </div>
+
+<!-- /. MFooter -->
+<?php 
+  Include "footer.php";
+?>
 
 </div>
 
-  <!-- /. MFooter -->
-  <?php 
-  Include "footer.php";
-?>
+
 
 <!-- ./wrapper -->
 <script src="plugins/jquery/jquery.min.js"></script>
