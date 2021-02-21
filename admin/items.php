@@ -76,7 +76,7 @@
               <tbody>
                     <?php Include "dbconnhd.php";
                     $filtyp = "";
-                    if (isset($_GET["typ"]){
+                    if (isset($_GET["typ"])) {
                         $filtyp = $_GET["typ"];
                     }
 
