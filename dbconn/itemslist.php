@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
         $nextgroup = $objResult["nextgroup"];
+        $status = $objResult["status"];
         
         $arr_items_lst .= '{
                         "type": "buttons",
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         "imageSize": "contain",
                         "imageBackgroundColor": "#FFFFFF",
                         "title": "' . $itmdesc . '",
-                        "text": "ราคา ' . $itmprice . ' บาท",
+                        "text": "ราคา ' . $itmprice . ' บาท    (' . $status . ')",
                         "actions": [
                             {
                                 "type": "message",
