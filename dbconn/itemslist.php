@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $itmprice = $objResult["items_price"];
         $imagefile = $objResult["image"];
         $nextgroup = $objResult["nextgroup"];
-        $status = $objResult["status"];
+        $status = $objResult["items_status"];
         
         $arr_items_lst .= '{
                         "type": "buttons",
