@@ -25,8 +25,11 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">รายการสินค้า</li>
+              <li class="breadcrumb-item"><a href="#">All</a></li>
+              <li class="breadcrumb-item"><a href="?typ=snack">Snack</a></li>
+              <li class="breadcrumb-item"><a href="?typ=food">Foods</a></li>
+              <li class="breadcrumb-item"><a href="?typ=drinking">Drinking</a></li>
+              <li class="breadcrumb-item"><a href="?typ=other">Other</a></li>
             </ol>
           </div>
         </div>
@@ -71,25 +74,34 @@
                   </tr>
               </thead>
               <tbody>
-                  <?php Include "dbconnhd.php"; 
-                  $objQuery = mysqli_query ($conn,"select * from items order by cate,items_name asc");
-                  $row_cnt = mysqli_num_rows($objQuery);
-                  $i = 0;
-                  while($objResult = mysqli_fetch_array($objQuery))
-                  {
-                      $itmid = $objResult["items_id"] ;
-                      $itmname = $objResult["items_name"];
-                      $itmdesc = $objResult["items_desc"];
-                      $itmprice = $objResult["items_price"];
-                      $imagefile = $objResult["image"];
-                      $status = $objResult["items_status"];
-                      $i = $i + 1;
+                    <?php Include "dbconnhd.php";
+                    $filtyp = "";
+                    if (isset($_GET['typ']){
+                        filtyp = $_GET['typ'];
+                    })
 
-                      $ststusType = "success";
-                      if ($status != "Active"){
-                        $ststusType = "danger";
-                      }
-                  ?>
+                    $sql = "select * from items";
+                    if (empty($filtyp) == false) {
+                        $sql .= "where cate LIKE '".$filtyp."%'";
+                    }
+                    $sql .= "order by cate,items_name asc";
+                    $objQuery = mysqli_query ($conn, $sql);
+                    $i = 0;
+                    while($objResult = mysqli_fetch_array($objQuery))
+                    {
+                        $itmid = $objResult["items_id"] ;
+                        $itmname = $objResult["items_name"];
+                        $itmdesc = $objResult["items_desc"];
+                        $itmprice = $objResult["items_price"];
+                        $imagefile = $objResult["image"];
+                        $status = $objResult["items_status"];
+                        $i = $i + 1;
+
+                        $ststusType = "success";
+                        if ($status != "Active"){
+                            $ststusType = "danger";
+                        }
+                    ?>
 
                   <tr>
                       <td>
