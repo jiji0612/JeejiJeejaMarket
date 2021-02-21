@@ -77,7 +77,7 @@
                     <?php Include "dbconnhd.php";
                     $filtyp = "";
                     if (isset($_GET['typ']){
-                        filtyp = $_GET['typ'];
+                        $filtyp = $_GET['typ'];
                     })
 
                     $sql = "select * from items";
