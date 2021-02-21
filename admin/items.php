@@ -80,9 +80,9 @@
                         $filtyp = $_GET['typ'];
                     })
 
-                    $sql = "select * from items";
+                    $sql = "select * from items ";
                     if (empty($filtyp) == false) {
-                        $sql .= "where cate LIKE '".$filtyp."%'";
+                        $sql .= "where cate LIKE '".$filtyp."%' ";
                     }
                     $sql .= "order by cate,items_name asc";
                     $objQuery = mysqli_query ($conn, $sql);
