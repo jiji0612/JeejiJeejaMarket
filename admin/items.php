@@ -82,11 +82,11 @@
                       $itmdesc = $objResult["items_desc"];
                       $itmprice = $objResult["items_price"];
                       $imagefile = $objResult["image"];
-                      success = $objResult["items_status"];
+                      $status = $objResult["items_status"];
                       $i = $i + 1;
 
                       $ststusType = "success":
-                      if ($success != "Active"){
+                      if ($status != "Active"){
                         $ststusType = "danger";
                       }
                   ?>
