@@ -54,7 +54,7 @@
           <table class="table table-striped projects">
               <thead>
                   <tr>
-                      <th style="width: 1%">
+                      <th style="width: 2%">
                           #
                       </th>
                       <th style="width: 20%">
@@ -69,7 +69,7 @@
                       <th style="width: 8%" class="text-center">
                           Status
                       </th>
-                      <th style="width: 20%">
+                      <th style="width: 30%">
                       </th>
                   </tr>
               </thead>
