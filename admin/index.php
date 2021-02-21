@@ -12,7 +12,6 @@
 
   <style>
 iframe {
-    display: block;       /* iframes are inline by default */
     background: #000;
     border: none;         /* Reset default border */
     height: 80vh;        /* Viewport-relative units */
@@ -46,13 +45,12 @@ iframe {
           <iframe src="dashboard1.php"></iframe>
     </div>
   </section>
-</div>
 
-
-<!-- /. MFooter -->
+  <!-- /. MFooter -->
 <?php 
   Include "footer.php";
 ?>
+</div>
 
 </div>
 
