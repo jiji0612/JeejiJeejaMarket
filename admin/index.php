@@ -42,7 +42,7 @@ iframe {
   <div class="content-wrapper">
     <section class="content">
       <div class="container-fluid">
-            <iframe src="dashboard1.php"></iframe>
+            <iframe id="myFrame" src="#"></iframe>
       </div>
     </section>
 

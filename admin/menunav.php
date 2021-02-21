@@ -45,9 +45,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="dashboard1.php" class="nav-link">
+                <a onclick="myFunction('dashboard1.php')" href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Dashboard</p>
                 </a>
               </li>
             </ul>
@@ -63,7 +63,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="items.php" class="nav-link">
+                <a onclick="myFunction('items.php')" href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ข้อมูลสินค้า</p>
                 </a>
@@ -95,3 +95,9 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+
+<script>
+    function changeurl(url) {
+    document.getElementById("myFrame").src = url;
+    }
+</script>
