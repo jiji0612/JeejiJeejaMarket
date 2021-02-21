@@ -85,7 +85,7 @@
                       $status = $objResult["items_status"];
                       $i = $i + 1;
 
-                      $ststusType = "success":
+                      $ststusType = "success";
                       if ($status != "Active"){
                         $ststusType = "danger";
                       }
