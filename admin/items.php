@@ -21,7 +21,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>รายการสินค้า</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -76,8 +76,8 @@
               <tbody>
                     <?php Include "dbconnhd.php";
                     $filtyp = "";
-                    if (isset($_GET['typ']){
-                        $filtyp = $_GET['typ'];
+                    if (isset($_GET["typ"]){
+                        $filtyp = $_GET["typ"];
                     }
 
                     $sql = "select * from items ";
