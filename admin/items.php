@@ -105,9 +105,9 @@
                           </small>
                       </td>
                       <td>
-                          <ul class="list-inline">
+                          <ul class="list-inline text-center">
                               <li class="list-inline-item">
-                                  <img width="100%" height="auto" alt="ItemImage" src="../images/<?php echo $imagefile; ?>">
+                                  <img width="50%" height="auto" alt="ItemImage" src="../images/<?php echo $imagefile; ?>">
                               </li>
                           </ul>
                       </td>
