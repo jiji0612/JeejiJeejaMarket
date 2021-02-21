@@ -32,7 +32,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
     <div class="nav navbar navbar-expand-lg navbar-white navbar-light border-bottom p-0">
-      <iframe src="dashboard1.html" style="border: 0; width: 100%; height: 100%">Your browser doesn't support iFrames.</iframe>
+      <iframe src="dashboard1.php" style="border: 0; width: 100%; height: 100%">Your browser doesn't support iFrames.</iframe>
    </div>
   </div>
 
