@@ -15,7 +15,7 @@ iframe {
     display: block;       /* iframes are inline by default */
     background: #000;
     border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
+    height: 80vh;        /* Viewport-relative units */
     width: 100vw;
 }
 </style>
@@ -26,7 +26,6 @@ iframe {
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -41,11 +40,13 @@ iframe {
   ?>
 
 <!-- Main content -->
-<section class="content">
-  <div class="container-fluid">
-        <iframe src="dashboard1.php"></iframe>
-  </div>
-</section>
+<div class="content-wrapper">
+  <section class="content">
+    <div class="container-fluid">
+          <iframe src="dashboard1.php"></iframe>
+    </div>
+  </section>
+</div>
 
 
 <!-- /. MFooter -->
