@@ -48,13 +48,9 @@ iframe {
   ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
-    <div class="nav navbar navbar-expand-lg navbar-white navbar-light border-bottom p-0">
       <div class="container"> 
         <iframe src="dashboard1.php"></iframe>
       </div>
-    </div>
-  </div>
 
 <!-- /. MFooter -->
 <?php 
