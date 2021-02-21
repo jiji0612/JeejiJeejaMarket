@@ -20,7 +20,7 @@ iframe {
 </style>
 
 </head>
-<body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -38,19 +38,19 @@ iframe {
     Include "menunav.php";
   ?>
 
-<!-- Main content -->
-<div class="content-wrapper">
-  <section class="content">
-    <div class="container-fluid">
-          <iframe src="dashboard1.php"></iframe>
-    </div>
-  </section>
+  <!-- Main content -->
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="container-fluid">
+            <iframe src="dashboard1.php"></iframe>
+      </div>
+    </section>
 
-  <!-- /. MFooter -->
-<?php 
-  Include "footer.php";
-?>
-</div>
+    <!-- /. MFooter -->
+    <?php 
+      Include "footer.php";
+    ?>
+  </div>
 
 </div>
 
