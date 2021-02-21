@@ -32,14 +32,21 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
     <div class="nav navbar navbar-expand-lg navbar-white navbar-light border-bottom p-0">
-      <iframe src="dashboard1.php" style="border: 0; width: 100%; height: 100%">Your browser doesn't support iFrames.</iframe>
+    <iframe src="dashboard1.php"
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            width="100%" 
+            height="100vh" 
+            scrolling="auto"> 
+  </iframe> 
    </div>
   </div>
 
   <!-- /. MFooter -->
-  <?php 
-    Include "footer.php";
-  ?>
+<?php 
+  Include "footer.php";
+?>
 
 </div>
 <!-- ./wrapper -->
