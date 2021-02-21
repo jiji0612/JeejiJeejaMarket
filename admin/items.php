@@ -81,7 +81,7 @@
                     }
 
                     $sql = "select * from items ";
-                    if (empty($filtyp) == false) {
+                    if ($filtyp != "") {
                         $sql .= "where cate LIKE '" . $filtyp . "%' ";
                     }
                     $sql .= "order by cate,items_name asc";
