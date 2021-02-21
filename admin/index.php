@@ -46,12 +46,17 @@ iframe {
       </div>
     </section>
 
+
+  </div>
+
     <!-- /. MFooter -->
     <?php 
       Include "footer.php";
     ?>
-  </div>
 
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
 </div>
 
 
