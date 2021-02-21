@@ -82,8 +82,13 @@
                       $itmdesc = $objResult["items_desc"];
                       $itmprice = $objResult["items_price"];
                       $imagefile = $objResult["image"];
-                      $status = $objResult["items_status"];
+                      success = $objResult["items_status"];
                       $i = $i + 1;
+
+                      $ststusType = "success":
+                      if ($success != "Active"){
+                        $ststusType = "danger";
+                      }
                   ?>
 
                   <tr>
@@ -102,7 +107,7 @@
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../images/<?php echo $imagefile; ?>">
+                                  <img alt="ItemImage" src="../images/<?php echo $imagefile; ?>">
                               </li>
                           </ul>
                       </td>
@@ -112,7 +117,7 @@
                         </a>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success"><?php echo $status; ?></span>
+                          <span class="badge badge-<?php echo $ststusType; ?>"><?php echo $status; ?></span>
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
