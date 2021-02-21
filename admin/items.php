@@ -51,19 +51,19 @@
           <table class="table table-striped projects">
               <thead>
                   <tr>
-                      <th style="width: 2%">
-                          #
+                      <th style="width: 5%">
+                          ลำดับ
                       </th>
                       <th style="width: 20%">
                           สินค้า
                       </th>
-                      <th style="width: 30%">
+                      <th style="width: 15%">
                           รูปสินค้า
                       </th>
-                      <th>
-                          รายละเอียดสินค้า
+                      <th style="width: 20%">
+                          ราคาขาย
                       </th>
-                      <th style="width: 8%" class="text-center">
+                      <th style="width: 10%" class="text-center">
                           สถานะ
                       </th>
                       <th style="width: 30%">
@@ -71,46 +71,48 @@
                   </tr>
               </thead>
               <tbody>
+                  <?php Include "dbconnhd.php"; 
+                  $objQuery = mysqli_query ($conn,"select * from items order by cate,items_name asc");
+                  $row_cnt = mysqli_num_rows($objQuery);
+                  $i = 0;
+                  while($objResult = mysqli_fetch_array($objQuery))
+                  {
+                      $itmid = $objResult["items_id"] ;
+                      $itmname = $objResult["items_name"];
+                      $itmdesc = $objResult["items_desc"];
+                      $itmprice = $objResult["items_price"];
+                      $imagefile = $objResult["image"];
+                      $status = $objResult["items_status"];
+                      $i = $i + 1;
+                  ?>
+
                   <tr>
                       <td>
-                          #
+                      <?php echo $i; ?>
                       </td>
                       <td>
                           <a>
-                              AdminLTE v3
+                            <?php echo $itmdesc; ?>
                           </a>
                           <br/>
                           <small>
-                              Created 01.01.2019
+                            <?php echo $itmid; ?>
                           </small>
                       </td>
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png">
+                                  <img alt="Avatar" class="table-avatar" src="../images/<?php echo $imagefile; ?>">
                               </li>
                           </ul>
                       </td>
-                      <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                              </div>
-                          </div>
-                          <small>
-                              57% Complete
-                          </small>
+                      <td>
+                        <a>
+                            <?php echo $itmprice; ?> บาท
+                        </a>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success">Success</span>
+                          <span class="badge badge-success"><?php echo $status; ?></span>
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
@@ -131,6 +133,11 @@
                       </td>
                   </tr>
                   
+                <?php 
+                    }
+                    Include "dbconndt.php"; 
+                ?>
+
               </tbody>
           </table>
         </div>
