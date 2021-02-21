@@ -19,6 +19,7 @@
 }
 
 .responsive-iframe {
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -58,12 +59,13 @@
    </div>
   </div>
 
+</div>
+
   <!-- /. MFooter -->
-<?php 
+  <?php 
   Include "footer.php";
 ?>
 
-</div>
 <!-- ./wrapper -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
