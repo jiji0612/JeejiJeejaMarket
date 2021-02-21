@@ -47,10 +47,13 @@ iframe {
     Include "menunav.php";
   ?>
 
-  <!-- Content Wrapper. Contains page content -->
-      <div class="container"> 
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
         <iframe src="dashboard1.php"></iframe>
-      </div>
+  </div>
+</section>
+
 
 <!-- /. MFooter -->
 <?php 
