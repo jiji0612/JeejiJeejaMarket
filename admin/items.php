@@ -53,12 +53,15 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">รายการสินค้า</h3>
+          <h3 class="card-title">รายการสินค้า <?php echo $subfiltyp; ?></h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
             </button>
+            <div class="btn btn-tool">
+            <li class="breadcrumb-item">กลุ่มย่อย : </li>
+            </div>
               <?php
               if ($filtyp != "") {
                   $sql = "select distinct cate from items ";
