@@ -12,7 +12,6 @@
 
   <style>
 iframe {
-    background: #000;
     border: none;         /* Reset default border */
     height: 78vh;        /* Viewport-relative units */
     width: 100%;
