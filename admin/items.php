@@ -61,11 +61,10 @@
                   $sql .= "where cate LIKE '" . $filtyp . "%' ";
                   $sql .= "order by cate asc";
                   $objQuery = mysqli_query ($conn, $sql);
-                  $i = 0;
                   while($objResult = mysqli_fetch_array($objQuery))
                   {
-                    $cate = $objResult["cate"] ;
-                    echo "<li class='breadcrumb-item'><a href='&subtyp=".$cate."'>".$cate."</a></li>"
+                    $cate = $objResult["cate"];
+                    echo "<li class='breadcrumb-item'><a href='&subtyp=".$cate."'>".$cate."</a></li>";
                   }
               }
               ?>
