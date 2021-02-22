@@ -54,7 +54,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="changeurl('items.php')" href="#" class="nav-link">
+                <a onclick="changeurl('items.php?typ=snack')" href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ข้อมูลสินค้า</p>
                 </a>
