@@ -46,9 +46,13 @@
 
           <?php Include "dbconnhd.php";
             $filtyp = "";
+            $subfiltyp = "";
             if (isset($_GET["typ"])) {
                 $filtyp = $_GET["typ"];
             }
+            if (isset($_GET["subtyp"])) {
+              $subfiltyp = $_GET["subtyp"];
+          }
           ?>
 
           <div class="card-tools">
@@ -64,7 +68,9 @@
                   while($objResult = mysqli_fetch_array($objQuery))
                   {
                     $cate = $objResult["cate"];
-                    echo "<li class='breadcrumb-item'><a href='&subtyp=".$cate."'>".$cate."</a></li>";
+                    echo "<div> ";
+                    echo "<li class='breadcrumb-item'><a href='?typ=" . $filtyp . "&subtyp=".$cate."'>".$cate."</a></li> ";
+                    echo "</div> ";
                   }
               }
               ?>
@@ -98,6 +104,9 @@
                     $sql = "select * from items ";
                     if ($filtyp != "") {
                         $sql .= "where cate LIKE '" . $filtyp . "%' ";
+                    }
+                    if ($subfiltyp != "") {
+                      $sql .= "and cate = '" . $subfiltyp . "' ";
                     }
                     $sql .= "order by cate,items_name asc";
                     $objQuery = mysqli_query ($conn, $sql);
