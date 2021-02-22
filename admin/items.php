@@ -44,10 +44,31 @@
         <div class="card-header">
           <h3 class="card-title">รายการสินค้า</h3>
 
+          <?php Include "dbconnhd.php";
+            $filtyp = "";
+            if (isset($_GET["typ"])) {
+                $filtyp = $_GET["typ"];
+            }
+          ?>
+
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
             </button>
+              <?php
+              if ($filtyp != "") {
+                  $sql = "select distinct cate from items ";
+                  $sql .= "where cate LIKE '" . $filtyp . "%' ";
+                  $sql .= "order by cate asc";
+                  $objQuery = mysqli_query ($conn, $sql);
+                  $i = 0;
+                  while($objResult = mysqli_fetch_array($objQuery))
+                  {
+                    $cate = $objResult["cate"] ;
+                    echo "<li class='breadcrumb-item'><a href='&subtyp=".$cate."'>".$cate."</a></li>"
+                  }
+              }
+              ?>
           </div>
         </div>
         <div class="card-body p-0">
@@ -74,12 +95,7 @@
                   </tr>
               </thead>
               <tbody>
-                    <?php Include "dbconnhd.php";
-                    $filtyp = "";
-                    if (isset($_GET["typ"])) {
-                        $filtyp = $_GET["typ"];
-                    }
-
+                    <?php
                     $sql = "select * from items ";
                     if ($filtyp != "") {
                         $sql .= "where cate LIKE '" . $filtyp . "%' ";
