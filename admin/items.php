@@ -36,6 +36,17 @@
       </div><!-- /.container-fluid -->
     </section>
 
+    <?php Include "dbconnhd.php";
+      $filtyp = "";
+      $subfiltyp = "";
+      if (isset($_GET["typ"])) {
+          $filtyp = $_GET["typ"];
+      }
+      if (isset($_GET["subtyp"])) {
+        $subfiltyp = $_GET["subtyp"];
+      }
+    ?>
+
     <!-- Main content -->
     <section class="content">
 
@@ -43,17 +54,6 @@
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">รายการสินค้า</h3>
-
-          <?php Include "dbconnhd.php";
-            $filtyp = "";
-            $subfiltyp = "";
-            if (isset($_GET["typ"])) {
-                $filtyp = $_GET["typ"];
-            }
-            if (isset($_GET["subtyp"])) {
-              $subfiltyp = $_GET["subtyp"];
-          }
-          ?>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -68,7 +68,7 @@
                   while($objResult = mysqli_fetch_array($objQuery))
                   {
                     $cate = $objResult["cate"];
-                    echo "<div> ";
+                    echo "<div class='btn btn-tool'> ";
                     echo "<li class='breadcrumb-item'><a href='?typ=" . $filtyp . "&subtyp=".$cate."'>".$cate."</a></li> ";
                     echo "</div> ";
                   }
