@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '{
             "replyToken": "",  
             "messages": [
-              {
+                {
                 "type": "text",
                 "text": "$ ยังไม่มีสินค้าในตะกร้าค่ะ",
                 "emojis": [
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "emojiId": "148"
                     }
                 ]
-              }
+                }
             ]
           }';
     } else {
@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sum_qty = '0';
         $sum_price = '0';
 
+        $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
         while($objResult = mysqli_fetch_array($objQuery))
         {
             $arr_order_lst .= '{
