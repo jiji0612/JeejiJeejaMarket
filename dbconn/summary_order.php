@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$memberaddr = $objResult["addr"];
     }
     
-    $confrimtext = "ยืนยันสั่งซื้อ";
+    $confrimtext = "ConfirmOrder";
     $confrimlabel = "ยืนยันสั่งซื้อ";
 
     $infofooter = "เราจะรีบจัดส่งให้นะคะ";
@@ -199,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     "action": {
                                         "type": "message",
                                         "label": "ยกเลิกสั่งซื้อ",
-                                        "text": "ยกเลิกสั่งซื้อ"
+                                        "text": "CancelOrder"
                                         }
                                     },
                                     { 
