@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_set_charset($conn, "utf8");
 
 
-    $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
+    $objQuery = mysqli_query ($conn,"select 1 from member_order where memberid = '".$uid."'");
     $row_cnt = mysqli_num_rows($objQuery);
     if ($row_cnt == 0){
         echo '{
