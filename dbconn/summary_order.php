@@ -17,6 +17,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $membername = "";
     $memberaddr = "";
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $uid ."'");
+    $row_cnt = mysqli_num_rows($objQuery);
+    if ($row_cnt == 0){
+        echo '{
+            "replyToken": "",  
+            "messages": [
+              {
+                "type": "text",
+                "text": "$ ยังไม่มีสินค้าในตะกร้าค่ะ",
+                "emojis": [
+                    {
+                    "index": 0,
+                    "productId": "5ac2216f040ab15980c9b448",
+                    "emojiId": "148"
+                    }
+                ]
+              }
+            ]
+          }';
+        mysqli_close($conn);
+        return;
+    }
+
 	while($objResult = mysqli_fetch_array($objQuery))
 	{
         $membername = $objResult["membername"];
