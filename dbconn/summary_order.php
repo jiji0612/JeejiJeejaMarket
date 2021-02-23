@@ -17,6 +17,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $membername = "";
     $memberaddr = "";
     $objQuery = mysqli_query($conn, "Select * From member Where memberid = '". $uid ."'");
+	while($objResult = mysqli_fetch_array($objQuery))
+	{
+        $membername = $objResult["membername"];
+		$memberaddr = $objResult["addr"];
+    }
+    
+    $confrimtext = "ConfirmOrder";
+    $confrimlabel = "ยืนยันสั่งซื้อ";
+
+    $infofooter = "เราจะรีบจัดส่งให้นะคะ";
+    $coloralert = "#1DB446";
+    if ($memberaddr == ""){
+        $confrimtext = "Profile";
+        $confrimlabel = "ใส่ที่อยู่จัดส่ง";
+        $infofooter = "ใส่ที่อยู่จัดส่ง *เฉพาะครั้งแรก* ก่อนค่ะ";
+        $coloralert = "#FF0000";
+    }
+
+    $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
     $row_cnt = mysqli_num_rows($objQuery);
     if ($row_cnt == 0){
         echo '{
@@ -38,26 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_close($conn);
         return;
     }
-
-	while($objResult = mysqli_fetch_array($objQuery))
-	{
-        $membername = $objResult["membername"];
-		$memberaddr = $objResult["addr"];
-    }
     
-    $confrimtext = "ConfirmOrder";
-    $confrimlabel = "ยืนยันสั่งซื้อ";
-
-    $infofooter = "เราจะรีบจัดส่งให้นะคะ";
-    $coloralert = "#1DB446";
-    if ($memberaddr == ""){
-        $confrimtext = "Profile";
-        $confrimlabel = "ใส่ที่อยู่จัดส่ง";
-        $infofooter = "ใส่ที่อยู่จัดส่ง *เฉพาะครั้งแรก* ก่อนค่ะ";
-        $coloralert = "#FF0000";
-    }
-
-    $objQuery = mysqli_query ($conn,"select * from vi_member_order where memberid = '".$uid."'");
     $arr_order_lst = '{
         "type": "box",
         "layout": "horizontal",
