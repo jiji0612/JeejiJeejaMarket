@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }';
     } else {
 
-        $arr_order_lst = '{
+        $arr_member_lst = '{
             "type": "box",
             "layout": "horizontal",
             "contents": [
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     {
                     "type": "text",
                     "wrap": true,
-                    "text": "'. $objResult["member_name"]. '",
+                    "text": "'. $objResult["membername"]. '",
                     "size": "sm",
                     "color": "#555555",
                     "flex": 0
