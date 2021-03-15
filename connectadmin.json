@@ -6,7 +6,7 @@
           "altText": "This is a buttons template",
           "template": {
               "type": "buttons",
-              "thumbnailImageUrl": "https://example.com/bot/images/admin.png",
+              "thumbnailImageUrl": "https://jeejijeejamarket.herokuapp.com/images/admin.png",
               "imageAspectRatio": "rectangle",
               "imageSize": "cover",
               "imageBackgroundColor": "#FFFFFF",
