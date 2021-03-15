@@ -1,0 +1,30 @@
+{
+    "replyToken": "",  
+    "messages": [
+      {
+          "type": "template",
+          "altText": "This is a buttons template",
+          "template": {
+              "type": "buttons",
+              "thumbnailImageUrl": "https://example.com/bot/images/admin.png",
+              "imageAspectRatio": "rectangle",
+              "imageSize": "cover",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "สอบถามเพิ่มเติม",
+              "text": "กดปุ่มด้านล่างเพื่อติดต่อ เจ้าของร้าน",
+              "defaultAction": {
+                  "type": "uri",
+                  "label": "View detail",
+                  "uri": "https://lin.ee/KswE0mH"
+              },
+              "actions": [
+                  {
+                    "type": "uri",
+                    "label": "ติดต่อเจ้าของร้าน",
+                    "uri": "https://lin.ee/KswE0mH"
+                  }
+              ]
+          }
+        }
+    ]
+  }

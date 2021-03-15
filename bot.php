@@ -113,7 +113,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 				$send_result = $ordered_result;
 			}
 		} else {
-			$string = file_get_contents('defaultemoji.json');
+			$string = file_get_contents('connectadmin.json');
 			$json_a = json_decode($string, true);
 			$json_a['replyToken'] = $reply_token;
 			$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
