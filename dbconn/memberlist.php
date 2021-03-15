@@ -46,14 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 "weight": "bold",
                 "color": "#555555",
                 "flex": 0
-                },
-                {
-                "type": "text",
-                "text": "Ordered",
-                "size": "sm",
-                "weight": "bold",
-                "color": "#111111",
-                "align": "end"
                 }
             ]
             },
@@ -72,14 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "size": "sm",
                     "color": "#555555",
                     "flex": 0
-                    },
-                    {
-                    "type": "text",
-                    "wrap": true,
-                    "text": "0",
-                    "size": "sm",
-                    "color": "#111111",
-                    "align": "end"
                     }
                 ]
                 },
