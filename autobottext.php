@@ -38,6 +38,7 @@
                     'other6'                => 'json;/dbconn/itemslist.php?itmgrp=other6',
                     'other7'                => 'json;/dbconn/itemslist.php?itmgrp=other7',
                     'other8'                => 'json;/dbconn/itemslist.php?itmgrp=other8',
+                    'member'                => 'json;/dbconn/memberlist.php',
                     'Category'              => 'file;cate.json',
                     'ยกเลิกสั่งซื้อ'            => 'file;cancelorder.json',
                     'ยืนยันสั่งซื้อ'             => 'file;confirmorder.json',
