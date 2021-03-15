@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "contents": [
                 {
                 "type": "text",
-                "text": "ชื่อสมาชิก",
+                "text": "ชื่อสมาชิก ' . $row_cnt . ' คน",
                 "size": "sm",
                 "weight": "bold",
                 "color": "#555555",
