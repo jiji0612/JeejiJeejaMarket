@@ -58,7 +58,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"url")) 
 			{
 				$url = explode(';', $arr);
-				$del_result = send_reply_message($host_php . $url[1], 'Content-Type content="text/html; charset=utf-8', 'uid='.$uid);
+				$del_result = send_reply_message($host_php . $url[1], array('Content-Type: text/html;'), 'uid='.$uid);
 				if (startsWith($del_result,"successfully")){
 					$data = [
 						'replyToken' => $reply_token,
