@@ -58,7 +58,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"url")) 
 			{
 				$url = explode(';', $arr);
-				$del_result = send_reply_message($host_php . $url[1], array('Content-Type: application/x-www-form-urlencoded'), 'uid='.$uid);
+				$del_result = post_reply_message($host_php . $url[1], 'Content-Type: application/x-www-form-urlencoded', 'uid='.$uid);
 				if (startsWith($del_result,"successfully")){
 					$data = [
 						'replyToken' => $reply_token,
@@ -70,7 +70,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 					if ($text == "ConfirmOrder"){
 						$arr = $arrayText["pushord"];
 						$jsonurl = explode(';', $arr);
-						$json_result = send_reply_message($host_php . $jsonurl[1], '', 'uid='.$uid);
+						$json_result = post_reply_message($host_php . $jsonurl[1], 'Content-Type: application/x-www-form-urlencoded', 'uid='.$uid);
 						$json_a = json_decode($json_result, true);
 						$json_a['to'] = $admin_uid1;
 						$post_body_push = json_encode($json_a, JSON_UNESCAPED_UNICODE);
@@ -84,7 +84,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 			else if(startsWith($arr,"json")) 
 			{
 				$jsonurl = explode(';', $arr);
-				$json_result = send_reply_message($host_php . $jsonurl[1], '', 'uid='.$uid);
+				$json_result = post_reply_message($host_php . $jsonurl[1], 'Content-Type: application/x-www-form-urlencoded', 'uid='.$uid);
 				$json_a = json_decode($json_result, true);
 				$json_a['replyToken'] = $reply_token;
 				$post_body = json_encode($json_a, JSON_UNESCAPED_UNICODE);
@@ -98,8 +98,8 @@ if ( sizeof($request_array['events']) > 0 ) {
 			}
 		} else if(startsWith($text,"order")) { //Add order
 			//Postback ordered
-			$ordered_result = send_reply_message($host_php.'dbconn/addorder.php'
-			, ''
+			$ordered_result = post_reply_message($host_php.'dbconn/addorder.php'
+			, 'Content-Type: application/x-www-form-urlencoded'
 			, 'uid='.$uid.'&uname='.$user_name.'&ordersubmit='. str_replace(' ','',$text));
 			
 			if ($ordered_result == "successfully"){
@@ -150,6 +150,25 @@ function send_reply_message($url, $post_header, $post_body)
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $result = curl_exec($ch);
     curl_close($ch);
+
+    return $result;
+}
+
+function post_reply_message($url, $post_header, $post_body)
+{
+	$postString = http_build_query($post_body, '', '&');
+
+	$opts = array('http' =>
+		array(
+			'method'  => 'POST',
+			'header'  => $post_header,
+			'content' => $postString
+		)
+	);
+	# Create the context
+	$context = stream_context_create($opts);
+	# Get the response (you can use this for GET)
+	$result = file_get_contents($url, false, $context);
 
     return $result;
 }
