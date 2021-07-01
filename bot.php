@@ -156,13 +156,11 @@ function send_reply_message($url, $post_header, $post_body)
 
 function post_reply_message($url, $post_header, $post_body)
 {
-	$postString = http_build_query($post_body, '', '&');
-
 	$opts = array('http' =>
 		array(
 			'method'  => 'POST',
 			'header'  => $post_header,
-			'content' => $postString
+			'content' => $post_body
 		)
 	);
 	# Create the context
