@@ -135,7 +135,7 @@
                       <td>
                           <ul class="list-inline text-center">
                               <li class="list-inline-item">
-                                  <img width="auto" height="50px" alt="ItemImage" src="../images/<?php echo $imagefile; ?>">
+                                  <img width="auto" height="100px" alt="ItemImage" src="../images/<?php echo $imagefile; ?>">
                               </li>
                           </ul>
                       </td>
