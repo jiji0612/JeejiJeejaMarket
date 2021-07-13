@@ -84,7 +84,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Master
+                Report
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>

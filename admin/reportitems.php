@@ -95,11 +95,6 @@
                       <th style="width: 20%">
                           ราคาขาย
                       </th>
-                      <th style="width: 10%" class="text-center">
-                          สถานะ
-                      </th>
-                      <th style="width: 30%">
-                      </th>
                   </tr>
               </thead>
               <tbody>
@@ -121,13 +116,7 @@
                         $itmdesc = $objResult["items_desc"];
                         $itmprice = $objResult["items_price"];
                         $imagefile = $objResult["image"];
-                        $status = $objResult["items_status"];
                         $i = $i + 1;
-
-                        $ststusType = "success";
-                        if ($status != "Active"){
-                            $ststusType = "danger";
-                        }
                     ?>
 
                   <tr>
@@ -154,26 +143,6 @@
                         <a>
                             <?php echo $itmprice; ?> บาท
                         </a>
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-<?php echo $ststusType; ?>"><?php echo $status; ?></span>
-                      </td>
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
-                          <a class="btn btn-info btn-sm" href="#">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
                       </td>
                   </tr>
                   
