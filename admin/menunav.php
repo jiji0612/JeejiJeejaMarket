@@ -48,7 +48,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Forms
+                Master
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -75,6 +75,24 @@
                 <a href="pages/forms/validation.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Validation</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Master
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a onclick="changeurl('reportitems.php')" href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>รายการสินค้า</p>
                 </a>
               </li>
             </ul>
